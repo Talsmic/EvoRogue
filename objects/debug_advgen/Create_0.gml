@@ -1,0 +1,1 @@
+varset_roguemap();

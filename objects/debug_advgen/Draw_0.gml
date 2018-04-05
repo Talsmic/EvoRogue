@@ -1,0 +1,1 @@
+advgen_drawgridmap(10,10);

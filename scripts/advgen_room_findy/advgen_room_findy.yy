@@ -1,8 +1,8 @@
 {
-    "id": "b5bea3ab-d908-417d-9639-96bf52ff04c0",
+    "id": "afe6bf0e-991d-423e-b3f9-f39fce00e71b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "advgen_core_rooms",
+    "name": "advgen_room_findy",
     "IsCompatibility": false,
     "IsDnD": false
 }

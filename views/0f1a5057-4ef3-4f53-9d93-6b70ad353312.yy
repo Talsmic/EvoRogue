@@ -12,7 +12,12 @@
         "5112a471-b7ea-4dc3-83b7-4514aafd032a",
         "366ae073-e1ee-4228-99f9-6b3b3e2fd190",
         "1fe09eb3-3cdd-464a-92a8-dc970f571bda",
-        "b5bea3ab-d908-417d-9639-96bf52ff04c0"
+        "b5bea3ab-d908-417d-9639-96bf52ff04c0",
+        "6a16c72c-95c5-49c2-a1aa-7af1681f787c",
+        "8a8bebe9-71a8-4abf-bcec-ee81dad48662",
+        "431610c1-757c-4b4f-8fa8-d751d4031627",
+        "afe6bf0e-991d-423e-b3f9-f39fce00e71b",
+        "6f4c52d4-9756-40e6-a565-d657691741f8"
     ],
     "filterType": "GMScript",
     "folderName": "[Module: Rogue]",

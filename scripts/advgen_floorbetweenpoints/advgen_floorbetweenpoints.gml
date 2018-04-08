@@ -17,54 +17,70 @@ if ( X1 > X2 ) { var XDir = LEFT } else { var XDir = RIGHT };
 if ( Y1 > Y2 ) { var YDir = UP } else { var YDir = DOWN };
 
 //Random Path Styles
-if ( PathStyle == enum_Paths.random ) {
+if ( PathStyle == enum_Paths.israndom ) {
 	PathStyle = irandom_range(1,2);
 	};
 
 switch ( PathStyle ) {
 	// Horizontal -> Vertical
-	default: case enum_Paths.x_to_y:
+	default: case enum_Paths.x_toY:
 		//Horizontal
 		if ( XDir == LEFT ) {
 			for ( var X=X2 ; X<=X1 ; X++ ) {
 				adv_TileFloor[X,Y1] = FloorType;
+				if ( X!=X2 ) { adv_TileConnectsLeft[X,Y1] = true };
+				if ( X!=X1 ) { adv_TileConnectsRight[X,Y1] = true };
 				};
 		} else {
 			for ( var X=X1 ; X<=X2 ; X++ ) {
 				adv_TileFloor[X,Y1] = FloorType;
+				if ( X!=X1 ) { adv_TileConnectsLeft[X,Y1] = true };
+				if ( X!=X2 ) { adv_TileConnectsRight[X,Y1] = true };
 				};
 			};
 		//Vertical
 		if ( YDir == UP ) {
 			for ( var Y=Y2 ; Y<=Y1 ; Y++ ) {
 				adv_TileFloor[X2,Y] = FloorType;
+				if ( Y!=Y2 ) { adv_TileConnectsUp[X2,Y] = true };
+				if ( Y!=Y1 ) { adv_TileConnectsDown[X2,Y] = true };
 				};
 		} else {
 			for ( var Y=Y1 ; Y<=Y2 ; Y++ ) {
 				adv_TileFloor[X2,Y] = FloorType;
+				if ( Y!=Y1 ) { adv_TileConnectsUp[X2,Y] = true };
+				if ( Y!=Y2 ) { adv_TileConnectsDown[X2,Y] = true };
 				};
 			};
 		break;
 	// Vertical -> Horizontal
-	case enum_Paths.y_to_x:
+	case enum_Paths.y_toX:
 		//Vertical
 		if ( YDir == UP ) {
 			for ( var Y=Y2 ; Y<=Y1 ; Y++ ) {
 				adv_TileFloor[X1,Y] = FloorType;
+				if ( Y!=Y2 ) { adv_TileConnectsUp[X1,Y] = true };
+				if ( Y!=Y1 ) { adv_TileConnectsDown[X1,Y] = true };
 				};
 		} else {
 			for ( var Y=Y1 ; Y<=Y2 ; Y++ ) {
 				adv_TileFloor[X1,Y] = FloorType;
+				if ( Y!=Y1 ) { adv_TileConnectsUp[X1,Y] = true };
+				if ( Y!=Y2 ) { adv_TileConnectsDown[X1,Y] = true };
 				};
 			};
 		//Horizontal
 		if ( XDir == LEFT ) {
 			for ( var X=X2 ; X<=X1 ; X++ ) {
 				adv_TileFloor[X,Y2] = FloorType;
+				if ( X!=X2 ) { adv_TileConnectsLeft[X,Y2] = true };
+				if ( X!=X1 ) { adv_TileConnectsRight[X,Y2] = true };
 				};
 		} else {
 			for ( var X=X1 ; X<=X2 ; X++ ) {
 				adv_TileFloor[X,Y2] = FloorType;
+				if ( X!=X1 ) { adv_TileConnectsLeft[X,Y2] = true };
+				if ( X!=X2 ) { adv_TileConnectsRight[X,Y2] = true };
 				};
 			};
 		break;

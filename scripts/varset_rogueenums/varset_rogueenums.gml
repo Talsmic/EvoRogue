@@ -9,5 +9,5 @@ enum enum_RegionDistribution {
 	};
 	
 enum enum_Paths {
-	random, x_to_y, y_to_x
+	israndom, x_toY, y_toX
 	};

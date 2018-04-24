@@ -1,1 +1,1 @@
-advgen_drawgridmap(10,10);
+advgen_drawgridmap_10x(10,10);

@@ -20,6 +20,17 @@ varset_		Establishes a pool of variables (Generally for use at creation)
 advgen_		Adventure Generator / Roguelike Generator
 ================================================================================
 
+=[Focus Layers]=================================================================
+-[0][Play Space]----------------------------------------------------------------
+Player moving in world and interacting with surroundings
+-[1][Interact in Space]---------------------------------------------------------
+Any interaction that locks movement without being a menu or overlay
+-[2][Dialog Boxes]--------------------------------------------------------------
+-[3][Menus in Space]------------------------------------------------------------
+...
+-[5][Overlay Menus]-------------------------------------------------------------
+...
+-[9][Debug Menus]---------------------------------------------------------------
 
 
 //Dividers (Width is 20 tabs)

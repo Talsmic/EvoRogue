@@ -17,7 +17,7 @@ if ( resolutionsnap == true ) {
 
 //Detect Real Magnification Level
 var real_magnification = 1;
-for ( i=1 ; i<5 ; i++ ) {
+for ( var i=1 ; i<5 ; i++ ) {
 	if ( window_get_width() >= breakpoints_width[i] and window_get_height() >= breakpoints_height[i] ) {
 		real_magnification = i;
 		};

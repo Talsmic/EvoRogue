@@ -8,7 +8,8 @@
         "108eb05a-8812-4af4-82e9-fa78e06d4e29",
         "aa388b4f-c7d5-4869-94f8-cc566e6dacc7",
         "67e90f40-ecaa-4870-a1e5-f823437bf43a",
-        "99aa2013-0558-4039-8219-e393695b7546"
+        "99aa2013-0558-4039-8219-e393695b7546",
+        "da7b7492-7704-421c-846f-507f1f46f2f6"
     ],
     "filterType": "GMObject",
     "folderName": "[Debug Tools]",

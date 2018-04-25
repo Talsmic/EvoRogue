@@ -9,11 +9,11 @@
 #macro LEFT 4
 #macro FORWARD 5
 #macro BACKWARD 6
-enum enum_direction {	
+enum eDirection {	
 	stop, up, right, down, left, forward, backward	};
 
 //Battle
-enum enum_status { 
+enum eCreatureState { 
 	nonexistant, existant, defeated, active, benched, defeatedbenched	};
 
 //Multiplayer
@@ -64,7 +64,7 @@ enum enum_status {
 #macro c_magic_dark		$4c337f
 
 //Misc
-enum enum_iconstate { 
-	disabled, enabled, mouseover, pressed, disabled_recharge, disabled_energy	};
+enum eIconState { 
+	disabled, enabled, mouseover, pressed, disabled_recharge, disabled_energy, detect	};
 
 

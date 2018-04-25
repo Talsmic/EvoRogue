@@ -6,8 +6,8 @@
 ini_open("settings.ini");
 
 //=[Video Settings]==================================================
-option_fullscreen = ini_read_real("video", "fullscreen", 0);
-resolutionsnap_magnification = ini_read_real("video", "scale", 3);
+Options_Fullscreen = ini_read_real("video", "fullscreen", 0);
+ResolutionSnapNextFrame_magnification = ini_read_real("video", "scale", 3);
 //===================================================================
 
 //=[Sound Settings]==================================================

@@ -1,10 +1,10 @@
 ///varset_rogueenums()
 
-enum enum_TileFloors {
+enum eTileFloors {
 	none, normal, grass, lava, shallows	};
 	
-enum enum_RegionDistribution {
+enum eRegionDistribution {
 	rows, columns	};
 	
-enum enum_Paths {
+enum ePaths {
 	israndom, x_toY, y_toX	};

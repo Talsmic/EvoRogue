@@ -19,3 +19,33 @@ id#,r,name,element,energy,recharge,priority,tooltip,effects,icon,timeline,value
 18,B,[T2] Arcing,Physical,20,1,,Physical|1 Damage|1# Arcing,Damage|20|0.8|Physical; Arcing,10,tl_strike,20
 19,B,[T2] Recoil,Physical,20,1,,Physical|1 Damage|1# Recoil [20%],Damage|25|0.8|Physical; Recoil|0.20,10,tl_strike,20
 20,B,[T2] Leech,Physical,20,1,,Physical|1 Damage|1# Leeching [25%],Damage|18|0.6|Physical; Leeching|0.25,10,tl_strike,20
+21,C,Strike,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+22,C,Fire Strike,Fire,10,0,,Fire|2 Damage|2,Damage|10|0.4|Fire,10,tl_strike,10
+23,C,Water Strike,Water,10,0,,Water|3 Damage|3,Damage|10|0.4|Water,10,tl_strike,10
+24,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
+25,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
+26,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10
+27,C,Strike,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+28,C,Fire Strike,Fire,10,0,,Fire|2 Damage|2,Damage|10|0.4|Fire,10,tl_strike,10
+29,C,Water Strike,Water,10,0,,Water|3 Damage|3,Damage|10|0.4|Water,10,tl_strike,10
+30,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
+31,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
+32,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10
+33,C,Strike,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+34,C,Fire Strike,Fire,10,0,,Fire|2 Damage|2,Damage|10|0.4|Fire,10,tl_strike,10
+35,C,Water Strike,Water,10,0,,Water|3 Damage|3,Damage|10|0.4|Water,10,tl_strike,10
+36,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
+37,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
+38,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10
+39,C,Strike,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+40,C,Fire Strike,Fire,10,0,,Fire|2 Damage|2,Damage|10|0.4|Fire,10,tl_strike,10
+41,C,Water Strike,Water,10,0,,Water|3 Damage|3,Damage|10|0.4|Water,10,tl_strike,10
+42,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
+43,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
+44,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10
+45,C,Strike,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+46,C,Fire Strike,Fire,10,0,,Fire|2 Damage|2,Damage|10|0.4|Fire,10,tl_strike,10
+47,C,Water Strike,Water,10,0,,Water|3 Damage|3,Damage|10|0.4|Water,10,tl_strike,10
+48,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
+49,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
+50,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10

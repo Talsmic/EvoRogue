@@ -5,7 +5,8 @@
     "name": "a3471e87-b4aa-40d2-ad19-a8954f2fda0e",
     "children": [
         "c788430f-9286-4404-94cc-c28a1b893f15",
-        "f198f82d-4a46-4ab8-a25f-9b638a98a8f1"
+        "f198f82d-4a46-4ab8-a25f-9b638a98a8f1",
+        "13927b0c-832f-4e1f-8c9c-9b70d8dce6f0"
     ],
     "filterType": "GMScript",
     "folderName": "{Addon] [GMSDB]",

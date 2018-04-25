@@ -20,7 +20,7 @@ for ( var i=1 ; i<5 ; i++ ) {
 
 //=[Video Settings]==================================================
 ini_section_delete("video");
-ini_write_real("video", "fullscreen", option_fullscreen);
+ini_write_real("video", "fullscreen", Options_Fullscreen);
 ini_write_real("video", "scale", real_magnification);
 //===================================================================
 

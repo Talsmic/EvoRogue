@@ -7,12 +7,12 @@ var breakpoints_width = [0,ideal_width,ideal_width*2,ideal_width*3,ideal_width*4
 var breakpoints_height = [0,ideal_height,ideal_height*2,ideal_height*3,ideal_height*4,ideal_height*5];
 
 //Fullscreen
-window_set_fullscreen(option_fullscreen);
+window_set_fullscreen(Options_Fullscreen);
 
 //Resolution Snap
-if ( resolutionsnap == true ) {
-	window_set_size( resolutionsnap_magnification*ideal_width, resolutionsnap_magnification*ideal_height );
-	resolutionsnap = false;
+if ( ResolutionSnapNextFrame == true ) {
+	window_set_size( ResolutionSnapNextFrame_magnification*ideal_width, ResolutionSnapNextFrame_magnification*ideal_height );
+	ResolutionSnapNextFrame = false;
 	};
 
 //Detect Real Magnification Level

@@ -17,13 +17,13 @@ if ( X1 > X2 ) { var XDir = LEFT } else { var XDir = RIGHT };
 if ( Y1 > Y2 ) { var YDir = UP } else { var YDir = DOWN };
 
 //Random Path Styles
-if ( PathStyle == enum_Paths.israndom ) {
+if ( PathStyle == ePaths.israndom ) {
 	PathStyle = irandom_range(1,2);
 	};
 
 switch ( PathStyle ) {
 	// Horizontal -> Vertical
-	default: case enum_Paths.x_toY:
+	default: case ePaths.x_toY:
 		//Horizontal
 		if ( XDir == LEFT ) {
 			for ( var X=X2 ; X<=X1 ; X++ ) {
@@ -54,7 +54,7 @@ switch ( PathStyle ) {
 			};
 		break;
 	// Vertical -> Horizontal
-	case enum_Paths.y_toX:
+	case ePaths.y_toX:
 		//Vertical
 		if ( YDir == UP ) {
 			for ( var Y=Y2 ; Y<=Y1 ; Y++ ) {

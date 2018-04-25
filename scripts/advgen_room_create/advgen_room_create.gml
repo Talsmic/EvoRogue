@@ -19,7 +19,7 @@ repeat 3 {
 	var Y = irandom_range( Ymin, Ymax );
 	if ( adv_TileRoomID[X,Y] == 0 ) {
 		adv_TileRoomID[X,Y] = RoomID;
-		adv_TileFloor[X,Y] = enum_TileFloors.normal;
+		adv_TileFloor[X,Y] = eTileFloors.normal;
 		return true;
 		};
 	};
@@ -34,7 +34,7 @@ for ( var X=Xmin ; X<=Xmax ; X++ ) {
 	for ( var Y=Ymin ; Y<=Ymax ; Y++ ) {
 		if ( adv_TileRoomID[X,Y] == 0 ) {
 			adv_TileRoomID[X,Y] = RoomID;
-			adv_TileFloor[X,Y] = enum_TileFloors.normal;
+			adv_TileFloor[X,Y] = eTileFloors.normal;
 			return true;
 			};
 		

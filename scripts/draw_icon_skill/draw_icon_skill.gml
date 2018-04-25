@@ -1,8 +1,9 @@
-///draw_icon_skill(x,y,size,skill,state);
+///draw_icon_skill(x,y,size,icon,colour,state);
 /// @arg x
 /// @arg y
 /// @arg size
 /// @arg skill
+/// @arg colour
 /// @arg state
 /*
 	[Edited 24/4/2018]
@@ -11,33 +12,48 @@
 var X = argument0;
 var Y = argument1;
 var icon_size = argument2;
-var icon_skill = argument3;
-var icon_state = floor(argument4);
-var icon_recharge = round(10*frac(argument4));
+var icon = argument3;
+var icon_colour = find_colour(argument4);
+var icon_state = floor(argument5);
+var icon_recharge = round(10*frac(argument5));
 
-//Pull from Database
-if ( icon_skill ) {
-	var icon = db_record_get("db_Skills",icon_skill,"icon");
-	var icon_colour = find_colour(db_record_get("db_Skills",icon_skill,"element"));
-} else {
-	var icon = 0;
-	var icon_colour = c_lightgray;	
+//State Detection
+if ( icon_state == eIconState.detect ) {
+	var icon_width = floor(icon_size);
+	var icon_height = frac(icon_size);
+	if ( icon_height == 0 ) { icon_height = icon_width };
+	var region;
+	region[1] = X-icon_width*0.5-3;		//[1] X1 [Integer]
+	region[2] = Y-icon_height*0.5-2;	//[2] Y1 [Integer]
+	region[3] = X+icon_width*0.5+1;		//[3] X2 [Integer]
+	region[4] = Y+icon_height*0.5+2;	//[4] Y2 [Integer]
+	
+	if ( infocus() ) {
+		if ( point_in_rectangle( mouse_x, mouse_y, region[1], region[2], region[3], region[4] ) ) {
+			if ( mouse_check_button(mb_left) ) {
+				icon_state = eIconState.pressed
+				}
+			else { icon_state = eIconState.mouseover };
+			}
+		else { icon_state = eIconState.enabled };
+		}
+	else { icon_state = eIconState.disabled };
 	};
 
 //State Adjustments
 var offset = 0;
 switch ( icon_state ) {
-	case enum_iconstate.disabled:
+	case eIconState.disabled:
 		icon_colour = c_darkgray;
 		break;
-	case enum_iconstate.enabled:
-	case enum_iconstate.mouseover:
+	case eIconState.enabled:
+	case eIconState.mouseover:
 		offset = -1;
 		break;
-	case enum_iconstate.disabled_recharge:
+	case eIconState.disabled_recharge:
 		icon_colour = c_gray;
 		break;
-	case enum_iconstate.disabled_energy:
+	case eIconState.disabled_energy:
 		icon_colour = c_gray;
 		break;
 	};

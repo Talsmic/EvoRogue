@@ -1,2 +1,2 @@
-/// @description Toggle Fullscreen
-if ( option_fullscreen == false ) { option_fullscreen = true } else { option_fullscreen = false; resolutionsnap = true };
+/// @desc Toggle Fullscreen
+if ( Options_Fullscreen == false ) { Options_Fullscreen = true } else { Options_Fullscreen = false; ResolutionSnapNextFrame = true };

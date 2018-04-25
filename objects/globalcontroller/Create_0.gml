@@ -6,13 +6,19 @@ var_initialize();
 window_set_colour(c_purple);
 FocusLevel = 10;
 FocusPrevious = 10;
+depth = -1;
 
 //Options
-option_fullscreen = false;
-option_resolutionsnap = false; //Should the game snap resolution every frame?
+Options_Fullscreen = false;
+Options_ResolutionSnap = false; //Should the game snap resolution every frame?
 
-resolutionsnap = true; //Should the resolution snap at the next frame?
-resolutionsnap_magnification = 2;
-resolutionsnap_center = false;
+ResolutionSnapNextFrame = true; //Should the resolution snap at the next frame?
+ResolutionSnap_Magnification = 2;
+ResolutionSnap_Center = false;
+
+//GUI Debug Tools
+Draw = false;
+Draw_FocusLevel = true;
+Draw_FrameRate = true;
 
 load_settings();

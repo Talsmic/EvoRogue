@@ -18,10 +18,10 @@ if ( adv_RegionVarianceY*2 + 2 > adv_GridYSize ) { adv_RegionVarianceY = floor((
 
 randomize();
 switch (adv_RegionDistribution) {
-	case enum_RegionDistribution.columns: default:
+	case eRegionDistribution.columns: default:
 		advgen_regions_createrow(1,adv_Regions,1,adv_GridXSize+1,1,adv_GridYSize);
 		break;
-	case enum_RegionDistribution.rows:
+	case eRegionDistribution.rows:
 		advgen_regions_createcolumn(1,adv_Regions,1,adv_GridXSize,1,adv_GridYSize+1);
 		break;
 	};

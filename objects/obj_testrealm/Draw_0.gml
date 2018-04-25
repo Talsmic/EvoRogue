@@ -1,3 +1,8 @@
+draw_tilebox_ext(20,20,50,80,spr_colourbox,c_darkgray,1);
+draw_tilebox_ext(100,20,60,40,spr_colourbox,c_white,1);
+
+
+/*
 draw_set_font(ft_EvoSmallcaps_6);
 
 draw_textbutton(20,40,"Test",c_green);

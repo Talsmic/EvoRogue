@@ -1,0 +1,1 @@
+FocusLevel = 10;

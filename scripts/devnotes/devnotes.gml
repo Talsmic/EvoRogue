@@ -1,5 +1,16 @@
 /*
-																				
+
+MACROS
+localvariables
+InstanceVariables
+global.GlobalVariables
+
+Identations are done like this:
+if ( arg ) {
+	fn();
+	};
+I know this is not the common standard, but as I primarily work on this project 
+alone, I've selected the format I find easiest to read at a glance. 
 
 =[Prefixes]=====================================================================
 -[General]----------------------------------------------------------------------
@@ -21,16 +32,16 @@ advgen_		Adventure Generator / Roguelike Generator
 ================================================================================
 
 =[Focus Layers]=================================================================
--[0][Play Space]----------------------------------------------------------------
+-[10][Play Space]----------------------------------------------------------------
 Player moving in world and interacting with surroundings
--[1][Interact in Space]---------------------------------------------------------
+-[9][Interact in Space]---------------------------------------------------------
 Any interaction that locks movement without being a menu or overlay
--[2][Dialog Boxes]--------------------------------------------------------------
--[3][Menus in Space]------------------------------------------------------------
+-[8][Dialog Boxes]--------------------------------------------------------------
+-[7][Menus in Space]------------------------------------------------------------
 ...
 -[5][Overlay Menus]-------------------------------------------------------------
 ...
--[9][Debug Menus]---------------------------------------------------------------
+-[1][Debug Menus]---------------------------------------------------------------
 
 
 //Dividers (Width is 20 tabs)

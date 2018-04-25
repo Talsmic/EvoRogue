@@ -1,4 +1,4 @@
-/// @desc draw_text_outline_thick(x,y,string,colour,ol_colour,thickness);
+///draw_text_outline_thick(x,y,string,colour,ol_colour,thickness);
 /// @arg x			
 /// @arg y
 /// @arg string		

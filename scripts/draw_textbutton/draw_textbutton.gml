@@ -1,4 +1,4 @@
-/// @desc draw_textbutton(x,y,string,colour);
+///draw_textbutton(x,y,string,colour);
 /// @arg x			
 /// @arg y
 /// @arg string		
@@ -11,7 +11,7 @@ var X = argument0;
 var Y = argument1; 
 var _string = argument2; 
 var colour = argument3;
-if ( colour = c_white ) { var colour2 = c_black } else { var colour2 = c_white };
+if ( colour = c_white ) { var colour2 = c_darkgray } else { var colour2 = c_white };
 var height = string_height( _string ) - 2;
 var width = string_width( _string ) - 2;
 

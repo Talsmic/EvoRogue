@@ -1,0 +1,21 @@
+id#,r,name,element,energy,recharge,priority,tooltip,effects,icon,timeline,value
+1,D,Basic Attack,Physical,0,0,,Minor Physical|1 Damage|1#  Generates Energy|4,Damage|5|0.2|Physical; RestoreEnergy|5|0.2,9,tl_basicattack,5
+2,D,Wait,Physical,0,0,,Do nothing,,8,tl_wait,
+3,D,???,Physical,0,0,,,,,tl_wait,
+4,C,Strike,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+5,C,Fire Strike,Fire,10,0,,Fire|2 Damage|2,Damage|10|0.4|Fire,10,tl_strike,10
+6,C,Water Strike,Water,10,0,,Water|3 Damage|3,Damage|10|0.4|Water,10,tl_strike,10
+7,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
+8,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
+9,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10
+10,,,,,,,,,,,
+11,C,[T1] Damage,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
+12,B,[T2] Damage,Physical,20,1,,Physical|1 Damage|1,Damage|20|0.8|Physical,10,tl_strike,20
+13,B,[T3] Damage,Physical,30,2,,Physical|1 Damage|1,Damage|30|1.2|Physical,10,tl_strike,30
+14,A,[T4] Damage,Physical,40,3,,Physical|1 Damage|1,Damage|40|1.6|Physical,10,tl_strike,40
+15,A,[T5] Damage,Physical,50,5,,Physical|1 Damage|1,Damage|50|2.0|Physical,10,tl_strike,55
+16,B,[T2] Penetrating,Physical,20,1,,Physical|1 Damage|1# Penetrating,Damage|18|0.6|Physical; Penetrating|0.5,10,tl_strike,20
+17,B,[T2] Powerful,Physical,20,1,,Physical|1 Damage|1# Powerful,Damage|20|0.8|Physical; Powerful|0.5,10,tl_strike,20
+18,B,[T2] Arcing,Physical,20,1,,Physical|1 Damage|1# Arcing,Damage|20|0.8|Physical; Arcing,10,tl_strike,20
+19,B,[T2] Recoil,Physical,20,1,,Physical|1 Damage|1# Recoil [20%],Damage|25|0.8|Physical; Recoil|0.20,10,tl_strike,20
+20,B,[T2] Leech,Physical,20,1,,Physical|1 Damage|1# Leeching [25%],Damage|18|0.6|Physical; Leeching|0.25,10,tl_strike,20

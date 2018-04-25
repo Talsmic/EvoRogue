@@ -1,0 +1,44 @@
+id#,name,element,tooltip,icon,type,duration
+1,Stagger,Physical,Can't act next turn,101,Debuff,Turn
+2,Stun,Physical,Can't act this round,101,Debuff,Round
+4,Weaken,Physical,Damage reduced,90,Debuff,Round
+5,Expose,Physical,Takes increased damage,51,Debuff,Round
+5,Slow,Physical,Speed reduced,51,Debuff,Round
+6,,,,,,
+7,,,,,,
+8,Armor,Physical,Slightly reduces the damage taken from the next skill,97,Buff,Charge
+9,Guard,Physical,Dramatically reduces the damage taken from the next skill,98,Buff,Charge
+10,,,,,,
+11,Empower Physical,Physical,Next Physical|1 skill deals Increased|1 Damage|1,100,Buff,Charge
+12,Empower Fire,Fire,Next Fire|2 skill deals Increased|2 Damage|2,100,Buff,Charge
+13,Empower Earth,Earth,Next Earth|3 skill deals Increased|3 Damage|3,100,Buff,Charge
+14,Empower Water,Water,Next Water|4 skill deals Increased|4 Damage|4,100,Buff,Charge
+15,Empower Air,Air,Next Air|5 skill deals Increased|5 Damage|5,100,Buff,Charge
+16,Empower Nature,Nature,Next Nature|6 skill deals Increased|6 Damage|6,100,Buff,Charge
+17,Empower Frost,Frost,Next Frost|7 skill deals Increased|7 Damage|7,100,Buff,Charge
+18,Empower Shadow,Shadow,Next Shadow|8 skill deals Increased|8 Damage|8,100,Buff,Charge
+19,Empower Electric,Electric,Next Electric|9 skill deals Increased|9 Damage|9,100,Buff,Charge
+20,Empower Magic,Magic,Next Magic|10 skill deals Increased|10 Damage|10,100,Buff,Charge
+21,Wrap,Physical,Physical|1 Damage|1 each turn #Removed if either creature switches,13,Debuff,Round
+22,Burn,Fire,Fire|2 Damage|2 at the end of each round,102,Debuff,Round
+23,Poison,Nature,Nature|6 Damage|6 at the end of each round,103,Debuff,Round
+24,Corruption,Shadow,Shadow|8 Damage|8 at the end of each round,65,Debuff,Round
+25,Fever,Shadow,Shadow|8 Damage|8 at the end of each round #Increases in damage against low Recovery|14 targets,104,Debuff,Round
+26,Boost Power,Physical,,,Buff,Round
+27,Boost Fortitude,Physical,,,Buff,Round
+28,Boost Speed,Physical,,,Buff,Round
+29,Boost Recovery,Physical,,,Buff,Round
+30,Boost Potency,Physical,,,Buff,Round
+31,Bide,Physical,Delays this creature's next skill and increases Power each time damage is taken before that skill activates,106,Buff,Round
+32,Endure,Physical,This creature cannot be reduced below 1 health this round,71,Buff,Round
+33,Huddle,Physical,Damage taken reduced by 75% #Can not act this round,88,Buff,Round
+34,Critical,Physical,Next damaging skill will be a Critical|1 Hit|1,,Buff,Charge
+35,Dodge,Physical,Avoids the next contact or direct skill,,Buff,Charge
+36,,,,,,
+37,,,,,,
+38,,,,,,
+39,,,,,,
+40,,,,,,
+41,Burrowed,Earth,,,Stance,Round
+42,Flying,Air,,57,Stance,Round
+43,Rooted,Nature,,138,Stance,Round

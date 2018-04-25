@@ -7,7 +7,7 @@ var Y = argument1;
 //Draw Grid
 for ( var i=1 ; i<=adv_GridXSize ; i++ ) {
 	for ( var j=1 ; j<=adv_GridYSize ; j++ ) {
-			draw_sprite(spr_maptiles16x,0,X+16*i,Y+16*j);
+		draw_sprite(spr_maptiles16x,0,X+16*i,Y+16*j);
 		};
 	};
 
@@ -30,9 +30,6 @@ for ( var i=1 ; i<=adv_GridXSize ; i++ ) {
 		//Draw Chamber
 		if ( adv_TileRoomID[i,j] ) {
 			draw_sprite(spr_maptiles16x,2,X+16*i,Y+16*j);
-			//DB draw_set_colour(c_black);
-			//DB draw_set_font(ft_EvoTooltipCondensed_6);
-			//DB draw_text(X+16*i,Y+16*j,adv_TileRoomID[i,j]);
 			};
 		//Draw Paths
 		if ( adv_TileConnectsUp[i,j] ) {

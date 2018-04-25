@@ -1,4 +1,4 @@
-/// @desc draw_textbutton_gui(x,y,string,colour,roll_colour,height_padding,width_padding);
+///draw_textbutton_gui(x,y,string,colour,roll_colour,height_padding,width_padding);
 /// @arg x			
 /// @arg y
 /// @arg string		

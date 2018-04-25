@@ -1,0 +1,17 @@
+{
+    "id": "cd73bd2b-e643-479b-b4d3-1e49d18cd14c",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "cd73bd2b-e643-479b-b4d3-1e49d18cd14c",
+    "children": [
+        "0932b2d1-d8b3-47f2-992f-6f3ddcddbffb",
+        "f5b68877-07e0-4b24-8d1b-1cbbce65837b",
+        "7d5134ff-2c4e-4916-a360-051220e250d4",
+        "58c2d368-4e61-479e-b739-7a48db052bab",
+        "5076535f-e76a-43df-843c-97a6b029d185"
+    ],
+    "filterType": "GMScript",
+    "folderName": "Tileboxes",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}

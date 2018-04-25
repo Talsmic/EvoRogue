@@ -1,4 +1,4 @@
-/// @desc draw_text_outline(x,y,string,colour);
+///draw_text_outline(x,y,string,colour);
 /// @arg x			
 /// @arg y
 /// @arg string		

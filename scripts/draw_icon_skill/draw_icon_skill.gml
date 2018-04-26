@@ -19,17 +19,8 @@ var icon_recharge = round(10*frac(argument5));
 
 //State Detection
 if ( icon_state == eIconState.detect ) {
-	var icon_width = floor(icon_size);
-	var icon_height = frac(icon_size);
-	if ( icon_height == 0 ) { icon_height = icon_width };
-	var region;
-	region[1] = X-icon_width*0.5-3;		//[1] X1 [Integer]
-	region[2] = Y-icon_height*0.5-2;	//[2] Y1 [Integer]
-	region[3] = X+icon_width*0.5+1;		//[3] X2 [Integer]
-	region[4] = Y+icon_height*0.5+2;	//[4] Y2 [Integer]
-	
 	if ( infocus() ) {
-		if ( point_in_rectangle( mouse_x, mouse_y, region[1], region[2], region[3], region[4] ) ) {
+		if ( mouse_in_region( define_region_icon( X,Y,icon_size ) ) ) {
 			if ( mouse_check_button(mb_left) ) {
 				icon_state = eIconState.pressed
 				}

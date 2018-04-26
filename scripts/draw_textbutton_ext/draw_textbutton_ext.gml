@@ -20,20 +20,12 @@ var width = string_width( _string ) - 2;
 var height_padding = argument5; 
 var width_padding = argument6; 
 
-
-
-var region;
-region[1] = X-width_padding;			//[1] X1 [Integer]
-region[2] = Y-height_padding;			//[2] Y1 [Integer]
-region[3] = X+width+width_padding*2;	//[3] X2 [Integer]
-region[4] = Y+height+height_padding*2;	//[4] Y2 [Integer]
-
 //Draw Shadow
 draw_text_flatcolour( X+1,Y+1,_string,c_black,0.8 );
 //Draw Text
 draw_text_flatcolour( X,Y,_string,colour,1 );
 /*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 //Draw Hover
-if ( point_in_rectangle( mouse_x, mouse_y, region[1], region[2], region[3], region[4] ) ) {
+if ( mouse_in_region( define_region( X-width_padding,Y-height_padding,width+width_padding,height+height_padding ) ) ) {
 	draw_text_flatcolour( X,Y,_string,colour2,1 );
 	};

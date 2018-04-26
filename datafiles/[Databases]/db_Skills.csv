@@ -8,7 +8,7 @@ id#,r,name,element,energy,recharge,priority,tooltip,effects,icon,timeline,value
 7,C,Air Strike,Air,10,0,,Air|4 Damage|4,Damage|10|0.4|Air,10,tl_strike,10
 8,C,Nature Strike,Nature,10,0,,Nature|5 Damage|5,Damage|10|0.4|Nature,10,tl_strike,10
 9,C,Shadow Strike,Shadow,10,0,,Shadow|6 Damage|6,Damage|10|0.4|Shadow,10,tl_strike,10
-10,,,,,,,,,,,
+10,A,Ultimate Testeration,Nature,45,3,-20,Shadow|6 Damage|6#  Generates Energy|4#  Generates Energy|4#  Generates Energy|4,Damage|10|0.4|Shadow; RestoreEnergy|5|0.2; RestoreEnergy|5|0.2; RestoreEnergy|5|0.2; RestoreEnergy|5|0.2,10,tl_strike,10
 11,C,[T1] Damage,Physical,10,0,,Physical|1 Damage|1,Damage|10|0.4|Physical,10,tl_strike,10
 12,B,[T2] Damage,Physical,20,1,,Physical|1 Damage|1,Damage|20|0.8|Physical,10,tl_strike,20
 13,B,[T3] Damage,Physical,30,2,,Physical|1 Damage|1,Damage|30|1.2|Physical,10,tl_strike,30

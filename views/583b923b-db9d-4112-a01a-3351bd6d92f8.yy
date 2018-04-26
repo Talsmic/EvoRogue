@@ -4,10 +4,11 @@
     "mvc": "1.1",
     "name": "583b923b-db9d-4112-a01a-3351bd6d92f8",
     "children": [
-        "0ed8653f-498b-42d0-b703-b44ac4b49dfc"
+        "39cc4102-8d81-457b-8d6f-6061677c398c",
+        "11b13fc8-3880-4e83-9d74-481eb2133779"
     ],
     "filterType": "GMScript",
-    "folderName": "Window Structures",
+    "folderName": "[Window Structures]",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

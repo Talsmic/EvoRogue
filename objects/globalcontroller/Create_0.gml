@@ -13,7 +13,7 @@ Options_Fullscreen = false;
 Options_ResolutionSnap = false; //Should the game snap resolution every frame?
 
 ResolutionSnapNextFrame = true; //Should the resolution snap at the next frame?
-ResolutionSnap_Magnification = 2;
+ResolutionSnap_Magnification = 3;
 ResolutionSnap_Center = false;
 
 //GUI Debug Tools

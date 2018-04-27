@@ -20,5 +20,8 @@ ResolutionSnap_Center = false;
 Draw = false;
 Draw_FocusLevel = true;
 Draw_FrameRate = true;
+Draw_Beat = true;
 
 load_settings();
+
+Beat = beat_create(5,0.1);

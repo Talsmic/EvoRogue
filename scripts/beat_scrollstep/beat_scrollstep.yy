@@ -1,8 +1,8 @@
 {
-    "id": "033815a5-ce29-466c-99e1-2408127e6b45",
+    "id": "6c2d741b-357a-4a6a-9155-93269acaff68",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "window_listbox_lefthold",
+    "name": "beat_scrollstep",
     "IsCompatibility": false,
     "IsDnD": false
 }

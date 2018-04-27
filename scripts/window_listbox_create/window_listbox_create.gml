@@ -16,11 +16,16 @@ Listbox_Y = y;
 
 Listbox_Position = 1;	
 Listbox_Row_Starting = 1;
-Listbox_Row_Count = 1;		//Self Correcting
 Listbox_Row_Length = 5;
 Listbox_Column_Length = 5;
 Listbox_List_Length = 1;	//Self Correcting
 Listbox_WordWidth = 150;
 	
-Listbox_Beat = 0;
-Listbox_BeatCount = 5;
+Listbox_TabEnabled = false;
+Listbox_TabArray = array_create(2,"ToggleIDs");
+Listbox_TabArray[0] = 1;	//Pointer
+Listbox_ShiftTabEnabled = false;
+Listbox_ShiftTabArray = array_create(2,"ToggleIDs");
+Listbox_ShiftTabArray[0] = 1;	//Pointer
+Listbox_ScrollSize = 1;
+Listbox_ScrollLoop = false;

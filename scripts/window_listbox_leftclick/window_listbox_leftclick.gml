@@ -16,7 +16,7 @@ var range_start = Listbox_Row_Starting * Listbox_Row_Length - Listbox_Row_Length
 var range_end = range_start + Listbox_Row_Length * Listbox_Column_Length - 1;
 if ( range_end > Listbox_List_Length ) { range_end = Listbox_List_Length };
 
-//Check Buttons
+//Buttons
 switch ( Listbox_Mode ) {
 	case "Icons":
 		var _x = Listbox_X+18; var _y = Listbox_Y+20; 
@@ -41,30 +41,22 @@ switch ( Listbox_Mode ) {
 		break;
 	};
 	
-//Scroll
+//Scroll Bars
 switch ( Listbox_Mode ) {
 	case "Icons":
 		//Up Scroll
 		if ( mouse_in_region( define_region( Listbox_X-1,Listbox_Y-2,Listbox_Row_Length*30+6,6 ) ) ) {
-			Listbox_Row_Starting -= 1;
-			window_listbox_scrollloop();
-			};
+			window_listbox_command("ScrollUp")	};
 		//Down Scroll
 		if ( mouse_in_region( define_region( Listbox_X-1,Listbox_Y+Listbox_Column_Length*31+4,Listbox_Row_Length*30+6,6 ) ) ) {
-			Listbox_Row_Starting -= 1;
-			window_listbox_scrollloop();	
-			};
+			window_listbox_command("ScrollDown")	};
 		break;
 	case "Words":
 		//Up Scroll
 		if ( mouse_in_region( define_region( Listbox_X-1,Listbox_Y-2,Listbox_Row_Length*Listbox_WordWidth+6,6 ) ) ) {
-			Listbox_Row_Starting -= 1;
-			window_listbox_scrollloop();
-			};
+			window_listbox_command("ScrollUp")	};
 		//Down Scroll
 		if ( mouse_in_region( define_region( Listbox_X-1,Listbox_Y+Listbox_Column_Length*10+4,Listbox_Row_Length*Listbox_WordWidth+6,6 ) ) ) {
-			Listbox_Row_Starting -= 1;
-			window_listbox_scrollloop();
-			};
+			window_listbox_command("ScrollDown")	};
 		break;
 	};

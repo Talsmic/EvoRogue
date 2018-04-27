@@ -9,8 +9,7 @@
         "6d44d4e8-a69b-4d7e-b1ad-68b98cf0f249",
         "033815a5-ce29-466c-99e1-2408127e6b45",
         "7768bb2a-2886-44a9-877e-57e330a248a9",
-        "dcf14386-62cc-4e85-9cfc-7b9d7b6d1182",
-        "6e508fe1-eb83-46f3-9b57-2036e0255cd1"
+        "2dffdecc-fc81-4f56-b9e2-425c3d544d56"
     ],
     "filterType": "GMScript",
     "folderName": "Listbox",

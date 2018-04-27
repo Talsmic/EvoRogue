@@ -10,7 +10,7 @@ var ref = argument0;
 // "DB_Skill"		Displays the database info of a skill
 
 //Requires the following variables to be pre-established:
-Databox_Type[ref] = "DB_Skill"
+Databox_Type[ref] = "DB_Skills"
 Databox_Pointer[ref] = 1;
 
 Databox_X[ref] = x;

@@ -1,23 +1,27 @@
 FocusLevel = 5;
 
-Mode = "Skills"
+Mode = "Creatures"
 X = 20;
 Y = 20;
 
 window_listbox_create();
-	Listbox_Mode = "Icons";
-	Listbox_IconType = "DB_Skill";
-	Listbox_ShowID = true;
-	Listbox_ListIcon = db_pull_columnasarray("db_Skills","id");
-	Listbox_ListWords = db_pull_columnasarray("db_Skills","name");
-	Listbox_ListColour = db_pull_columnasarray("db_Skills","element");
+	window_listbox_command("ParentMode:Creatures");
+	window_listbox_command("Mode:Words");
+	
+	Listbox_ShowID = true;	
 	Listbox_X = X;
 	Listbox_Y = Y+25;
-	Listbox_Row_Length = 4;
-	Listbox_Column_Length = 5;
+	
 	Listbox_WordWidth = 120;
+	Listbox_TabEnabled = true;
+	Listbox_TabArray[1] = "ToggleScrollLoop";
+	Listbox_ShiftTabEnabled = true;
+	Listbox_ShiftTabArray[1] = "Mode:Icons";
+	Listbox_ShiftTabArray[2] = "Mode:Words";
 
 window_databox_create(1);
 	Databox_Type[1] = "DB_Skill"
 	Databox_X[1] = X+130;
 	Databox_Y[1] = Y+25;
+	
+ScrollBeat = beat_create(15,1);

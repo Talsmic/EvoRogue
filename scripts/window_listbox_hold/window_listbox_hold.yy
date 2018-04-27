@@ -1,8 +1,8 @@
 {
-    "id": "dcf14386-62cc-4e85-9cfc-7b9d7b6d1182",
+    "id": "033815a5-ce29-466c-99e1-2408127e6b45",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "window_listbox_scrollsnap",
+    "name": "window_listbox_hold",
     "IsCompatibility": false,
     "IsDnD": false
 }

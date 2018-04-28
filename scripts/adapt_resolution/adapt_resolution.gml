@@ -1,17 +1,16 @@
 ///adapt_resolution();
-var minimum_width = 480;
-var minimum_height = 270;
-var ideal_width = 480;
-var ideal_height = 270;
-var breakpoints_width = [0,ideal_width,ideal_width*2,ideal_width*3,ideal_width*4,ideal_width*5];
-var breakpoints_height = [0,ideal_height,ideal_height*2,ideal_height*3,ideal_height*4,ideal_height*5];
+var breakpoints_width = [0,Resolution_IdealWidth,Resolution_IdealWidth*2,Resolution_IdealWidth*3,Resolution_IdealWidth*4,Resolution_IdealWidth*5];
+var breakpoints_height = [0,Resolution_IdealHeight,Resolution_IdealHeight*2,Resolution_IdealHeight*3,Resolution_IdealHeight*4,Resolution_IdealHeight*5];
 
 //Fullscreen
-window_set_fullscreen(Options_Fullscreen);
+if ( window_get_fullscreen() != Options_Fullscreen ) {
+	ResolutionSnapNextFrame = true;
+	window_set_fullscreen(Options_Fullscreen);
+	};
 
 //Resolution Snap
 if ( ResolutionSnapNextFrame == true ) {
-	window_set_size( ResolutionSnapNextFrame_magnification*ideal_width, ResolutionSnapNextFrame_magnification*ideal_height );
+	window_set_size( ResolutionSnap_Magnification*Resolution_IdealWidth, ResolutionSnap_Magnification*Resolution_IdealHeight );
 	ResolutionSnapNextFrame = false;
 	};
 
@@ -24,10 +23,10 @@ for ( var i=1 ; i<5 ; i++ ) {
 	};
 
 //Enforce Minimums
-if ( window_get_width() < minimum_width ) { window_set_size( minimum_width, window_get_height() )  };
-if ( window_get_height() < minimum_height ) { window_set_size( window_get_width(), minimum_height )  };
-window_set_min_width(minimum_width);
-window_set_min_height(minimum_height);
+if ( window_get_width() < Resolution_MinWidth ) { window_set_size( Resolution_MinWidth, window_get_height() )  };
+if ( window_get_height() < Resolution_MinHeight ) { window_set_size( window_get_width(), Resolution_MinHeight )  };
+window_set_min_width(Resolution_MinWidth);
+window_set_min_height(Resolution_MinHeight);
 
 //Adapt Cursor
 switch ( real_magnification ) {
@@ -38,5 +37,9 @@ switch ( real_magnification ) {
 	};
 
 //Adapt GUI Layer
-var a = application_get_position();
-display_set_gui_maximise(real_magnification,real_magnification,a[0],a[1]);
+if ( Resolution_GUIsnap ) {
+	var a = application_get_position();
+	Resolution_GUIxOffset = a[0];
+	Resolution_GUIyOffset = a[1];
+	};
+display_set_gui_maximise(real_magnification,real_magnification,Resolution_GUIxOffset,Resolution_GUIyOffset);

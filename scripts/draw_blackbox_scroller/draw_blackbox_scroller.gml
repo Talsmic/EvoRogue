@@ -4,7 +4,7 @@
 /// @arg length		
 /// @arg direction
 /// @arg state
-/*
+/*	
 	[Edited 24/4/2018] (Variant of draw_tilebox_ext)
 	Draws a coloured, semi-transparent UI box with rounded corners 
 */
@@ -17,9 +17,9 @@ var state = argument4;
 var draw_colour = c_midgray;
 
 //State Detection
-if ( state == eIconState.detect ) {
+if ( state == eIconState.detectGUI ) {
 	if ( infocus() ) {
-		if ( mouse_in_region( define_region( X-1,Y-2,length,6 ) ) ) {
+		if ( mouse_in_region_gui( define_region( X-1,Y-2,length,6 ) ) ) {
 			if ( mouse_check_button(mb_left) ) {
 				state = eIconState.pressed
 				}

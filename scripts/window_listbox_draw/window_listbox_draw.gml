@@ -30,11 +30,11 @@ if ( Listbox_List_Length > Listbox_Row_Length * Listbox_Column_Length ) {
 	if ( Listbox_Row_Starting == 1 and !Listbox_ScrollLoop ) {	
 		draw_blackbox_scroller(Listbox_X,Listbox_Y,box_width,UP,eIconState.disabled)	};
 	else {		
-		draw_blackbox_scroller(Listbox_X,Listbox_Y,box_width,UP,eIconState.detect)	};
+		draw_blackbox_scroller(Listbox_X,Listbox_Y,box_width,UP,eIconState.detectGUI)	};
 	if ( Listbox_Row_Starting > ceil( Listbox_List_Length / Listbox_Row_Length ) - Listbox_Column_Length and !Listbox_ScrollLoop ) {	
 		draw_blackbox_scroller(Listbox_X,Listbox_Y+box_height-4,box_width,DOWN,eIconState.disabled)	};
 	else {	
-		draw_blackbox_scroller(Listbox_X,Listbox_Y+box_height-4,box_width,DOWN,eIconState.detect)	};	
+		draw_blackbox_scroller(Listbox_X,Listbox_Y+box_height-4,box_width,DOWN,eIconState.detectGUI)	};	
 	};
 	
 //Draw List
@@ -49,9 +49,9 @@ switch ( Listbox_Mode ) {
 			if ( array_length_1d(Listbox_ListColour) < i ) { Listbox_ListColour[i] = c_white };			
 			//Draw Icon
 			if ( Listbox_IconType = "Skill" ) {
-				draw_icon_skill(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detect) };
+				draw_icon_skill(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detectGUI) };
 			if ( Listbox_IconType = "DB_Skill" ) {
-				draw_icon_dbskill(_x,_y,24,Listbox_ListIcon[i],eIconState.detect) };
+				draw_icon_dbskill(_x,_y,24,Listbox_ListIcon[i],eIconState.detectGUI) };
 			//Draw Focus
 			if ( i == Listbox_Position ) { draw_sprite_ext(spr_icon_halo_24x24,1,_x,_y,1,1,0,c_orange,0.5) };		
 			//Draw ID

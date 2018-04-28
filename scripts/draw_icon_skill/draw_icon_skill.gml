@@ -18,9 +18,9 @@ var icon_state = floor(argument5);
 var icon_recharge = round(10*frac(argument5));
 
 //State Detection
-if ( icon_state == eIconState.detect ) {
+if ( icon_state == eIconState.detectGUI ) {
 	if ( infocus() ) {
-		if ( mouse_in_region( define_region_icon( X,Y,icon_size ) ) ) {
+		if ( mouse_in_region_gui( define_region_icon( X,Y,icon_size ) ) ) {
 			if ( mouse_check_button(mb_left) ) {
 				icon_state = eIconState.pressed
 				}

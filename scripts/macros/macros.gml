@@ -65,6 +65,6 @@ enum eCreatureState {
 
 //Misc
 enum eIconState { 
-	disabled, enabled, mouseover, pressed, disabled_recharge, disabled_energy, detect	};
+	disabled, enabled, mouseover, pressed, disabled_recharge, disabled_energy, detectGUI, detectroom	};
 
 

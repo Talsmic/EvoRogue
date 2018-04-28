@@ -8,8 +8,8 @@
 */
 
 var skill = argument0;
-var X = argument1; //mouse_x+2;
-var Y = argument2; //mouse_y+10;
+var X = argument1; //global.gui_mouse_x+2;
+var Y = argument2; //global.gui_mouse_y+10;
 
 //Pull from Database
 var tt_header = db_record_get("db_Skills",skill,"name");

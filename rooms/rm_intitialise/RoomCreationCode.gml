@@ -1,3 +1,3 @@
-database_create();
+game_intialise();
 
 room_goto_next();

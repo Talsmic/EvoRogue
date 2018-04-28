@@ -1,6 +1,18 @@
 if ( Draw == false ) { return };
 
-var draw_offset = window_get_width()/window_get_scaling() - 22;
+var window_width = window_get_width()/window_get_scaling();
+var window_height = window_get_height()/window_get_scaling();
+var draw_offset = window_width - 22;
+
+if ( Draw_Mouse ) {
+	draw_set_font(ft_EvoTooltip_6);
+	draw_text_outline_coloured(window_width-80,window_height-30,"Mouse:",c_white,c_gray);
+	draw_text_outline_coloured(window_width-100,window_height-20,"GUI Mouse:",c_white,c_gray);
+	draw_text_outline_coloured(window_width-100,window_height-10,"View Mouse:",c_white,c_gray);
+	draw_text_outline_coloured(window_width-40,window_height-30,string(mouse_x)+","+string(mouse_y),c_orange,c_black);
+	draw_text_outline_coloured(window_width-40,window_height-20,string(global.gui_mouse_x)+","+string(global.gui_mouse_y),c_orange,c_black);
+	draw_text_outline_coloured(window_width-40,window_height-10,string(window_view_mouse_get_x(0))+","+string(window_view_mouse_get_y(0)),c_orange,c_black);
+	};
 	
 draw_set_halign(fa_center);
 

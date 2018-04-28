@@ -25,7 +25,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "globalcontroler000","id": "4b4144da-82ed-4a53-9f07-d3e715299520","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "globalcontroler000","objId": "9cc70321-30ea-435c-8244-0b3451cc3519","properties": null,"rotation": 0,"scaleX": -1,"scaleY": -1,"mvc": "1.0","x": 0,"y": 0}
+{"name": "globalcontroller0","id": "4b4144da-82ed-4a53-9f07-d3e715299520","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "globalcontroller0","objId": "9cc70321-30ea-435c-8244-0b3451cc3519","properties": null,"rotation": 0,"scaleX": -1,"scaleY": -1,"mvc": "1.0","x": 0,"y": 0}
             ],
             "layers": [
 

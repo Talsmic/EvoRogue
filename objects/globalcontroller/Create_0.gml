@@ -1,5 +1,7 @@
 global.Player1 = instance_create_depth(0,0,0,playercontainer);
 global.DefaultOpponent = instance_create_depth(0,0,0,playercontainer);
+global.gui_mouse_x = 0;
+global.gui_mouse_y = 0;
 
 var_initialize();
 
@@ -9,19 +11,22 @@ FocusPrevious = 10;
 depth = -1;
 
 //Options
-Options_Fullscreen = false;
-Options_ResolutionSnap = false; //Should the game snap resolution every frame?
 
-ResolutionSnapNextFrame = true; //Should the resolution snap at the next frame?
-ResolutionSnap_Magnification = 3;
-ResolutionSnap_Center = false;
+//Resolution
+resolution_defaults();
 
 //GUI Debug Tools
 Draw = false;
 Draw_FocusLevel = true;
 Draw_FrameRate = true;
 Draw_Beat = true;
+Draw_Mouse = true;
 
 load_settings();
+
+//Apply Resolution Settings
+ResolutionSnap_Magnification = Options_Magnification;
+adapt_resolution();
+display_reset(0, Options_Vsync);
 
 Beat = beat_create(5,0.1);

@@ -79,9 +79,9 @@ switch ( argument0 ) {
 		Mode = "Creatures"
 		Listbox_IconType = "DB_Creature";
 		Listbox_Position = 1;
-		Listbox_ListIcon = db_pull_columnasarray("db_Skills","id");
-		Listbox_ListWords = db_pull_columnasarray("db_Skills","name");
-		Listbox_ListColour = db_pull_columnasarray("db_Skills","element");
+		Listbox_ListIcon = db_pull_columnasarray("db_Creatures","id");
+		Listbox_ListWords = db_pull_columnasarray("db_Creatures","name");
+		Listbox_ListColour = db_pull_columnasarray("db_Creatures","element");
 		window_listbox_command("Mode:Words");
 		break;
 	};

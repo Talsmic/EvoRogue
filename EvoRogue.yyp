@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "17d39384-6d98-4cde-8c83-cd1f99dcbbca",
+            "Value": {
+                "id": "4605d745-37a1-4c71-bf61-1c0de020d0d0",
+                "resourcePath": "scripts\\draw_icon_creature\\draw_icon_creature.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "18868d74-3087-4452-9492-af8b538dea53",
             "Value": {
                 "id": "8c1dce87-4f61-46f5-b404-61a09cbd697a",
@@ -2309,6 +2317,7 @@
         "d459e7cf-d0ea-485a-b532-3a7d2f139150",
         "65c3020c-11e5-4c1c-a72f-6569ae8a3225",
         "fc0605ca-c61c-4ddc-89be-0d56f91bd9a4",
+        "17d39384-6d98-4cde-8c83-cd1f99dcbbca",
         "c5b58879-6316-4ce8-852c-817cb9a75267",
         "ee305f03-65b7-4680-bbca-7f35f3ce8c7e",
         "f5030c1c-1ed7-4f8d-8c7d-cb11b6f0f330",

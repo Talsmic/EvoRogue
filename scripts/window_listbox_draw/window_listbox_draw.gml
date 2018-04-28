@@ -51,11 +51,15 @@ switch ( Listbox_Mode ) {
 			if ( Listbox_IconType = "Skill" ) {
 				draw_icon_skill(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detectGUI) };
 			if ( Listbox_IconType = "DB_Skill" ) {
-				draw_icon_dbskill(_x,_y,24,Listbox_ListIcon[i],eIconState.detectGUI) };
+				draw_icon_dbskill(_x,_y,24,i,eIconState.detectGUI) };
+			if ( Listbox_IconType = "Creature" ) {
+				draw_icon_creature(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detectGUI) };
+			if ( Listbox_IconType = "DB_Creature" ) {
+				draw_icon_dbcreature(_x,_y,24,i,eIconState.detectGUI) };
 			//Draw Focus
-			if ( i == Listbox_Position ) { draw_sprite_ext(spr_icon_halo_24x24,1,_x,_y,1,1,0,c_orange,0.5) };		
+			if ( i == Listbox_Position ) { draw_sprite_ext(spr_icon_halo_24x24,1,_x,_y,1,1,0,c_orange,0.75) };		
 			//Draw ID
-			if ( Listbox_ShowID ) { draw_text_outline_coloured(_x+12,_y+6,Listbox_ListIcon[i],c_lightgray,c_darkgray) };	
+			if ( Listbox_ShowID ) { draw_text_outline_coloured(_x+12,_y+6,i,c_lightgray,c_darkgray) };	
 			//Progress Locations
 			_x += 30;
 			if ( _x > Listbox_X+Listbox_Row_Length*30 ) { _x = Listbox_X+18; _y += 31 };

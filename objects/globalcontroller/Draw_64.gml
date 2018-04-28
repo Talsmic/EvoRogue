@@ -1,4 +1,5 @@
-if ( Draw == false ) { return };
+/*Debugmode Required*/ if ( !DebugMode ) { return };
+if ( !Draw ) { return };
 
 var window_width = window_get_width()/window_get_scaling();
 var window_height = window_get_height()/window_get_scaling();

@@ -16,6 +16,8 @@ depth = -1;
 resolution_defaults();
 
 //GUI Debug Tools
+DebugMode = debug_mode;
+
 Draw = false;
 Draw_FocusLevel = true;
 Draw_FrameRate = true;

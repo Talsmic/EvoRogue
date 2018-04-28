@@ -29,8 +29,8 @@ switch ( command ) {
 			if ( Listbox_Row_Starting > rowcount - Listbox_Column_Length ) { Listbox_Row_Starting = 1 };		
 			};
 		else {
-			if ( Listbox_Row_Starting < 1 ) { Listbox_Row_Starting = 1 };
 			if ( Listbox_Row_Starting > rowcount - Listbox_Column_Length ) { Listbox_Row_Starting = rowcount - Listbox_Column_Length };		
+			if ( Listbox_Row_Starting < 1 ) { Listbox_Row_Starting = 1 };
 			};
 		break;
 		
@@ -40,8 +40,8 @@ switch ( command ) {
 			if ( Listbox_Position > Listbox_List_Length ) { Listbox_Position = 1 };		
 			};
 		else {
-			if ( Listbox_Position < 1 ) { Listbox_Position = 1 };
 			if ( Listbox_Position > Listbox_List_Length ) { Listbox_Position = Listbox_List_Length };		
+			if ( Listbox_Position < 1 ) { Listbox_Position = 1 };
 			};
 		//Find Visible Range
 		var range_start = Listbox_Row_Starting * Listbox_Row_Length - Listbox_Row_Length + 1;
@@ -57,6 +57,7 @@ switch ( command ) {
 		Listbox_Column_Length = 5;
 		Listbox_Row_Starting = ceil( Listbox_Position / Listbox_Row_Length );
 		Listbox_ScrollSize = 1;
+		window_listbox_command("scrollloop");
 		ScrollBeat = beat_create(15,1);
 		break;
 		
@@ -66,6 +67,7 @@ switch ( command ) {
 		Listbox_Column_Length = 16;
 		Listbox_Row_Starting = Listbox_Position;
 		Listbox_ScrollSize = 5;
+		window_listbox_command("scrollloop");
 		ScrollBeat = beat_create(5,1);
 		break;
 		
@@ -73,7 +75,7 @@ switch ( command ) {
 		Mode = "Skills"
 		Listbox_IconType = "DB_Skill";
 		Listbox_Position = 1;
-		Listbox_ListIcon = db_pull_columnasarray("db_Skills","id");
+		Listbox_ListIcon = db_pull_columnasarray("db_Skills","icon");
 		Listbox_ListWords = db_pull_columnasarray("db_Skills","name");
 		Listbox_ListColour = db_pull_columnasarray("db_Skills","element");
 		window_listbox_command("Mode:Icons");
@@ -83,7 +85,7 @@ switch ( command ) {
 		Mode = "Creatures"
 		Listbox_IconType = "DB_Creature";
 		Listbox_Position = 1;
-		Listbox_ListIcon = db_pull_columnasarray("db_Creatures","id");
+		Listbox_ListIcon = db_pull_columnasarray("db_Creatures","icon");
 		Listbox_ListWords = db_pull_columnasarray("db_Creatures","name");
 		Listbox_ListColour = db_pull_columnasarray("db_Creatures","element");
 		window_listbox_command("Mode:Words");

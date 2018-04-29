@@ -15,12 +15,20 @@ if ( ResolutionSnapNextFrame == true ) {
 	};
 
 //Detect Real Magnification Level
-var real_magnification = 1;
+Resolution_Magnification = 1;
 for ( var i=1 ; i<5 ; i++ ) {
 	if ( window_get_width() >= breakpoints_width[i] and window_get_height() >= breakpoints_height[i] ) {
-		real_magnification = i;
+		Resolution_Magnification = i;
 		};
 	};
+	
+//Update Stored Dimensions
+Resolution_Width	= window_get_width()/Resolution_Magnification;
+Resolution_Height	= window_get_height()/Resolution_Magnification;
+Resolution_CoreWidth	= Resolution_IdealWidth * Resolution_Magnification;
+Resolution_CoreHeight	= Resolution_IdealHeight * Resolution_Magnification;
+Resolution_PadWidth		= Resolution_Width - Resolution_CoreWidth;
+Resolution_PadHeight	= Resolution_Height - Resolution_CoreHeight;
 
 //Enforce Minimums
 if ( window_get_width() < Resolution_MinWidth ) { window_set_size( Resolution_MinWidth, window_get_height() )  };
@@ -43,3 +51,5 @@ if ( Resolution_GUIsnap ) {
 	Resolution_GUIyOffset = a[1];
 	};
 display_set_gui_maximise(real_magnification,real_magnification,Resolution_GUIxOffset,Resolution_GUIyOffset);
+
+flex_view(0);

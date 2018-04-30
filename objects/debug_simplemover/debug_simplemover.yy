@@ -2,7 +2,7 @@
     "id": "67e90f40-ecaa-4870-a1e5-f823437bf43a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "debug_simpleroomexplorer",
+    "name": "debug_simplemover",
     "eventList": [
         {
             "id": "a9445898-cf2d-4e8d-8d35-24717e4c510c",
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "6db7ea41-36fd-41ea-b46c-ca9ccf7614b2",
     "visible": true
 }

@@ -1,5 +1,5 @@
-global.Player1 = instance_create_depth(0,0,0,playercontainer);
-global.DefaultOpponent = instance_create_depth(0,0,0,playercontainer);
+global.Player1 = instance_create_depth(0,0,0,oPlayer);
+global.DefaultOpponent = instance_create_depth(0,0,0,oPlayer);
 global.gui_mouse_x = 0;
 global.gui_mouse_y = 0;
 
@@ -33,5 +33,7 @@ adapt_resolution();
 display_reset(0, Options_Vsync);
 window_set_min_width( Resolution_MinWidth );
 window_set_min_height( Resolution_MinHeight );
+alarm[1] = 10;
+application_surface_draw_enable(false);
 
 Beat = beat_create(5,0.1);

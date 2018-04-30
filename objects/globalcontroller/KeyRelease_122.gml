@@ -1,5 +1,4 @@
-/// @desc [Debug] Commandline
+/// @desc [Debug] Toggle Drawing
 /*Debugmode Required*/ if ( !DebugMode ) { return };
 
-var command = get_string("Global Controller Commandline:"," ");
-globalcontroller_command( command );
+Draw = toggle(Draw);

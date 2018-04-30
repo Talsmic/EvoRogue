@@ -1,8 +1,20 @@
 ///adapt_resolution();
 
 //Define Breakpoints
-var breakpoints_width = [0,Resolution_MinWidth,Resolution_MinWidth*2,Resolution_MinWidth*3,Resolution_MinWidth*4,Resolution_MinWidth*5];
-var breakpoints_height = [0,Resolution_MinHeight,Resolution_MinHeight*2,Resolution_MinHeight*3,Resolution_MinHeight*4,Resolution_MinHeight*5];
+var breakpoints_width = [	0,
+							Resolution_MinWidth,
+							Resolution_IdealWidth+Resolution_MinWidth,
+							Resolution_IdealWidth*2+Resolution_MinWidth,
+							Resolution_IdealWidth*3+Resolution_MinWidth,
+							Resolution_IdealWidth*4+Resolution_MinWidth
+							];
+var breakpoints_height = [	0,
+							Resolution_MinHeight,
+							Resolution_IdealHeight+Resolution_MinHeight,
+							Resolution_IdealHeight*2+Resolution_MinHeight,
+							Resolution_IdealHeight*3+Resolution_MinHeight,
+							Resolution_IdealHeight*4+Resolution_MinHeight
+							];
 
 //Fullscreen
 if ( window_get_fullscreen() != Options_Fullscreen ) {
@@ -30,19 +42,24 @@ for ( var i=1 ; i<5 ; i++ ) {
 		Resolution_Magnification = i;
 		};
 	};
+if ( Options_LockedMagnification ) {	Resolution_Magnification = Options_Magnification	};
 	
 //Update Stored Dimensions
 Resolution_CompleteWidth	= ceil( window_get_width() / Resolution_Magnification );
 Resolution_CompleteHeight	= ceil( window_get_height() / Resolution_Magnification );
-Resolution_PadWidth			= Resolution_CompleteWidth - Resolution_IdealWidth;
-Resolution_PadHeight		= Resolution_CompleteHeight - Resolution_IdealHeight;
+if ( Resolution_CompleteWidth > Resolution_MaxWidth ) {	Resolution_PlayableWidth = Resolution_MaxWidth };
+	else {	Resolution_PlayableWidth	= Resolution_CompleteWidth };
+if ( Resolution_CompleteHeight > Resolution_MaxHeight ) {	Resolution_PlayableHeight = Resolution_MaxHeight };
+	else {	Resolution_PlayableHeight	= Resolution_CompleteHeight };
+Resolution_PadWidth			= Resolution_PlayableWidth - Resolution_IdealWidth;
+Resolution_PadHeight		= Resolution_PlayableHeight - Resolution_IdealHeight;
 
 //Adapt Cursor
 switch ( Resolution_Magnification ) {
-	case 1: default:	cursor_sprite = spr_cursor;		break;
+	case 1: 			cursor_sprite = spr_cursor;		break;
 	case 2:				cursor_sprite = spr_cursor_x2;	break;
 	case 3:				cursor_sprite = spr_cursor_x3;	break;
-	case 4:				cursor_sprite = spr_cursor_x4;	break;
+	case 4:	default:	cursor_sprite = spr_cursor_x4;	break;
 	};
 
 //Adapt GUI Layer
@@ -56,11 +73,15 @@ else {
 	Resolution_GUIxOffset = 0;
 	Resolution_GUIyOffset = 0;
 	};
-display_set_gui_maximise(Resolution_Magnification,Resolution_Magnification,Resolution_GUIxOffset,Resolution_GUIyOffset);
+display_set_gui_maximise( Resolution_Magnification, Resolution_Magnification, Resolution_GUIxOffset, Resolution_GUIyOffset );
 
 //AdaptView
 flex_view(0);
 
 //Adapt Application Surface
-surface_resize(application_surface, Resolution_CompleteWidth, Resolution_CompleteHeight);
-//window_set_size(Resolution_CompleteWidth*Resolution_Magnification,Resolution_CompleteHeight*Resolution_Magnification);
+surface_resize( application_surface, Resolution_PlayableWidth, Resolution_PlayableHeight );
+/*if (	window_get_width() != Resolution_CompleteWidth*Resolution_Magnification or
+		window_get_height() != Resolution_CompleteHeight*Resolution_Magnification ) {
+	window_set_size( Resolution_CompleteWidth*Resolution_Magnification, Resolution_CompleteHeight*Resolution_Magnification );
+	ResolutionCenterNextFrame = true;
+	};

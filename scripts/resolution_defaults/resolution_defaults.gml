@@ -3,16 +3,22 @@
 Options_Fullscreen = false;
 Options_ResolutionSnap = false; 
 Options_Magnification = 3;
+Options_LockedMagnification = false;
 Options_Vsync = false; //Should the game snap resolution every frame?
 
 Resolution_IdealWidth		= 480;
 Resolution_IdealHeight		= 270;
 Resolution_MinWidth			= 400;
 Resolution_MinHeight		= 200;
+Resolution_MaxWidth			= 512;
+Resolution_MaxHeight		= 384;
+
+Resolution_Magnification	= 3;
 
 Resolution_CompleteWidth	= 480;
 Resolution_CompleteHeight	= 270;
-Resolution_Magnification	= 3;
+Resolution_PlayableWidth	= 480;
+Resolution_PlayableHeight	= 270;
 Resolution_PadWidth			= 0;
 Resolution_PadHeight		= 0;
 Resolution_ViewWidth		= 0;

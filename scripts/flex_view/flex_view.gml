@@ -8,13 +8,13 @@ var view = argument0;
 //Adjust the view size to fit the screen
 view_xport[view] = 0;
 view_yport[view] = 0;
-view_wport[view] = Resolution_CompleteWidth;
-view_hport[view] = Resolution_CompleteHeight;
+view_wport[view] = Resolution_PlayableWidth;
+view_hport[view] = Resolution_PlayableHeight;
 camera_set_view_size( view_camera[view], view_wport[view], view_hport[view] );
 
 //Adjust the view location if the view size has changed
-var width_change = Resolution_ViewWidth - Resolution_CompleteWidth;
-var height_change = Resolution_ViewHeight - Resolution_CompleteHeight;
+var width_change = Resolution_ViewWidth - Resolution_PlayableWidth;
+var height_change = Resolution_ViewHeight - Resolution_PlayableHeight;
 if ( width_change != 0 or height_change != 0 ) {
 	camera_set_view_pos( view_camera[view], camera_get_view_x(view_camera[view]) + floor(width_change*0.5), camera_get_view_y(view_camera[view]) + floor(height_change*0.5) );
 	};

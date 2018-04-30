@@ -8,6 +8,7 @@ ini_open("settings.ini");
 //=[Video Settings]==================================================
 Options_Fullscreen = ini_read_real("video", "fullscreen", 0);
 Options_Magnification = ini_read_real("video", "scale", 3);
+Options_LockedMagnification = ini_read_real("video", "lockedscale", false);
 Options_Vsync = ini_read_real("video", "vsync", false);
 //===================================================================
 

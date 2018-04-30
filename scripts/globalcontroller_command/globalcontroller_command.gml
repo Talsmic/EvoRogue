@@ -7,6 +7,17 @@ command = string_lower( command );
 
 switch ( command ) {
 	
+	//Options
+	case "fullscreen":		Options_Fullscreen = toggle(Options_Fullscreen);
+							ResolutionSnapNextFrame = true;								break;
+	case "scale":			Options_Magnification = get_integer("Screen Scale:",3);
+							ResolutionSnap_Magnification = Options_Magnification;
+							ResolutionSnapNextFrame = true;								break;
+	case "lockedscale":		Options_LockedMagnification = toggle(Options_LockedMagnification);
+							ResolutionSnap_Magnification = Options_Magnification;
+							ResolutionSnapNextFrame = true;								break;
+	case "vsync":			Options_Vsync = toggle(Options_Vsync);						break;
+	
 	//Debug Drawing
 	case "draw":				Draw = toggle(Draw);	break;
 	case "drawfocus":			Draw = true; Draw_FocusLevel = toggle(Draw_FocusLevel);	break;
@@ -22,7 +33,7 @@ switch ( command ) {
 						window_set_size(input,window_get_height());						break;
 	case "ressety":		var input = get_integer("Screen Height:",270);		
 						window_set_size(window_get_width(),input);						break;
-	case "magnification":	case "screenscale":		case "scale":
+	case "magnification":
 						ResolutionSnap_Magnification = get_integer("Screen Magnification:",3);		
 						ResolutionSnapNextFrame = true;									break;
 	

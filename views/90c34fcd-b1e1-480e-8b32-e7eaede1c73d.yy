@@ -6,7 +6,8 @@
     "children": [
         "23d61730-a252-42e0-8c26-385b55d9fa83",
         "0f4f448f-ef71-45a1-ae2d-03b1f83452e3",
-        "5423d2a0-5c65-40cd-b3d2-b307de10de77"
+        "5423d2a0-5c65-40cd-b3d2-b307de10de77",
+        "bdcea45b-52c5-4a24-ab1e-88686e1d970a"
     ],
     "filterType": "GMScript",
     "folderName": "Window Adjustments",

@@ -2,13 +2,12 @@
 #macro VERSION "Roguelite V0.1"
 
 //Directions
-#macro STOP 0
-#macro UP 1
-#macro RIGHT 2
-#macro DOWN 3
-#macro LEFT 4
-#macro FORWARD 5
-#macro BACKWARD 6
+#macro UP 0
+#macro LEFT 90
+#macro DOWN 180
+#macro RIGHT 270
+#macro VERTICAL 1
+#macro HORIZONTAL 2
 enum eDirection {	
 	stop, up, right, down, left, forward, backward	};
 
@@ -65,6 +64,6 @@ enum eCreatureState {
 
 //Misc
 enum eIconState { 
-	disabled, enabled, mouseover, pressed, disabled_recharge, disabled_energy, detectGUI, detectroom	};
+	disabled, enabled, mouseover, pressed, disabled_recharge, disabled_energy, detectGUI, detectroom, focus	};
 
 

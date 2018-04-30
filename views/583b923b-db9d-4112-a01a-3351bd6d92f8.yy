@@ -6,7 +6,8 @@
     "children": [
         "39cc4102-8d81-457b-8d6f-6061677c398c",
         "11b13fc8-3880-4e83-9d74-481eb2133779",
-        "7b6f0565-cf46-4ee9-aa21-be9e5b3a705b"
+        "7b6f0565-cf46-4ee9-aa21-be9e5b3a705b",
+        "54131c65-f473-46cf-b8e0-4b6cac3318bd"
     ],
     "filterType": "GMScript",
     "folderName": "[Window Structures]",

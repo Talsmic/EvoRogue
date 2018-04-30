@@ -1,8 +1,8 @@
 /*Debugmode Required*/ if ( !DebugMode ) { return };
 if ( !Draw ) { return };
 
-var window_width = window_get_width()/window_get_scaling();
-var window_height = window_get_height()/window_get_scaling();
+var window_width = Resolution_CompleteWidth//window_get_width() / window_get_scaling();
+var window_height = Resolution_CompleteHeight//window_get_height() / window_get_scaling();
 var draw_offset = window_width - 22;
 
 if ( Draw_Mouse ) {

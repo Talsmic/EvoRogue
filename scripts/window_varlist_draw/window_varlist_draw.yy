@@ -1,8 +1,8 @@
 {
-    "id": "97c24a7b-3fa5-4472-9414-1c730e38235b",
+    "id": "7a5104e1-5ae5-4f23-a5f5-ecc765e922e3",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "window_get_scaling",
+    "name": "window_varlist_draw",
     "IsCompatibility": false,
     "IsDnD": false
 }

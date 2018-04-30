@@ -7,12 +7,26 @@ command = string_lower( command );
 
 switch ( command ) {
 	
+	//Debug Drawing
 	case "draw":				Draw = toggle(Draw);	break;
 	case "drawfocus":			Draw = true; Draw_FocusLevel = toggle(Draw_FocusLevel);	break;
 	case "drawframerate":		Draw = true; Draw_FrameRate = toggle(Draw_FrameRate);	break;
 	case "drawbeat":			Draw = true; Draw_Beat = toggle(Draw_Beat);				break;
 	case "drawmouse":			Draw = true; Draw_Mouse = toggle(Draw_Mouse);			break;
 	
+	//Resolution
+	case "resminx":		Resolution_MinWidth	= get_integer("Minimum Width:",400);		break;
+	case "resminy":		Resolution_MinHeight= get_integer("Minimum Height:",200);		break;
+	case "guisnap":		Resolution_GUIsnap = toggle(Resolution_GUIsnap);				break;
+	case "ressetx":		var input = get_integer("Screen Width:",480);		
+						window_set_size(input,window_get_height());						break;
+	case "ressety":		var input = get_integer("Screen Height:",270);		
+						window_set_size(window_get_width(),input);						break;
+	case "magnification":	case "screenscale":		case "scale":
+						ResolutionSnap_Magnification = get_integer("Screen Magnification:",3);		
+						ResolutionSnapNextFrame = true;									break;
+	
+	//Debug Databases
 	case "opendatabase":
 		if ( !instance_exists(debug_databasebrowser) ) {
 			DatabaseBrowser = instance_create_depth(0,0,5,debug_databasebrowser)	};

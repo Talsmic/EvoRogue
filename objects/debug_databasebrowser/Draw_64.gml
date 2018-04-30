@@ -17,4 +17,4 @@ window_listbox_draw();
 window_databox_draw(1);
 //------------------------------------------------------------------------------
 
-draw_cornercross(globalcontroller.Resolution_Width,0,spr_cornerX,eIconState.detectGUI);
+draw_cornercross(globalcontroller.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);

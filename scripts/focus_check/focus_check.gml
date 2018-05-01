@@ -5,5 +5,5 @@
 
 var value = argument0;
 
-if ( globalcontroller.FocusLevel >= value ) { return true };
+if ( oGlobalController.FocusLevel >= value ) { return true };
 return false;

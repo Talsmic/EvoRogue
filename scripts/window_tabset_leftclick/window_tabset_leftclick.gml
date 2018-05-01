@@ -35,6 +35,10 @@ switch ( Tabset_Side[ref] ) {
 		var Y = Tabset_Y[ref]+tabheight+1;	
 		break;
 	};
+if ( Tabset_Orientation[ref] == RIGHT or Tabset_Orientation[ref] == LEFT ) {
+	var tabwidth = Tabset_TabHeight[ref]; 
+	var tabheight = Tabset_TabWidth[ref];
+	};
 	
 //Buttons
 for ( var i=1 ; i<array_length_2d(Tabset_List,ref) ; i++ ) {

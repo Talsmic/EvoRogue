@@ -7,7 +7,7 @@
 if ( variable_instance_exists(id,"FocusLevel") == false ) { return true }; 
 
 //If Focus is being tracked and is too low for the object, return false
-if ( globalcontroller.FocusLevel < FocusLevel ) { return false };
+if ( oGlobalController.FocusLevel < FocusLevel ) { return false };
 
 //Otherwise, assume the object is in focus and return true
 return true;

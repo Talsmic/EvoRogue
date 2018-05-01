@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_debugmenu",
+    "name": "rm_DebugMenu",
     "id": "dfdcd067-d033-475c-aeab-90659f6325d1",
     "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,

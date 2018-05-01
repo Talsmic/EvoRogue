@@ -5,6 +5,13 @@ localvariables
 InstanceVariables
 global.GlobalVariables
 
+oObject
+btnButton
+
+rm_Room
+
+spr_Sprite
+
 Identations are done like this:
 if ( arg ) {
 	fn();
@@ -13,11 +20,6 @@ I know this is not the common standard, but as I primarily work on this project
 alone, I've selected the format I find easiest to read at a glance. 
 
 =[Prefixes]=====================================================================
--[General]----------------------------------------------------------------------
-obj_		Object
-rm_			Room
-
-btn_		A button Object
 -[Variables]--------------------------------------------------------------------
 adv_		Adventure / Roguelike Mode
 

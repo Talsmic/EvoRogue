@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_battle",
+    "name": "rm_Battle",
     "id": "ceea95e1-d1a5-4268-9008-ad3ca22ef8f8",
     "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,

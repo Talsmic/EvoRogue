@@ -35,16 +35,16 @@ switch ( mode ) {
 							Options_LockedMagnification,
 							Options_Vsync,
 							" ",
-							globalcontroller.Resolution_Magnification, 
-							string(globalcontroller.Resolution_IdealWidth)+", "+string(globalcontroller.Resolution_IdealHeight), 
-							string(globalcontroller.Resolution_MinWidth)+", "+string(globalcontroller.Resolution_MinHeight), 
-							string(globalcontroller.Resolution_MaxWidth)+", "+string(globalcontroller.Resolution_MaxHeight), 
-							string(globalcontroller.Resolution_CompleteWidth)+", "+string(globalcontroller.Resolution_CompleteHeight), 
-							string(globalcontroller.Resolution_PlayableWidth)+", "+string(globalcontroller.Resolution_PlayableHeight), 
-							string(globalcontroller.Resolution_PadWidth)+", "+string(globalcontroller.Resolution_PadHeight), 
-							string(globalcontroller.Resolution_GUIxOffset)+", "+string(globalcontroller.Resolution_GUIyOffset),
-							globalcontroller.Resolution_GUIsnap, 
-							string(globalcontroller.Resolution_ViewWidth)+", "+string(globalcontroller.Resolution_ViewHeight) 
+							oGlobalController.Resolution_Magnification, 
+							string(oGlobalController.Resolution_IdealWidth)+", "+string(oGlobalController.Resolution_IdealHeight), 
+							string(oGlobalController.Resolution_MinWidth)+", "+string(oGlobalController.Resolution_MinHeight), 
+							string(oGlobalController.Resolution_MaxWidth)+", "+string(oGlobalController.Resolution_MaxHeight), 
+							string(oGlobalController.Resolution_CompleteWidth)+", "+string(oGlobalController.Resolution_CompleteHeight), 
+							string(oGlobalController.Resolution_PlayableWidth)+", "+string(oGlobalController.Resolution_PlayableHeight), 
+							string(oGlobalController.Resolution_PadWidth)+", "+string(oGlobalController.Resolution_PadHeight), 
+							string(oGlobalController.Resolution_GUIxOffset)+", "+string(oGlobalController.Resolution_GUIyOffset),
+							oGlobalController.Resolution_GUIsnap, 
+							string(oGlobalController.Resolution_ViewWidth)+", "+string(oGlobalController.Resolution_ViewHeight) 
 							];
 		var col_width = [120,50];
 		break;

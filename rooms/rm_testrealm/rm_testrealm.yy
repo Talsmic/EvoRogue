@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_testrealm",
+    "name": "rm_TestRealm",
     "id": "aaa5d7fe-21a0-4b17-acdb-e43710dba402",
     "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,

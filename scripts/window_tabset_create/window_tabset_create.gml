@@ -24,7 +24,7 @@ Tabset_FontHeight[ref] = 7;
 Tabset_TabSpace[ref] = 1;
 Tabset_Side[ref] = UP;
 Tabset_Direction[ref] = LEFT;
-Tabset_Orientation[ref] = VERTICAL;
+Tabset_Orientation[ref] = UP;
 
 Tabset_Colour_Tab[ref] = c_black;
 Tabset_Colour_TabHover[ref] = c_darkgray;

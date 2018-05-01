@@ -1,4 +1,4 @@
-///globalcontroller_command(command);
+///oGlobalController_command(command);
 /// @arg command
 var command = argument0;
 //Sanitise command
@@ -39,17 +39,17 @@ switch ( command ) {
 	
 	//Debug Databases
 	case "opendatabase":
-		if ( !instance_exists(debug_databasebrowser) ) {
-			DatabaseBrowser = instance_create_depth(0,0,5,debug_databasebrowser)	};
+		if ( !instance_exists(oDatabaseBrowser) ) {
+			DatabaseBrowser = instance_create_depth(0,0,5,oDatabaseBrowser)	};
 		break;
 	case "opendatabaseskills": case "opendatabaseskill":
-		if ( !instance_exists(debug_databasebrowser) ) {
-			DatabaseBrowser = instance_create_depth(0,0,5,debug_databasebrowser)	};
+		if ( !instance_exists(oDatabaseBrowser) ) {
+			DatabaseBrowser = instance_create_depth(0,0,5,oDatabaseBrowser)	};
 		with ( DatabaseBrowser ) { window_listbox_command("parentmodeskills") };
 		break;
 	case "opendatabasecreatures": case "opendatabasecreature":
-		if ( !instance_exists(debug_databasebrowser) ) {
-			DatabaseBrowser = instance_create_depth(0,0,5,debug_databasebrowser)	};
+		if ( !instance_exists(oDatabaseBrowser) ) {
+			DatabaseBrowser = instance_create_depth(0,0,5,oDatabaseBrowser)	};
 		with ( DatabaseBrowser ) { window_listbox_command("parentmodecreatures") };
 		break;
 		

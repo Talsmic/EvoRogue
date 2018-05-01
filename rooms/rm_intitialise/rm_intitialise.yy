@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_intitialise",
+    "name": "rm_Intitialise",
     "id": "8348a764-0ee4-435f-ab23-3c01e235463d",
     "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,

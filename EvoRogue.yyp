@@ -178,7 +178,7 @@
             "Key": "108eb05a-8812-4af4-82e9-fa78e06d4e29",
             "Value": {
                 "id": "9015bf21-9152-476b-ae6c-ecb15911eb1f",
-                "resourcePath": "objects\\obj_testrealm\\obj_testrealm.yy",
+                "resourcePath": "objects\\oTestRealm\\oTestRealm.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1122,7 +1122,7 @@
             "Key": "67e90f40-ecaa-4870-a1e5-f823437bf43a",
             "Value": {
                 "id": "493c3630-4a17-4dc8-ae8a-573052449998",
-                "resourcePath": "objects\\debug_simplemover\\debug_simplemover.yy",
+                "resourcePath": "objects\\oSimpleMover\\oSimpleMover.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1362,7 +1362,7 @@
             "Key": "8348a764-0ee4-435f-ab23-3c01e235463d",
             "Value": {
                 "id": "2f44098c-45d2-4368-a65a-0278328362d6",
-                "resourcePath": "rooms\\rm_intitialise\\rm_intitialise.yy",
+                "resourcePath": "rooms\\rm_Intitialise\\rm_Intitialise.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1506,7 +1506,7 @@
             "Key": "99aa2013-0558-4039-8219-e393695b7546",
             "Value": {
                 "id": "f0449da5-9fc2-40dc-867d-1995730266e6",
-                "resourcePath": "objects\\debug_menucontroller\\debug_menucontroller.yy",
+                "resourcePath": "objects\\oDebugMenu\\oDebugMenu.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1530,7 +1530,7 @@
             "Key": "9cc70321-30ea-435c-8244-0b3451cc3519",
             "Value": {
                 "id": "c5a6ecc8-7c1d-406f-bef2-e86420015cc0",
-                "resourcePath": "objects\\globalcontroller\\globalcontroller.yy",
+                "resourcePath": "objects\\oGlobalController\\oGlobalController.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1610,7 +1610,7 @@
             "Key": "aa388b4f-c7d5-4869-94f8-cc566e6dacc7",
             "Value": {
                 "id": "ac088b24-cc8c-4613-b294-863ad437cf49",
-                "resourcePath": "objects\\debug_scalegrid\\debug_scalegrid.yy",
+                "resourcePath": "objects\\oSimpleGrid\\oSimpleGrid.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1618,7 +1618,7 @@
             "Key": "aaa5d7fe-21a0-4b17-acdb-e43710dba402",
             "Value": {
                 "id": "ca2d6e60-65c1-4f51-bc53-82699e6ab557",
-                "resourcePath": "rooms\\rm_testrealm\\rm_testrealm.yy",
+                "resourcePath": "rooms\\rm_TestRealm\\rm_TestRealm.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -2010,7 +2010,7 @@
             "Key": "ceea95e1-d1a5-4268-9008-ad3ca22ef8f8",
             "Value": {
                 "id": "1a5d64b8-466b-4c6e-adfc-9dcc79968287",
-                "resourcePath": "rooms\\rm_battle\\rm_battle.yy",
+                "resourcePath": "rooms\\rm_Battle\\rm_Battle.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -2106,7 +2106,7 @@
             "Key": "da7b7492-7704-421c-846f-507f1f46f2f6",
             "Value": {
                 "id": "be532a78-dcf4-4096-93b7-89c4e2c8bc84",
-                "resourcePath": "objects\\debug_databasebrowser\\debug_databasebrowser.yy",
+                "resourcePath": "objects\\oDatabaseBrowser\\oDatabaseBrowser.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2114,7 +2114,7 @@
             "Key": "dfdcd067-d033-475c-aeab-90659f6325d1",
             "Value": {
                 "id": "d7bd3856-417b-48f2-9ec9-78f8c2b3427a",
-                "resourcePath": "rooms\\rm_debugmenu\\rm_debugmenu.yy",
+                "resourcePath": "rooms\\rm_DebugMenu\\rm_DebugMenu.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -2250,7 +2250,7 @@
             "Key": "e9e1872c-d354-48f9-b712-1a3e3b4eec07",
             "Value": {
                 "id": "3b118ec8-be11-4dff-82ab-3cb163fca73e",
-                "resourcePath": "objects\\debug_advgen\\debug_advgen.yy",
+                "resourcePath": "objects\\oDebugAdventureGen\\oDebugAdventureGen.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2426,7 +2426,7 @@
             "Key": "fad3f7d4-7ee0-45cc-8a45-b333847dad2e",
             "Value": {
                 "id": "edebc8c9-eaa6-49e3-97b0-77f80620ee5e",
-                "resourcePath": "rooms\\rm_advgen\\rm_advgen.yy",
+                "resourcePath": "rooms\\rm_AdventureGen\\rm_AdventureGen.yy",
                 "resourceType": "GMRoom"
             }
         },

@@ -4,4 +4,4 @@
 
 var value = argument0;
 
-if ( value < globalcontroller.FocusLevel ) { globalcontroller.FocusLevel = value };
+if ( value < oGlobalController.FocusLevel ) { oGlobalController.FocusLevel = value };

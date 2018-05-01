@@ -1,3 +1,3 @@
 ///focus_get();
 
-return globalcontroller.FocusLevel
+return oGlobalController.FocusLevel

@@ -20,11 +20,12 @@ Tabset_Y[ref] = y;
 Tabset_TabWidth[ref] = 40;
 Tabset_TabHeight[ref] = 11;
 Tabset_Font[ref] = ft_EvoTooltipBold_6;
-Tabset_FontHeight[ref] = 7;
+Tabset_FontHeight[ref] = 6;
 Tabset_TabSpace[ref] = 1;
-Tabset_Side[ref] = UP;
-Tabset_Direction[ref] = LEFT;
-Tabset_Orientation[ref] = UP;
+
+Tabset_AttachToSide[ref] = UP;
+Tabset_ListDirection[ref] = LEFT;
+Tabset_Rotation[ref] = NONE;
 
 Tabset_Colour_Tab[ref] = c_black;
 Tabset_Colour_TabHover[ref] = c_darkgray;

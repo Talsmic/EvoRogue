@@ -22,7 +22,7 @@ if ( width_change != 0 or height_change != 0 ) {
 //Room Specific Anchors
 switch ( room ) {
 	default:				var fixed_X = -1; 		var fixed_Y = -1;		break;
-	case rm_debugmenu:		var fixed_X = 240; 		var fixed_Y = 135;		break;	
+	case rm_DebugMenu:		var fixed_X = 240; 		var fixed_Y = 135;		break;	
 	};
 //Apply Archors
 if ( fixed_X >= 0 or fixed_Y >= 0 ) {	

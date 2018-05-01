@@ -1,9 +1,5 @@
-global.Player1 = instance_create_depth(0,0,0,oPlayer);
-global.DefaultOpponent = instance_create_depth(0,0,0,oPlayer);
 global.gui_mouse_x = 0;
 global.gui_mouse_y = 0;
-
-var_initialize();
 
 window_set_colour(c_black);
 FocusLevel = 10;

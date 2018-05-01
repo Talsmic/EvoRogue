@@ -1,5 +1,5 @@
 id#,name,elementA,bPower,gPower,bFortitude,gFortitude,bSpeed,gSpeed,bRecovery,gRecovery,bPotency,gPotency,skills_core,passives_core,skills,sprite,icon,shadow
-1,Lumbark,Physical,6,0.8,3,0.5,8,0.8,4.5,0.5,4.6,0.4,Basic Attack,Momentum,Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike,sprite_lumbark,1,6
+1,Lumbark,Physical,6,0.8,3,0.5,8,0.8,4.5,0.5,4.6,0.4,Basic Attack,Momentum,Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike,sprite_lumbark,1,6
 2,Hoglet,Physical,5,0.7,6,0.7,5,0.7,5,0.6,4,0.3,Basic Attack,Stubborn Stand,Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike,sprite_hoglet,2,10
 3,Foren,Physical,7,0.8,5,0.6,7,0.8,3.2,0.3,3,0.5,Basic Attack,Heavy Impact,Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike,sprite_foren,5,9
 4,Cinder,Fire,8,0.8,2,0.3,5,0.6,4.4,0.6,6,0.7,Basic Attack,Essence Fuel,Strike; Fire Strike; Water Strike; Air Strike; Nature Strike; Shadow Strike,sprite_cinder,3,21

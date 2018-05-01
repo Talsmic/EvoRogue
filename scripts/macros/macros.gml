@@ -1,6 +1,8 @@
 //Game
 #macro VERSION "Roguelite V0.1"
 
+#macro NONE 0
+
 //Directions
 #macro UP 0
 #macro LEFT 90

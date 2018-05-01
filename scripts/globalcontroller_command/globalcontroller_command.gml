@@ -1,4 +1,4 @@
-///oGlobalController_command(command);
+///globalcontroller_command(command);
 /// @arg command
 var command = argument0;
 //Sanitise command

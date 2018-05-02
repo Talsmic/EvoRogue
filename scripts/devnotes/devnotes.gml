@@ -34,7 +34,8 @@ advgen_		Adventure Generator / Roguelike Generator
 ================================================================================
 
 =[Focus Layers]=================================================================
--[10][Play Space]----------------------------------------------------------------
+-[11+][Background]--------------------------------------------------------------
+-[10][Play Space]---------------------------------------------------------------
 Player moving in world and interacting with surroundings
 -[9][Interact in Space]---------------------------------------------------------
 Any interaction that locks movement without being a menu or overlay

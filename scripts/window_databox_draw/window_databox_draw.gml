@@ -5,7 +5,7 @@ var ref = argument0;
 //Draw Databox
 switch ( Databox_Type[ref] ) {
 	
-	case "DB_Skills":
+	case "DB_Skills": #region
 		var effects_string = db_record_get("db_Skills",Databox_Pointer[ref],"effects");
 		effects_string = string_replace_all(effects_string,"; ","\n");
 		var width = 200;
@@ -55,9 +55,9 @@ switch ( Databox_Type[ref] ) {
 		draw_icon_dbskill(Databox_X[ref]+width-16,Databox_Y[ref]+59,24,Databox_Pointer[ref],1)
 		//Draw Tooltip
 		draw_tooltip_skill(Databox_Pointer[ref],Databox_X[ref],Databox_Y[ref]+height+3);
-		break;
+		break; #endregion
 		
-	case "DB_Creatures":
+	case "DB_Creatures": #region
 		var width = 164;
 		var height = 25;
 		//Draw Box
@@ -77,9 +77,9 @@ switch ( Databox_Type[ref] ) {
 		id_string = string_replace_all(id_string," ","0");
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,id_string);
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,db_record_get("db_Creatures",Databox_Pointer[ref],"name"));
-		break;	
+		break; #endregion
 		
-	case "DB_Creatures1": //Stats
+	case "DB_Creatures1": #region Creature Stats 
 		var width = 164;
 		var att_width = floor((width-4)/5);
 		var height = 87;
@@ -145,9 +145,9 @@ switch ( Databox_Type[ref] ) {
 		draw_set_halign(fa_left);
 		//Draw Icon
 		draw_icon_dbcreature(Databox_X[ref]+width-16,Databox_Y[ref]+39,24,Databox_Pointer[ref],1);
-		break;
+		break; #endregion
 		
-	case "DB_Creatures3":
+	case "DB_Creatures3": #region Creature Skills
 		var skillset = DBcreature_skillset(Databox_Pointer[ref]);
 		var skillset_core = DBcreature_skillset_core(Databox_Pointer[ref]);
 		var width = 246;
@@ -183,5 +183,120 @@ switch ( Databox_Type[ref] ) {
 			};
 		//Draw Tooltip
 		if ( tooltip ) { draw_tooltip_skill( tooltip, global.gui_mouse_x+2, global.gui_mouse_y+10 ) };
-		break;
+		break; #endregion
+	
+	case "PlayerContainer": #region
+		var width = 167;
+		var height = 46;
+		//Draw Box
+		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
+		//Draw Fields
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+12,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+33,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+33,width-40,11,c_midgray,0.3);
+		//Draw Headers
+		draw_set_font(ft_EvoTooltip_6);
+		draw_set_colour(c_midgray);
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"ID:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+24,"Tag:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Name:");
+		//Draw Data
+		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_colour(c_lightgray);
+		var id_string = string(Databox_Pointer[ref]);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,id_string);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,"["+Databox_Pointer[ref].PlayerTag+"]");
+		draw_text_flatcolour(Databox_X[ref]+42,Databox_Y[ref]+34,Databox_Pointer[ref].PlayerName,Databox_Pointer[ref].PlayerColour,1);
+		break; #endregion
+		
+	case "StorageCreature": #region
+		var p = Databox_Pointer[ref];
+		var player = Databox_Pointer[1];
+		if ( player.Stored_Status[p] == eCreatureState.nonexistant ) { return false };
+		var width = 140;
+		var height = 109;
+		//Draw Box
+		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
+		//Draw Fields
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+12,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+12,width-40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+33,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+33,width-40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+54,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+54,40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+75,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+96,width-4,11,c_midgray,0.3);
+		//Draw Headers
+		draw_set_font(ft_EvoTooltip_6);
+		draw_set_colour(c_midgray);
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"ID:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+3,"Name:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+24,"State:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Species:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Level:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+45,"Exp:");
+		draw_text(Databox_X[ref]+80,Databox_Y[ref]+45,"Nature:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+87,"Traits:");
+		//Draw Data
+		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_colour(c_lightgray);
+		var inparty = creatureinparty(player,p);
+		if ( inparty ) {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(inparty)) };
+			else	   {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,p) };
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,player.Stored_Name[p]);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,player.Stored_Status[p]);
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,db_record_get("db_Creatures",player.Stored_Species[p],"name"));
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+55,player.Stored_Level[p]);
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+55,player.Stored_Exp[p]);
+		draw_text(Databox_X[ref]+82,Databox_Y[ref]+55,player.Stored_Nature[p]);
+		draw_set_font(ft_EvoTooltip_6);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+76,player.Stored_SkillString[p]);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+97,player.Stored_TraitString[p]);
+		break; #endregion
+		
+	case "PartyCreature": #region
+		var p = Databox_Pointer[ref];
+		var player = Databox_Pointer[1];
+		if ( player.Party_Status[p] == eCreatureState.nonexistant ) { return false };
+		var width = 140;
+		var height = 109;
+		//Draw Box
+		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
+		//Draw Fields
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+12,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+12,width-40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+33,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+33,width-40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+54,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+54,40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+75,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+96,width-4,11,c_midgray,0.3);
+		//Draw Headers
+		draw_set_font(ft_EvoTooltip_6);
+		draw_set_colour(c_midgray);
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"ID:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+3,"Name:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+24,"State:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Species:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Level:");
+		draw_text(Databox_X[ref]+40,Databox_Y[ref]+45,"Exp:");
+		draw_text(Databox_X[ref]+80,Databox_Y[ref]+45,"Nature:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+87,"Traits:");
+		//Draw Data
+		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_colour(c_lightgray);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(player.Party_StoredID[p]));
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,player.Party_Name[p]);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,player.Party_Status[p]);
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,db_record_get("db_Creatures",player.Party_Species[p],"name"));
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+55,player.Party_Level[p]);
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+55,player.Party_Exp[p]);
+		draw_text(Databox_X[ref]+82,Databox_Y[ref]+55,player.Party_Nature[p]);
+		draw_set_font(ft_EvoTooltip_6);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+76,player.Party_SkillString[p]);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+97,player.Party_TraitString[p]);
+		break; #endregion
+		
 	};

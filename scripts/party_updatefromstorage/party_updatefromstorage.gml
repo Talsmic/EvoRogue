@@ -1,4 +1,4 @@
-/// @desc party_updatefromstorage(player,party_member);
+///party_updatefromstorage(player,party_member);
 /// @arg player
 /// @arg party_member
 /*
@@ -9,7 +9,7 @@ var party_member = argument1;
 var slot = player.Party_StoredID[party_member];
 
 //Fail to update if no slot ID
-if ( slot == 0 ) { return false };
+if ( slot <= 0 ) { return false };
 //Fail to update if no creature in slot
 if ( player.Stored_Status[slot] == eCreatureState.nonexistant ) { return false };
 

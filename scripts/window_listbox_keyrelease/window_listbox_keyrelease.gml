@@ -19,8 +19,8 @@ if ( KeyIns ) {
 	};
 
 //Tab
-if ( KeyTab ) {		
-	if ( keyboard_check(vk_shift) ) {
+if ( KeyTab and Listbox_TabEnabled ) {		
+	if ( keyboard_check(vk_shift) and Listbox_ShiftTabEnabled ) {
 		Listbox_ShiftTabArray[0] += 1;
 		if ( Listbox_ShiftTabArray[0] >= array_length_1d(Listbox_ShiftTabArray) ) { Listbox_ShiftTabArray[0] = 1 };
 		var tabmode = Listbox_ShiftTabArray[Listbox_ShiftTabArray[0]];

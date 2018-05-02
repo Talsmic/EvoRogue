@@ -1,5 +1,6 @@
-PlayerName = "Default"
-PlayerTag = "P1"
+PlayerName = "Default";
+PlayerTag = "P1";
+PlayerColour = c_nature;
 
 Draw = false;
 
@@ -17,6 +18,7 @@ for ( var i=1 ; i<=StorageSize ; i++ ) {
 //for stored creatures
 PartySize = global.gps_partysize;
 for ( var i=1 ; i<=PartySize ; i++ ) {
+	Party_Status[i] = eCreatureState.nonexistant;
 	Party_StoredID[i] = 0;
 	Party_Skill[i,0] = 0;
 	Party_Trait[i,0] = 0;

@@ -1,4 +1,4 @@
-/// @desc [Debug][DB] Creatures
+/// @desc [Debug] PlayerManager
 /*Debugmode Required*/ if ( !DebugMode ) { return };
 
-globalcontroller_command( "opendatabasecreatures" );
+globalcontroller_command( "openplayermanager" );

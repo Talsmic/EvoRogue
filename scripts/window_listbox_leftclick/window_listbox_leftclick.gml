@@ -2,14 +2,7 @@
 /*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 		
 //Find Correct List Length
-switch ( Listbox_Mode ) {
-	case "Icons": default:
-		Listbox_List_Length = array_length_1d(Listbox_ListIcon)-1;
-		break;
-	case "Words": default:
-		Listbox_List_Length = array_length_1d(Listbox_ListWords)-1;
-		break;
-	};
+window_listbox_command("ListLength");
 
 //Define visual range
 var range_start = Listbox_Row_Starting * Listbox_Row_Length - Listbox_Row_Length + 1;

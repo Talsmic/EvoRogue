@@ -39,4 +39,4 @@ repeat 20 {
 	};
 player.Stored_SkillString[slot] = array_to_skillstring(skillarray);
 
-player.Stored_TraitString[slot] = "";
+player.Stored_TraitString[slot] = array_to_skillstring(skillarray);

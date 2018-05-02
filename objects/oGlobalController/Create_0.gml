@@ -2,8 +2,9 @@ global.gui_mouse_x = 0;
 global.gui_mouse_y = 0;
 
 window_set_colour(c_black);
-FocusLevel = 10;
+FocusCurrent = 10;
 FocusPrevious = 10;
+FocusCheck = 10;
 depth = -1;
 
 //Options

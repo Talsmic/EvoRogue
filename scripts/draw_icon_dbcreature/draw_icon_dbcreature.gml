@@ -16,7 +16,7 @@ var icon_state = floor(argument4);
 	
 //Pull from Database
 if ( icon_creature ) {
-	var icon = db_record_get("db_Creatures",icon_creature,"icon");
+	var icon = real(db_record_get("db_Creatures",icon_creature,"icon"));
 	var icon_colour = find_colour(db_record_get("db_Creatures",icon_creature,"element"));
 } else {
 	var icon = 0;

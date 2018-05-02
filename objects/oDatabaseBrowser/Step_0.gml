@@ -1,5 +1,7 @@
 //Manage Focus
 focus_set(FocusLevel);
+setdepth();
+
 //Manage Beats
 ScrollBeat = beat_scrollstep(ScrollBeat);
 

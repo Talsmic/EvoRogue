@@ -1,3 +1,5 @@
+/*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
+
 window_listbox_leftclick();
 
 var tabpress = window_tabset_leftclick(1);

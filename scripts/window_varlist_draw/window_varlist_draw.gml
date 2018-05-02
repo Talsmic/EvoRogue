@@ -10,7 +10,7 @@ draw_set_font(ft_EvoSmallcaps_6);
 //Find Correct Data
 switch ( mode ) {
 	
-	case "Resolution":
+	case "Resolution": #region
 		draw_text_flatcolour(X+4,Y,"Resolution Variables",c_orange,1);
 		var list_string = [	"Options_Fullscreen", 
 							"Options_ResolutionSnap", 
@@ -47,15 +47,15 @@ switch ( mode ) {
 							string(oGlobalController.Resolution_ViewWidth)+", "+string(oGlobalController.Resolution_ViewHeight) 
 							];
 		var col_width = [120,50];
-		break;
+		break; #endregion
 		
-	case "ApplicationSurface":
+	case "ApplicationSurface": #region
 		draw_text_flatcolour(X+4,Y,"AppSurface",c_orange,1);
 		var a = application_get_position();
 		var list_string = [  "X", "Y", "Width", "Height"  ];
 		var list_value = [  a[0],a[1],a[2]-a[0],a[3]-a[1]  ];
 		var col_width = [60,20];
-		break;
+		break; #endregion
 		
 	default:
 		draw_text_flatcolour(X,Y,"Unassigned Variables",c_orange,1);

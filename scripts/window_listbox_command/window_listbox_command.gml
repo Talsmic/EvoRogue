@@ -7,6 +7,7 @@ command = string_lower( command );
 
 switch ( command ) {
 		
+	#region Move Focus Point and Scroll
 	case "movefocusup":		Listbox_Position -= Listbox_Row_Length;		window_listbox_command("ScrollSnap");	break;
 	case "movefocusdown":	Listbox_Position += Listbox_Row_Length;		window_listbox_command("ScrollSnap");	break;
 	case "movefocusleft":	Listbox_Position -= 1;						window_listbox_command("ScrollSnap");	break;
@@ -49,8 +50,17 @@ switch ( command ) {
 		//Snap view to Visible Range
 		if ( Listbox_Position < range_start )	{ Listbox_Row_Starting = ceil( Listbox_Position / Listbox_Row_Length ) };
 		if ( Listbox_Position > range_end )		{ Listbox_Row_Starting += ceil( ( Listbox_Position - range_end ) / Listbox_Row_Length ) };
-		break;
+		break; 
+		
+	case "listlength":
+		switch ( Listbox_Mode ) {
+			case "Icons":	Listbox_List_Length = array_length_1d(Listbox_ListIcon)-1;		break;
+			case "Words":	Listbox_List_Length = array_length_1d(Listbox_ListWords)-1;		break;
+			default:		Listbox_List_Length = 0;										break;
+			};
+		break; #endregion
 	
+	#region Change Listbox Mode
 	case "modeicons":
 		Listbox_Mode = "Icons" 
 		Listbox_Row_Length = 4;
@@ -69,8 +79,9 @@ switch ( command ) {
 		Listbox_ScrollSize = 5;
 		window_listbox_command("scrollloop");
 		ScrollBeat = beat_create(5,1);
-		break;
+		break; #endregion
 		
+	#region Change List and Object Mode
 	case "parentmodeskills":
 		Mode = "Skills"
 		Listbox_IconType = "DB_Skill";
@@ -90,4 +101,69 @@ switch ( command ) {
 		Listbox_ListColour = db_pull_columnasarray("db_Creatures","element");
 		window_listbox_command("Mode:Words");
 		break;
+	
+	case "parentmodeplayers":
+		Mode = "Players"
+		Listbox_IconType = "disabled";
+		Listbox_Position = 1;
+		Listbox_ListIcon = 0;
+		Listbox_ListWords = 0;
+		Listbox_ListColour = 0;
+		Count = 1;
+		with ( oPlayer ) {
+			other.Listbox_ListIcon[other.Count] = id;
+			other.Listbox_ListWords[other.Count] = "["+PlayerTag+"] "+PlayerName;
+			other.Listbox_ListColour[other.Count] = PlayerColour;
+			other.Count++;
+			};
+		window_listbox_command("Mode:Words");
+		break;
+	
+	case "parentmodeplayerstorage":
+		Mode = "Storage"
+		Listbox_IconType = "Creature";
+		Listbox_Position = 1;
+		Listbox_ListIcon = 0;
+		Listbox_ListWords = 0;
+		Listbox_ListColour = 0;
+		with ( PlayerID ) {
+			for ( var i=1 ; i<=StorageSize ; i++ ) {
+				if ( Stored_Status[i] == eCreatureState.nonexistant ) { i = StorageSize };
+				else {
+					other.Listbox_ListIcon[i] = db_record_get("db_Creatures",Stored_Species[i],"icon");
+					other.Listbox_ListWords[i] = Stored_Name[i];
+					other.Listbox_ListColour[i] = db_record_get("db_Creatures",Stored_Species[i],"element");
+					};
+				};
+			};
+		window_listbox_command("Mode:Icons");
+		Listbox_Row_Length = 5;
+		Listbox_Column_Length = 5;
+		Listbox_Row_Starting = ceil( Listbox_Position / Listbox_Row_Length );
+		break; 
+		
+	case "parentmodeplayerparty":
+		Mode = "Party"
+		Listbox_IconType = "Creature";
+		Listbox_Position = 1;
+		Listbox_ListIcon = 0;
+		Listbox_ListWords = 0;
+		Listbox_ListColour = 0;
+		with ( PlayerID ) {
+			for ( var i=1 ; i<=PartySize ; i++ ) {
+				if ( Party_Status[i] == eCreatureState.nonexistant ) { i = PartySize };
+				else {
+					other.Listbox_ListIcon[i] = db_record_get("db_Creatures",Party_Species[i],"icon");
+					other.Listbox_ListWords[i] = Party_Name[i];
+					other.Listbox_ListColour[i] = db_record_get("db_Creatures",Party_Species[i],"element");
+					};
+				};
+			};
+		window_listbox_command("Mode:Icons");
+		Listbox_Row_Length = 5;
+		Listbox_Column_Length = 5;
+		Listbox_Row_Starting = ceil( Listbox_Position / Listbox_Row_Length );
+		break; 
+		#endregion
+		
 	};

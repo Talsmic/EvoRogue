@@ -18,6 +18,6 @@ for ( var i=0 ; i<array_length_2d(player.Party_Skill,party_member); i++ ) {
 
 //Repopulate List
 player.Party_Skill[party_member,0] = 1; //Basic Attack at 0
-for ( var i=1 ; i<=array_length_1d(skill_list); i++ ) {
+for ( var i=1 ; i<array_length_1d(skill_list); i++ ) {
 	player.Party_Skill[party_member,i] = skill_list[i];
 	};

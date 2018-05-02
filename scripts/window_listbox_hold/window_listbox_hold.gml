@@ -9,18 +9,15 @@ var KeyPgUp = keyboard_check(vk_pageup);
 var KeyPgDown = keyboard_check(vk_pagedown);
 var MouseLeft = mouse_check_button(mb_left);
 
-switch ( Mode ) {
-	case "Skills":
-		if ( !ScrollBeat[0] ) { break };
-		//Move Focus Position
-		if ( KeyLeft ) {	window_listbox_command("MoveFocusLeft")	};
-		if ( KeyRight ) {	window_listbox_command("MoveFocusRight")	};
-		if ( KeyUp ) {		window_listbox_command("MoveFocusUp")	};
-		if ( KeyDown ) {	window_listbox_command("MoveFocusDown")	};
-		//Scroll Window		
-		if ( KeyPgUp ) { window_listbox_command("ScrollUp1") };
-		if ( KeyPgDown ) { window_listbox_command("ScrollDown1") };
-		break;
+if ( ScrollBeat[0] ) { 
+	//Move Focus Position
+	if ( KeyLeft ) {	window_listbox_command("MoveFocusLeft")	};
+	if ( KeyRight ) {	window_listbox_command("MoveFocusRight")	};
+	if ( KeyUp ) {		window_listbox_command("MoveFocusUp")	};
+	if ( KeyDown ) {	window_listbox_command("MoveFocusDown")	};
+	//Scroll Window		
+	if ( KeyPgUp ) { window_listbox_command("ScrollUp1") };
+	if ( KeyPgDown ) { window_listbox_command("ScrollDown1") };
 	};
 
 switch ( Listbox_Mode ) {

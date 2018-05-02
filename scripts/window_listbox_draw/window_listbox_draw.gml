@@ -1,19 +1,18 @@
 ///window_listbox_draw();
 		
 //Find Correct Dimensions
+if ( Listbox_Mode == "Icons" and Listbox_IconType == "disabled" ) { window_listbox_command("Mode:Words"); };
+window_listbox_command("ListLength");
 switch ( Listbox_Mode ) {
 	case "Icons":
-		Listbox_List_Length = array_length_1d(Listbox_ListIcon)-1;
 		var box_width = Listbox_Row_Length*30+6;
 		var box_height = Listbox_Column_Length*31+10;
 		break;
 	case "Words":
-		Listbox_List_Length = array_length_1d(Listbox_ListWords)-1;
 		var box_width = Listbox_Row_Length*Listbox_WordWidth+6;
 		var box_height = Listbox_Column_Length*10+10;
 		break;
 	default:
-		Listbox_List_Length = 0;
 		var box_width = 50;
 		var box_height = 50;
 	};
@@ -40,7 +39,7 @@ if ( Listbox_List_Length > Listbox_Row_Length * Listbox_Column_Length ) {
 //Draw List
 switch ( Listbox_Mode ) {
 	
-	case "Icons":
+	case "Icons": #region
 		var _x = Listbox_X+18; var _y = Listbox_Y+20; 
 		draw_set_font(ft_EvoTooltipBold_6);
 		draw_set_halign(fa_right);
@@ -57,7 +56,7 @@ switch ( Listbox_Mode ) {
 			if ( Listbox_IconType = "DB_Creature" ) {
 				draw_icon_dbcreature(_x,_y,24,i,eIconState.detectGUI) };
 			//Draw Focus
-			if ( i == Listbox_Position ) { draw_sprite_ext(spr_icon_halo_24x24,1,_x,_y,1,1,0,c_orange,0.75) };		
+			if ( i == Listbox_Position ) { draw_sprite_ext(spr_icon_halo_24x24,6,_x,_y,1,1,0,c_orange,0.75) };		
 			//Draw ID
 			if ( Listbox_ShowID ) { draw_text_outline_coloured(_x+12,_y+6,i,c_lightgray,c_darkgray) };	
 			//Progress Locations
@@ -65,9 +64,9 @@ switch ( Listbox_Mode ) {
 			if ( _x > Listbox_X+Listbox_Row_Length*30 ) { _x = Listbox_X+18; _y += 31 };
 			};
 		draw_set_halign(fa_left);
-		break;
+		break; #endregion
 		
-	case "Words":
+	case "Words": #region
 		var _x = Listbox_X+4; var _y = Listbox_Y+6; 
 		draw_set_font(ft_EvoTooltipBold_6);
 		for ( var i=range_start ; i<=range_end ; i++ ) {
@@ -93,5 +92,6 @@ switch ( Listbox_Mode ) {
 			_x += Listbox_WordWidth;
 			if ( _x > Listbox_X+Listbox_Row_Length*Listbox_WordWidth ) { _x = Listbox_X+4; _y += 10 };
 			};
-		break;
+		break; #endregion
+	
 	};

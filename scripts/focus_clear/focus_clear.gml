@@ -1,4 +1,5 @@
 ///focus_clear();
 
-oGlobalController.FocusPrevious = oGlobalController.FocusLevel;
-oGlobalController.FocusLevel = 10;
+oGlobalController.FocusPrevious = oGlobalController.FocusCurrent;
+oGlobalController.FocusCurrent = oGlobalController.FocusCheck;
+oGlobalController.FocusCheck = 10;

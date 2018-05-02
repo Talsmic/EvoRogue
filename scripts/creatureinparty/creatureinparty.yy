@@ -1,8 +1,8 @@
 {
-    "id": "96572fd5-419d-42c2-9ef8-4de98a9ceadf",
+    "id": "d80b022b-71dd-4441-a051-dc3dab85fbbc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "focus_check",
+    "name": "creatureinparty",
     "IsCompatibility": false,
     "IsDnD": false
 }

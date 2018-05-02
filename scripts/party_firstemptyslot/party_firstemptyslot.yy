@@ -1,8 +1,8 @@
 {
-    "id": "d640d313-f31c-484d-8896-321ecfc8bc62",
+    "id": "fe6743fc-b2e7-42a0-9ca1-3df7a9cb3525",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "focus_get",
+    "name": "party_firstemptyslot",
     "IsCompatibility": false,
     "IsDnD": false
 }

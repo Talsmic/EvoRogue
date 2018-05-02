@@ -10,7 +10,7 @@ draw_set_font(ft_EvoSmallcaps_6);
 //Find Correct Data
 switch ( mode ) {
 	
-	case "StorageContents":
+	case "StorageContents": #region
 		draw_text_flatcolour(X+4,Y,"Storage Contents for "+PlayerName,c_orange,1);
 		var rowcount = storage_firstemptyslot(id)-1;
 		var columns = [		"id",
@@ -34,7 +34,7 @@ switch ( mode ) {
 			data[7,i] = Stored_Nature[i];
 			data[8,i] = Stored_SkillString[i];			
 			};
-		break;
+		break; #endregion
 		
 	};
 	

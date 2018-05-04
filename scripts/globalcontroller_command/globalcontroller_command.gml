@@ -39,21 +39,21 @@ switch ( command ) {
 	
 	//Debug Databases
 	case "opendatabase":
-		if ( !instance_exists(oDatabaseBrowser) ) {	DatabaseBrowser = instance_create_depth(0,0,5,oDatabaseBrowser)	};
+		if ( !instance_exists(uiDatabaseBrowser) ) {	DatabaseBrowser = instance_create_depth(0,0,5,uiDatabaseBrowser)	};
 		else { instance_destroy( DatabaseBrowser ) };
 		break;
 	case "opendatabaseskills": case "opendatabaseskill":
-		if ( !instance_exists(oDatabaseBrowser) ) {	DatabaseBrowser = instance_create_depth(0,0,5,oDatabaseBrowser)	};
+		if ( !instance_exists(uiDatabaseBrowser) ) {	DatabaseBrowser = instance_create_depth(0,0,5,uiDatabaseBrowser)	};
 		else { instance_destroy( DatabaseBrowser ) };
 		with ( DatabaseBrowser ) { window_listbox_command("parentmodeskills") };
 		break;
 	case "opendatabasecreatures": case "opendatabasecreature":
-		if ( !instance_exists(oDatabaseBrowser) ) {	DatabaseBrowser = instance_create_depth(0,0,5,oDatabaseBrowser)	};
+		if ( !instance_exists(uiDatabaseBrowser) ) {	DatabaseBrowser = instance_create_depth(0,0,5,uiDatabaseBrowser)	};
 		else { instance_destroy( DatabaseBrowser ) };
 		with ( DatabaseBrowser ) { window_listbox_command("parentmodecreatures") };
 		break;
 	case "openplayermanager":
-		if ( !instance_exists(oPlayerBrowser) ) { PlayerBrowser = instance_create_depth(0,0,5,oPlayerBrowser)	};
+		if ( !instance_exists(uiPlayerBrowser) ) { PlayerBrowser = instance_create_depth(0,0,5,uiPlayerBrowser)	};
 		else { instance_destroy( PlayerBrowser ) };
 		break;
 		

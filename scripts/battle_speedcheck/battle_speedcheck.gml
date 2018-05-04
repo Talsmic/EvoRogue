@@ -12,6 +12,7 @@ var creature1 = argument1;
 var player2 = argument2;
 var creature2 = argument3;
 
+/*
 //Find Speed
 var speed1 = party_checkattribute(player1,creature1,3);
 var speed2 = party_checkattribute(player2,creature2,3);

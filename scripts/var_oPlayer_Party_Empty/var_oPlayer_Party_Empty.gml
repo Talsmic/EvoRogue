@@ -35,10 +35,10 @@ if ( inbattle() ) player.Party_Trait_ValueB[party_member,0] = 0;
 if ( inbattle() ) player.Party_Trait_Cooldown[party_member,0] = 0;	
 
 //Attributes
-if ( inbattle() ) player.Party_MaxHealth[party_member] = global.bal_basehealth;
+if ( inbattle() ) player.Party_MaxHealth[party_member] = global.bal_health_base;
 if ( inbattle() ) player.Party_Health[party_member] = player.Party_MaxHealth[party_member];
-if ( inbattle() ) player.Party_MaxEnergy[party_member] = global.bal_maxenergy;
-if ( inbattle() ) player.Party_Energy[party_member] =global.bal_startingenergy + global.bal_startingenergygrowth * level;
+if ( inbattle() ) player.Party_MaxEnergy[party_member] = global.bal_energy_base;
+if ( inbattle() ) player.Party_Energy[party_member] =global.bal_startingenergy + global.bal_startingenergy_growth * level;
 if ( inbattle() ) player.Party_Attribute[party_member,1] = 1;		//Power	
 if ( inbattle() ) player.Party_Attribute[party_member,2] = 1;		//Fortitude	
 if ( inbattle() ) player.Party_Attribute[party_member,3] = 1;		//Speed	

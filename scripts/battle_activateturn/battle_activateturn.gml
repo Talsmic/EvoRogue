@@ -7,7 +7,7 @@
 */
 var player = argument0;
 var turn = argument1;
-
+/*
 //[1] Use Skill
 if ( chain_command[player,turn] == 1 ) {
 	var skill = 0;

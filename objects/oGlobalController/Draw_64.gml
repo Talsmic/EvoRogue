@@ -29,7 +29,7 @@ if ( Draw_FocusLevel ) {
 	draw_set_font(ft_EvoTooltipSquished_6);
 	draw_text_outline_coloured(draw_offset,2,"FocusLevel",c_white,c_gray);
 	draw_set_font(ft_EvoLarge_12);
-	draw_text_outline_coloured(draw_offset,10,FocusLevel,c_shadow,c_shadow_dark);
+	draw_text_outline_coloured(draw_offset,10,FocusCurrent,c_shadow,c_shadow_dark);
 	draw_offset -= 40;
 	};
 		

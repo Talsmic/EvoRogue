@@ -1,1 +1,0 @@
-draw_sprite_ext(bg_screen,0,0,0,1,1,0,colour,alpha);

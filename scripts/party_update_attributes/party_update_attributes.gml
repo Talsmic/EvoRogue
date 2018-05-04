@@ -4,13 +4,26 @@
 var player = argument0;
 var party_member = argument1;
 var level = player.Party_Level[party_member];
+/*
+	Calculates {player}.{party_member}'s Power, Fortitude, Speed, Recovery and Potency
+	> Pushes to oPlayer [Party_Attribute][1..5]
+	> Returns Array
+		[0] -
+		[1] Power
+		[2] Fortitude
+		[3] Speed
+		[4] Recovery
+		[5] Potency
+*/
+
+//Fail to update if no creature
+if ( !player.Party_Status[party_member] ) { return false };
+
+//Attribute Arrays
 var a = [0,5,5,5,5,5];
 var a_growth = [0,0,0,0,0,0];
 var a_flat = [0,0,0,0,0,0];
 var a_multiplier = [0,0,0,0,0,0];
-
-//Fail to update if no creature
-if ( !player.Party_Status[party_member] ) { return false };
 
 #region Base Stats
 //Pull base stats for your species from the database
@@ -94,11 +107,12 @@ for ( var i=1 ; i<=5 ; i++ ) {
 	a_total[i] = floor( a_total[i] );
 	};
 	
-//Apply
+//Push
 player.Party_Attribute[party_member,1] = a_total[1];	//Power	
 player.Party_Attribute[party_member,2] = a_total[2];	//Fortitude	
 player.Party_Attribute[party_member,3] = a_total[3];	//Speed	
 player.Party_Attribute[party_member,4] = a_total[4];	//Recovery	
 player.Party_Attribute[party_member,5] = a_total[5];	//Potency	
 	
+//Return
 return a_total;

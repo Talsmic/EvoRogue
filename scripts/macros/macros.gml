@@ -53,6 +53,7 @@ enum eCreatureState {
 //Other
 #macro c_lightgray	$999999
 #macro c_midgray	$505050
+#macro c_nullgray	$323232
 #macro c_darkgray	$151515
 //Depreciated Elements
 #macro c_earth		$003366

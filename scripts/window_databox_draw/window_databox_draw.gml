@@ -52,7 +52,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+132,Databox_Y[ref]+55,db_record_get("db_Skills",Databox_Pointer[ref],"icon"));
 		draw_text_ext(Databox_X[ref]+6,Databox_Y[ref]+76,effects_string,9,width-12);
 		//Draw Icon
-		draw_icon_dbskill(Databox_X[ref]+width-16,Databox_Y[ref]+59,24,Databox_Pointer[ref],1)
+		draw_icon_dbskill(Databox_X[ref]+width-16,Databox_Y[ref]+60,24,Databox_Pointer[ref],1)
 		//Draw Tooltip
 		draw_tooltip_skill(Databox_Pointer[ref],Databox_X[ref],Databox_Y[ref]+height+3);
 		break; #endregion
@@ -164,7 +164,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"Core Skills:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+46,"Skills:");
 		//Draw Core Skills
-		var X = Databox_X[ref]+18; var Y = Databox_Y[ref]+28;
+		var X = Databox_X[ref]+18; var Y = Databox_Y[ref]+29;
 		for ( var i=1 ; i<array_height_2d(skillset_core) ; i++ ) {
 			draw_icon_dbskill(X,Y,24,skillset_core[i,0],1);
 			if ( mouse_in_region_gui( define_region_icon( X,Y,24 ) ) ) { tooltip = skillset_core[i,0] };

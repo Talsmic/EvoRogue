@@ -40,10 +40,9 @@ switch (colour) {
 		return c_magic;	
 	
 	//Basic Colours
-    case "c_white":					return c_white;
-    case "c_orange":				return c_orange;
-	case "c_black":					return c_black;
-	case "c_red":					return c_red;
+    case "c_white":	case string(c_white):					return c_white;
+    case "c_orange": case string(c_orange):				return c_orange;
+	case "c_black":	case string(c_black):					return c_black;
 	
 	//Attributes
     case "11": case "c_power":		return c_power;

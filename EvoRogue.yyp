@@ -1087,6 +1087,14 @@
             }
         },
         {
+            "Key": "5ebfc30b-095b-4711-85c2-f3606aab5838",
+            "Value": {
+                "id": "3ab996de-1be3-4c09-b94b-7b852df75941",
+                "resourcePath": "sprites\\spr_icon_mask_24\\spr_icon_mask_24.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5fb463e9-91d1-41cf-a6ab-1cfada14b72c",
             "Value": {
                 "id": "71f6e2fe-26e7-4e55-b3fc-0779fe8b5752",
@@ -2311,6 +2319,14 @@
             }
         },
         {
+            "Key": "e3a41688-0be2-4fbc-aebc-a6c4a5381d98",
+            "Value": {
+                "id": "dd4d3abd-8a0c-4a83-8780-ca55ed72bd55",
+                "resourcePath": "scripts\\draw_icon_halo\\draw_icon_halo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e44f62c4-3621-4547-9594-0e15d63d644d",
             "Value": {
                 "id": "81dcff28-f332-43f0-9384-9cbc8b1c30d1",
@@ -2814,6 +2830,7 @@
         "c0874429-22ab-44e9-91a2-ebbb855e966d",
         "d459e7cf-d0ea-485a-b532-3a7d2f139150",
         "65c3020c-11e5-4c1c-a72f-6569ae8a3225",
+        "e3a41688-0be2-4fbc-aebc-a6c4a5381d98",
         "fc0605ca-c61c-4ddc-89be-0d56f91bd9a4",
         "17d39384-6d98-4cde-8c83-cd1f99dcbbca",
         "905ac58e-f070-4c07-8714-dfb4cc32baf6",

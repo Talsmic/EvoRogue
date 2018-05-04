@@ -16,8 +16,8 @@ if ( icon_height == 0 ) { icon_height = icon_width };
 
 var region;
 region[1] = X-icon_width*0.5-3;		//[1] X1 [Integer]
-region[2] = Y-icon_height*0.5-2;	//[2] Y1 [Integer]
+region[2] = Y-icon_height*0.5-3;	//[2] Y1 [Integer]
 region[3] = X+icon_width*0.5+1;		//[3] X2 [Integer]
-region[4] = Y+icon_height*0.5+2;	//[4] Y2 [Integer]
+region[4] = Y+icon_height*0.5+1;	//[4] Y2 [Integer]
 
 return region;

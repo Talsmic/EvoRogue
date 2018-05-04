@@ -14,7 +14,7 @@ var Y = argument1;
 var icon_size = argument2;
 var icon = argument3;
 var icon_colour = find_colour(argument4);
-var icon_state = floor(argument5);
+var icon_state = argument5;
 
 //State Detection
 if ( icon_state == eIconState.detectGUI ) {
@@ -51,7 +51,7 @@ switch ( icon_size ) {
 		break;
 	//24x24
 	case 24:
-		draw_sprite_part_ext(spr_icon_creature_32,icon,5,5,24,24,X-12,Y-11+offset,1,1,c_white,1);
+		draw_sprite_part_ext(spr_icon_creature_32,icon,5,5,24,24,X-12,Y-12+offset,1,1,c_white,1);
         draw_sprite_ext(spr_icon_frame_24x24,icon_state,X,Y,1,1,0,icon_colour,1);
 		break;
 	//24x32

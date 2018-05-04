@@ -40,23 +40,25 @@ if ( Listbox_List_Length > Listbox_Row_Length * Listbox_Column_Length ) {
 switch ( Listbox_Mode ) {
 	
 	case "Icons": #region
-		var _x = Listbox_X+18; var _y = Listbox_Y+20; 
+		var _x = Listbox_X+18; var _y = Listbox_Y+21; 
 		draw_set_font(ft_EvoTooltipBold_6);
 		draw_set_halign(fa_right);
 		for ( var i=range_start ; i<=range_end ; i++ ) {
 			//Replace missing colours
 			if ( array_length_1d(Listbox_ListColour) < i ) { Listbox_ListColour[i] = c_white };			
 			//Draw Icon
+			var icon_rarity = "B";
 			if ( Listbox_IconType = "Skill" ) {
-				draw_icon_skill(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detectGUI) };
+				draw_icon_skill(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],"B",eIconState.detectGUI) };
 			if ( Listbox_IconType = "DB_Skill" ) {
-				draw_icon_dbskill(_x,_y,24,i,eIconState.detectGUI) };
+				draw_icon_dbskill(_x,_y,24,i,eIconState.detectGUI);
+				icon_rarity = db_record_get("db_Skills",i,"rarity") };
 			if ( Listbox_IconType = "Creature" ) {
 				draw_icon_creature(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detectGUI) };
 			if ( Listbox_IconType = "DB_Creature" ) {
 				draw_icon_dbcreature(_x,_y,24,i,eIconState.detectGUI) };
 			//Draw Focus
-			if ( i == Listbox_Position ) { draw_sprite_ext(spr_icon_halo_24x24,6,_x,_y,1,1,0,c_orange,0.75) };		
+			if ( i == Listbox_Position ) { draw_icon_halo(_x,_y,24,c_orange,icon_rarity,eIconState.detectGUI,0.75) };		
 			//Draw ID
 			if ( Listbox_ShowID ) { draw_text_outline_coloured(_x+12,_y+6,i,c_lightgray,c_darkgray) };	
 			//Progress Locations

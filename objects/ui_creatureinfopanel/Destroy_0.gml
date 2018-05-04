@@ -1,0 +1,1 @@
+global.focus_layer[3] = 0;

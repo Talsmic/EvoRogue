@@ -24,16 +24,17 @@ global.Opponent = global.DefaultOpponent;
 
 //Test Code Below this point-----------------------
 
-storage_create_creature(global.DefaultOpponent,19,5);
+storage_add(global.DefaultOpponent,19,5);
 
 randomise();
-for ( var i=1 ; i<=10 ; i++ ) {
-	var j = storage_create_creature(global.Player1,i,irandom(10));
-	};
-for ( var i=1 ; i<=30 ; i++ ) {
-	var j = storage_create_creature(global.Player1,irandom_range(1,19),irandom(10));
-	};
-
-for ( var i=1 ; i<=global.gps_partysize ; i++ ) {
-	party_addfromstorage(global.Player1,irandom_range(32,35));
+with ( global.Player1 ) {
+	for ( var i=1 ; i<=100 ; i+=2 ) {
+		var_oPlayer_Storage_Exists(i);
+		};
+	for ( var i=1 ; i<=10 ; i+=2 ) {
+		party_add_fromstorage(id,irandom(100));
+		};
+		
+	party_add_fromstorage(id,99);
+	
 	};

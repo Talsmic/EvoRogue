@@ -4,6 +4,10 @@ PlayerColour = c_nature;
 
 Draw = false;
 
+CondenseCounterParty = 0;
+CondenseCounterStorage = 0;
+CondenseCounterOperations = 0;
+
 //Establish Storage
 //Storage is a full list of all creatures a Player owns
 StorageSize = global.gps_storagesize;
@@ -20,6 +24,6 @@ PartySize = global.gps_partysize;
 for ( var i=1 ; i<=PartySize ; i++ ) {
 	Party_Status[i] = eCreatureState.nonexistant;
 	Party_StoredID[i] = 0;
-	Party_Skill[i,0] = 0;
-	Party_Trait[i,0] = 0;
+	Party_Skill[i,1] = 0;
+	Party_Trait[i,1] = 0;
 	};

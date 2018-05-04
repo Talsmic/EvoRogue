@@ -18,7 +18,7 @@ switch ( command ) {
 	case "scrollup1":		Listbox_Row_Starting -= 1; 					window_listbox_command("ScrollLoop");	break;
 	case "scrolldown1":		Listbox_Row_Starting += 1; 					window_listbox_command("ScrollLoop");	break;
 	case "scrolltop":		Listbox_Row_Starting = 1;															break;
-	case "scrollbottom":	Listbox_Row_Starting = ceil( Listbox_List_Length / Listbox_Row_Length ) + 1 - Listbox_Column_Length	break;
+	case "scrollbottom":	Listbox_Row_Starting = ceil( Listbox_List_Length / Listbox_Row_Length ) + 1 - Listbox_Column_Length;	break;
 			
 	case "togglescrollloop":		Listbox_ScrollLoop = toggle( Listbox_ScrollLoop );		break;
 	case "toggleids":				Listbox_ShowID = toggle( Listbox_ShowID );				break;
@@ -127,8 +127,13 @@ switch ( command ) {
 		Listbox_ListWords = 0;
 		Listbox_ListColour = 0;
 		with ( PlayerID ) {
-			for ( var i=1 ; i<=StorageSize ; i++ ) {
-				if ( Stored_Status[i] == eCreatureState.nonexistant ) { i = StorageSize };
+			for ( var i=1 ; i<=storage_lastentry(id) ; i++ ) {
+				if ( !Stored_Status[i] ) { 
+					other.Listbox_ListIcon[i] = 0;
+					other.Listbox_ListWords[i] = " ";
+					other.Listbox_ListColour[i] = c_black;					
+					//i = StorageSize 
+					};
 				else {
 					other.Listbox_ListIcon[i] = db_record_get("db_Creatures",Stored_Species[i],"icon");
 					other.Listbox_ListWords[i] = Stored_Name[i];
@@ -136,10 +141,12 @@ switch ( command ) {
 					};
 				};
 			};
-		window_listbox_command("Mode:Icons");
+		Listbox_Mode = "Icons" 
 		Listbox_Row_Length = 5;
 		Listbox_Column_Length = 5;
 		Listbox_Row_Starting = ceil( Listbox_Position / Listbox_Row_Length );
+		window_listbox_command("scrollloop");
+		ScrollBeat = beat_create(15,1);
 		break; 
 		
 	case "parentmodeplayerparty":
@@ -150,8 +157,13 @@ switch ( command ) {
 		Listbox_ListWords = 0;
 		Listbox_ListColour = 0;
 		with ( PlayerID ) {
-			for ( var i=1 ; i<=PartySize ; i++ ) {
-				if ( Party_Status[i] == eCreatureState.nonexistant ) { i = PartySize };
+			for ( var i=1 ; i<=party_lastentry(id) ; i++ ) {
+				if ( !Party_Status[i] ) { 
+					other.Listbox_ListIcon[i] = 0;
+					other.Listbox_ListWords[i] = " ";
+					other.Listbox_ListColour[i] = c_black;										
+					//i = PartySize 
+					};
 				else {
 					other.Listbox_ListIcon[i] = db_record_get("db_Creatures",Party_Species[i],"icon");
 					other.Listbox_ListWords[i] = Party_Name[i];
@@ -159,10 +171,12 @@ switch ( command ) {
 					};
 				};
 			};
-		window_listbox_command("Mode:Icons");
+		Listbox_Mode = "Icons" 
 		Listbox_Row_Length = 5;
 		Listbox_Column_Length = 5;
 		Listbox_Row_Starting = ceil( Listbox_Position / Listbox_Row_Length );
+		window_listbox_command("scrollloop");
+		ScrollBeat = beat_create(15,1);
 		break; 
 		#endregion
 		

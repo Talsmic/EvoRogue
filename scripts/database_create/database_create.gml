@@ -6,7 +6,11 @@ db_open("db_Evolutionary");
 //[db_Creatures]--------------------------------------------------[24/04/2018]
 db_table_create(	"db_Creatures",
 					"name:string","element:string",
-					"bPower:real","gPower:real","bFortitude:real","gFortitude:real","bSpeed:real","gSpeed:real","bRecovery:real","gRecovery:real","bPotency:real","gPotency:real",
+					"base_power:real","power_growth:real",
+					"base_fortitude:real","fortitude_growth:real",
+					"base_speed:real","speed_growth:real",
+					"base_recovery:real","recovery_growth:real",
+					"base_potency:real","potency_growth:real",
 					"skills_core:string","passives_core:string","skills:string",
 					"sprite:string","icon:real","shadow:real");
 db_table_import_csv("db_Creatures","[Databases]\\db_Creatures.csv",",");

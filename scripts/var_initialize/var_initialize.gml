@@ -9,7 +9,7 @@
 //=[Gameplay Settings](gps)===========================================
 //  Most of these are constants that can be adjusted during 
 //  testing but will be finalized before release
-global.gps_partysize = 5;				//Maximum party size
+global.gps_partysize = 10;				//Maximum party size
 global.gps_storagesize = 150;			//Maximum creatures in a storage set
 global.gps_currencymultiplier = 3;		//Multiplier for currency gains
 global.gps_experiencemultiplier = 3;	//Multiplier for experience gains
@@ -28,6 +28,7 @@ global.bal_recovery_healthratio = 0.2;	//health recovery growth per point of Rec
 global.bal_recovery_energyratio = 0.8;	//energy recovery growth per point of Recovery
 global.bal_recovery_penalty = 0.2;		//Recovery penalty applied to benched creatures
 // (battle) battle settings
+global.battle_engaged = false;
 global.battle_pointstowin = 0;
 global.battle_pointstowin[1] = 3;
 global.battle_pointstowin[2] = 3;

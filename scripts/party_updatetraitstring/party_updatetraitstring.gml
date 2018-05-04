@@ -6,13 +6,14 @@
 */
 var player = argument0;
 var party_member = argument1;
-var trait_string = player.Party_TraitString[party_member];
+
+if ( player.Party_Trait[party_member,1] == 0 ) { return "" };
 
 //Collect Traits
-var trait_list;
-for ( var i=1 ; i<=array_length_2d(player.Party_Trait,party_member); i++ ) {
-	trait_list[i] = player.Party_Trait[party_member,i];
+var skill_list;
+for ( var i=1 ; i<array_length_2d(player.Party_Trait,party_member); i++ ) {
+	skill_list[i] = player.Party_Trait[party_member,i];
 	};
 	
 //Create and Assign String
-player.Party_TraitString[party_member] = array_to_skillstring(trait_list);
+player.Party_TraitString[party_member] = array_to_skillstring(skill_list);

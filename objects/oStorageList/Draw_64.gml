@@ -10,7 +10,7 @@ if ( SubMode != Mode ) {
 			window_listbox_command("scrollsnap");	
 			break;
 		case "Party":	
-			var listbox_position = creatureinparty(PlayerID,Listbox_Position);
+			var listbox_position = inparty(PlayerID,Listbox_Position);
 			window_listbox_command("ParentMode:PlayerParty");	
 			Listbox_Position = listbox_position;	
 			window_listbox_command("scrollsnap");	
@@ -29,3 +29,14 @@ if ( SubPlayerID != PlayerID ) {
 
 Parent.Databox_Pointer[2] = Listbox_Position;
 window_listbox_draw();
+
+if ( DrawExtraCommands ) {
+	switch ( Mode ) {
+		case "Storage":		
+			draw_tooltip_basic("[1]:|1 Add to Party# [2]:|2 Remove from Party# # [8]:|8 Free from Storage# [9]:|9 Condense# [BkSpc]:|10 Toggle Battle",5,5,150);
+			break;
+		case "Party":	
+			draw_tooltip_basic("[1]:|1 Add Random to Party# [2]:|2 Remove from Party# # [8]:|8 Free from Storage# [9]:|9 Condense# [BkSpc]:|10 Toggle Battle",5,5,150);
+			break;
+		};
+	};

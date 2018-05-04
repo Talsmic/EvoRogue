@@ -6,11 +6,12 @@
 */
 var player = argument0;
 var party_member = argument1;
-var skill_string = player.Party_SkillString[party_member];
+
+if ( player.Party_Skill[party_member,1] == 0 ) { return "" };
 
 //Collect Skills
 var skill_list;
-for ( var i=1 ; i<=array_length_2d(player.Party_Skill,party_member); i++ ) {
+for ( var i=1 ; i<array_length_2d(player.Party_Skill,party_member); i++ ) {
 	skill_list[i] = player.Party_Skill[party_member,i];
 	};
 	

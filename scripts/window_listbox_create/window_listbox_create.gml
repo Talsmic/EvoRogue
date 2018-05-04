@@ -11,8 +11,8 @@ Listbox_ListWords = array_create(10,"default");
 Listbox_ListColour = array_create(10,c_white);
 Listbox_ShowID = false;
 
-Listbox_X = x;
-Listbox_Y = y;
+Listbox_X = 0;
+Listbox_Y = 0;
 
 Listbox_Position = 1;	
 Listbox_Row_Starting = 1;

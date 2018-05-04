@@ -1,4 +1,4 @@
-/// @desc storage_firstemptyslot(player);
+///storage_firstemptyslot(player);
 /// @arg player
 /*
 	[Edited 1/5/2018]
@@ -10,7 +10,7 @@ var storage_slot = -1;
 
 //Check All Slots
 for ( var i=1 ; i<=player.StorageSize ; i++ ) {
-	if ( player.Stored_Status[i] == eCreatureState.nonexistant ) {
+	if ( !player.Stored_Status[i] ) {
 		storage_slot = i;
 		break;
 		};

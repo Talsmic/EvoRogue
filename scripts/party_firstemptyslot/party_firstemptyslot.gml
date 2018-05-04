@@ -1,4 +1,4 @@
-/// @desc party_firstemptyslot(player);
+///party_firstemptyslot(player);
 /// @arg player
 /*
 	[Edited 1/5/2018]
@@ -10,7 +10,7 @@ var party_slot = -1;
 
 //Check All Slots
 for ( var i=1 ; i<=player.PartySize ; i++ ) {
-	if ( player.Party_Status[i] == eCreatureState.nonexistant ) {
+	if ( !player.Party_Status[i] ) {
 		party_slot = i;
 		break;
 		};

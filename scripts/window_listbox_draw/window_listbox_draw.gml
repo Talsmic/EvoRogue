@@ -1,7 +1,7 @@
 ///window_listbox_draw();
 		
 //Find Correct Dimensions
-if ( Listbox_Mode == "Icons" and Listbox_IconType == "disabled" ) { window_listbox_command("Mode:Words"); };
+if ( Listbox_Mode == "Icons" and Listbox_IconType == "disabled" ) { window_listbox_command("Mode:Words") };
 window_listbox_command("ListLength");
 switch ( Listbox_Mode ) {
 	case "Icons":
@@ -18,6 +18,7 @@ switch ( Listbox_Mode ) {
 	};
 
 //Define visual range
+if ( Listbox_Row_Starting < 1 ) { Listbox_Row_Starting = 1 };
 var range_start = Listbox_Row_Starting * Listbox_Row_Length - Listbox_Row_Length + 1;
 var range_end = range_start + Listbox_Row_Length * Listbox_Column_Length - 1;
 if ( range_end > Listbox_List_Length ) { range_end = Listbox_List_Length };
@@ -60,7 +61,7 @@ switch ( Listbox_Mode ) {
 			//Draw Focus
 			if ( i == Listbox_Position ) { draw_icon_halo(_x,_y,24,c_orange,icon_rarity,eIconState.detectGUI,0.75) };		
 			//Draw ID
-			if ( Listbox_ShowID ) { draw_text_outline_coloured(_x+12,_y+6,i,c_lightgray,c_darkgray) };	
+			if ( Listbox_ShowID ) { draw_text_outline_coloured(_x+14,_y+6,i,c_lightgray,c_darkgray) };	
 			//Progress Locations
 			_x += 30;
 			if ( _x > Listbox_X+Listbox_Row_Length*30 ) { _x = Listbox_X+18; _y += 31 };

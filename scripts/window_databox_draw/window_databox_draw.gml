@@ -130,18 +130,18 @@ switch ( Databox_Type[ref] ) {
 		draw_set_halign(fa_center);
 		draw_set_colour(c_white);
 		draw_set_font(ft_EvoTooltipBold_6);
-		draw_text(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"bPower"));
-		draw_text(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"bFortitude"));
-		draw_text(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"bSpeed"));
-		draw_text(Databox_X[ref]+2+att_width*3.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"bRecovery"));
-		draw_text(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"bPotency"));
+		draw_text(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_power"));
+		draw_text(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_fortitude"));
+		draw_text(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_speed"));
+		draw_text(Databox_X[ref]+2+att_width*3.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_recovery"));
+		draw_text(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_potency"));
 		draw_set_font(ft_EvoTooltip_6);
 		draw_set_colour(c_lightgray);
-		draw_text(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"gPower")));
-		draw_text(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"gFortitude")));
-		draw_text(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"gSpeed")));
-		draw_text(Databox_X[ref]+2+att_width*3.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"gRecovery")));
-		draw_text(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"gPotency")));
+		draw_text(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"power_growth")));
+		draw_text(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"fortitude_growth")));
+		draw_text(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"speed_growth")));
+		draw_text(Databox_X[ref]+2+att_width*3.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"recovery_growth")));
+		draw_text(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+76,"+"+string(db_record_get("db_Creatures",Databox_Pointer[ref],"potency_growth")));
 		draw_set_halign(fa_left);
 		//Draw Icon
 		draw_icon_dbcreature(Databox_X[ref]+width-16,Databox_Y[ref]+39,24,Databox_Pointer[ref],1);
@@ -212,7 +212,7 @@ switch ( Databox_Type[ref] ) {
 	case "StorageCreature": #region
 		var p = Databox_Pointer[ref];
 		var player = Databox_Pointer[1];
-		if ( player.Stored_Status[p] == eCreatureState.nonexistant ) { return false };
+		if ( !player.Stored_Status[p] ) { return false };
 		var width = 140;
 		var height = 109;
 		//Draw Box
@@ -223,7 +223,7 @@ switch ( Databox_Type[ref] ) {
 		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+33,width-4,11,c_midgray,0.3);
 		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+33,width-40,11,c_midgray,0.3);
 		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+54,width-4,11,c_midgray,0.3);
-		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+54,40,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+54,60,11,c_midgray,0.3);
 		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+75,width-4,11,c_midgray,0.3);
 		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+96,width-4,11,c_midgray,0.3);
 		//Draw Headers
@@ -235,21 +235,22 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Species:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Level:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+45,"Exp:");
-		draw_text(Databox_X[ref]+80,Databox_Y[ref]+45,"Nature:");
+		draw_text(Databox_X[ref]+100,Databox_Y[ref]+45,"Nature:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+87,"Traits:");
 		//Draw Data
 		draw_set_font(ft_EvoTooltipBold_6);
 		draw_set_colour(c_lightgray);
-		var inparty = creatureinparty(player,p);
-		if ( inparty ) {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(inparty)) };
+		if ( inparty(player,p) ) {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(inparty(player,p))) };
 			else	   {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,p) };
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,player.Stored_Name[p]);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,player.Stored_Status[p]);
-		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,db_record_get("db_Creatures",player.Stored_Species[p],"name"));
+		draw_text(Databox_X[ref]+16,Databox_Y[ref]+34,player.Stored_Form[p]);
+		draw_text(Databox_X[ref]+26,Databox_Y[ref]+34,player.Stored_Quality[p]);
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,string(player.Stored_Species[p])+":"+string(db_record_get("db_Creatures",player.Stored_Species[p],"name")));
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+55,player.Stored_Level[p]);
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+55,player.Stored_Exp[p]);
-		draw_text(Databox_X[ref]+82,Databox_Y[ref]+55,player.Stored_Nature[p]);
+		draw_text(Databox_X[ref]+102,Databox_Y[ref]+55,player.Stored_Nature[p]);
 		draw_set_font(ft_EvoTooltip_6);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+76,player.Stored_SkillString[p]);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+97,player.Stored_TraitString[p]);
@@ -258,9 +259,11 @@ switch ( Databox_Type[ref] ) {
 	case "PartyCreature": #region
 		var p = Databox_Pointer[ref];
 		var player = Databox_Pointer[1];
-		if ( player.Party_Status[p] == eCreatureState.nonexistant ) { return false };
+		if ( !player.Party_Status[p] ) { return false };
+		var skill_height = 11 * ceil( array_length_2d(player.Party_Skill,p) / 7 );
+		var trait_height = 11 * ceil( array_length_2d(player.Party_Trait,p) / 7 );
 		var width = 140;
-		var height = 109;
+		var height = 87+skill_height+trait_height;
 		//Draw Box
 		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
 		//Draw Fields
@@ -269,10 +272,19 @@ switch ( Databox_Type[ref] ) {
 		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+33,width-4,11,c_midgray,0.3);
 		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+33,width-40,11,c_midgray,0.3);
 		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+54,width-4,11,c_midgray,0.3);
-		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+54,40,11,c_midgray,0.3);
-		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+75,width-4,11,c_midgray,0.3);
-		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+96,width-4,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+38,Databox_Y[ref]+54,60,11,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+75,width-4,skill_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+21,Databox_Y[ref]+75,19,skill_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+59,Databox_Y[ref]+75,19,skill_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+97,Databox_Y[ref]+75,19,skill_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+2,Databox_Y[ref]+85+skill_height,width-4,trait_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+21,Databox_Y[ref]+85+skill_height,19,trait_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+59,Databox_Y[ref]+85+skill_height,19,trait_height,c_midgray,0.3);
+		draw_colouredplane(Databox_X[ref]+97,Databox_Y[ref]+85+skill_height,19,trait_height,c_midgray,0.3);
 		//Draw Headers
+		draw_set_font(ft_EvoSmallcaps_6);		
+		if ( inbattle() )	{ draw_text_flatcolour(Databox_X[ref]+4,Databox_Y[ref]-10,"In Battle",c_fire,1) };
+					   else { draw_text_flatcolour(Databox_X[ref]+4,Databox_Y[ref]-10,"Not In Battle",c_nature,1) };
 		draw_set_font(ft_EvoTooltip_6);
 		draw_set_colour(c_midgray);
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"ID:");
@@ -281,22 +293,43 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Species:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Level:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+45,"Exp:");
-		draw_text(Databox_X[ref]+80,Databox_Y[ref]+45,"Nature:");
+		draw_text(Databox_X[ref]+100,Databox_Y[ref]+45,"Nature:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
-		draw_text(Databox_X[ref]+4,Databox_Y[ref]+87,"Traits:");
+		draw_text(Databox_X[ref]+4,Databox_Y[ref]+76+skill_height,"Traits:");
 		//Draw Data
 		draw_set_font(ft_EvoTooltipBold_6);
 		draw_set_colour(c_lightgray);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(player.Party_StoredID[p]));
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,player.Party_Name[p]);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,player.Party_Status[p]);
-		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,db_record_get("db_Creatures",player.Party_Species[p],"name"));
+		draw_text(Databox_X[ref]+16,Databox_Y[ref]+34,player.Party_Form[p]);
+		draw_text(Databox_X[ref]+26,Databox_Y[ref]+34,player.Party_Quality[p]);
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,string(player.Party_Species[p])+":"+string(db_record_get("db_Creatures",player.Party_Species[p],"name")));
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+55,player.Party_Level[p]);
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+55,player.Party_Exp[p]);
-		draw_text(Databox_X[ref]+82,Databox_Y[ref]+55,player.Party_Nature[p]);
+		draw_text(Databox_X[ref]+102,Databox_Y[ref]+55,player.Party_Nature[p]);
 		draw_set_font(ft_EvoTooltip_6);
-		draw_text(Databox_X[ref]+6,Databox_Y[ref]+76,player.Party_SkillString[p]);
-		draw_text(Databox_X[ref]+6,Databox_Y[ref]+97,player.Party_TraitString[p]);
+		draw_set_halign(fa_right);
+		draw_text(Databox_X[ref]+width-4,Databox_Y[ref]+66,player.Party_SkillString[p]);
+		draw_text(Databox_X[ref]+width-4,Databox_Y[ref]+76+skill_height,player.Party_TraitString[p]);
+		draw_set_font(ft_EvoTooltipCondensed_6);
+		var _x = Databox_X[ref]+19; var _y = Databox_Y[ref]+76;
+		for ( var i=0 ; i<array_length_2d(player.Party_Skill,p); i++ ) {
+			draw_text(_x,_y,player.Party_Skill[p,i]);
+			_x += 19;
+			if ( _x > Databox_X[ref]+width ) {
+				_x = Databox_X[ref]+19; _y += 11;
+				};
+			};
+		_x = Databox_X[ref]+19; _y = Databox_Y[ref]+86+skill_height;
+		for ( var i=0 ; i<array_length_2d(player.Party_Trait,p); i++ ) {
+			draw_text(_x,_y,player.Party_Trait[p,i]);
+			_x += 19;
+			if ( _x > Databox_X[ref]+width ) {
+				_x = Databox_X[ref]+19; _y += 11;
+				};
+			};
+		draw_set_halign(fa_left);
 		break; #endregion
 		
 	};

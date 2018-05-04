@@ -19,5 +19,5 @@ for ( var i=0 ; i<array_length_2d(player.Party_Trait,party_member); i++ ) {
 //Repopulate List
 player.Party_Trait[party_member,0] = 1; //Basic Attack at 0
 for ( var i=1 ; i<array_length_1d(trait_list); i++ ) {
-	player.Party_Trait[party_member,i] = trait_list[i];
+	player.Party_Trait[party_member,i] = real(trait_list[i]);
 	};

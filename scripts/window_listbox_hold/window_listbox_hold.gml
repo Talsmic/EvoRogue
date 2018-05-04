@@ -1,4 +1,5 @@
 ///window_listbox_hold()
+window_listbox_command("scrollloop");
 /*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 
 var KeyLeft = keyboard_check(vk_left);

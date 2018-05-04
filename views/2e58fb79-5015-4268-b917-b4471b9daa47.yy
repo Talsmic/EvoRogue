@@ -4,11 +4,13 @@
     "mvc": "1.1",
     "name": "2e58fb79-5015-4268-b917-b4471b9daa47",
     "children": [
-        "3496136a-89a1-40c0-8907-c92103f7af34",
-        "adad9858-cbf6-4ec8-9d8e-37600be8f48f"
+        "0a9d51bc-ceb1-4cad-89b0-ca797518724d",
+        "3e36bbe4-073b-4359-b9f2-528cb0137a6c",
+        "f9df219e-9025-4ed5-8809-20e15eb6fdac",
+        "9e9cf55b-afef-4eb8-8365-3012f08f562f"
     ],
     "filterType": "GMScript",
-    "folderName": "[Storage]",
+    "folderName": "[Storage & Party Management]",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

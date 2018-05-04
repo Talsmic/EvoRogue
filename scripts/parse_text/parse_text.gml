@@ -32,6 +32,7 @@ repeat 500 {
 		position[4] = string_pos("!",ParsedText[parse_reference]);
 		position[5] = string_pos("?",ParsedText[parse_reference]);
 		position[6] = string_pos("#",ParsedText[parse_reference]);
+		position[7] = string_pos(":",ParsedText[parse_reference]);
 		//Cut "."
 		if ( position[2] ) {
 			ParsedText[parse_reference+1] = string_delete(ParsedText[parse_reference],1,position[2]-1);
@@ -67,6 +68,13 @@ repeat 500 {
 			parse_reference+=2;
 			continue;
 			};
+		//Cut ":"
+		if ( position[7] ) {
+			ParsedText[parse_reference+1] = string_delete(ParsedText[parse_reference],1,position[6]-1);
+			ParsedText[parse_reference] = string_copy(ParsedText[parse_reference],1,position[6]-1);
+			parse_reference+=2;
+			continue;
+			};
 		parse_reference++;
 		
 		};
@@ -83,16 +91,17 @@ var i;
 for ( i=1 ; i<parse_reference ;  i++ ) {
 	ParsedText_Colour[i] = default_colour;
 	//Find the next "|" [Colour Break]
-	position[1] = string_pos(" ",ParsedText[i]);
+	position[1] = string_pos(" ",ParsedText[i]);	
 	position[2] = string_pos("|",ParsedText[i]);	
 	//If a colour break exists... 
 	if ( position[2] ) {
-		//Remove any spaces
-		if ( position[1] ) { ParsedText[i] = string_delete(ParsedText[i], position[1], 1) };
 		//Split the string
-		ParsedText_Colour[i] = string_delete(ParsedText[i],1,position[2]);
-		ParsedText_Colour[i] = find_colour(ParsedText_Colour[i]);
+		ParsedText_Colour[i] = string_delete( ParsedText[i], 1, position[2] );
 		ParsedText[i] = string_copy(ParsedText[i],0,position[2]-1);
+		//Remove Spaces
+		ParsedText_Colour[i] = string_replace_all( ParsedText_Colour[i], " ", "" );
+		//Find ColourCode
+		ParsedText_Colour[i] = find_colour(ParsedText_Colour[i]);
 		//Add a space if one existed before the split
 		if ( position[1] ) { ParsedText[i] += " " };
 		};

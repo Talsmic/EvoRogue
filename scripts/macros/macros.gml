@@ -1,5 +1,6 @@
 //Game
 #macro VERSION "Roguelite V0.1"
+#macro CREATURECOUNT 19
 
 #macro NONE 0
 

@@ -5,13 +5,11 @@ Player = global.LocalPlayer;
 Party_Member = 1;
 Draw = true;
 
-//Positioning Variables
-Position_AnchorX = 150;
-Position_AnchorY = 150;
-Position_TargetedX = 150;
-Position_TargetedY = 150;
-Position_Side = LEFT;
-Position_Slot = 0;
+Selected = false;
+Target = 0;
+Targeted = false;
+AllowMouseSelection = true;
+ShowTarget = true;
 
 //Sprite Drawing Variables
 Sprite = sprite_hoglet;

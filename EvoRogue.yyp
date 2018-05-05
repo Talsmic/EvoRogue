@@ -2743,6 +2743,14 @@
             }
         },
         {
+            "Key": "db0a8867-ac6d-4caa-a1b1-fe0aa6555ab0",
+            "Value": {
+                "id": "6c6c958c-5236-499f-9318-ae17535b5714",
+                "resourcePath": "scripts\\draw_sprite_glow_ext\\draw_sprite_glow_ext.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dc935a37-4f39-4b01-bc4f-ec338e65c901",
             "Value": {
                 "id": "55860338-dfa2-4c6c-bd95-2bf153dd6687",
@@ -3357,6 +3365,7 @@
         "905ac58e-f070-4c07-8714-dfb4cc32baf6",
         "87f16cc1-e8d8-4b0e-b461-395a6ef20714",
         "3f2844d2-aa3a-4ef5-b58d-850f15f72333",
+        "db0a8867-ac6d-4caa-a1b1-fe0aa6555ab0",
         "0a6f865c-6852-473d-b762-f8161ac6fcea",
         "85f4434e-e9dd-4ecd-838e-e867ad0d0df1",
         "707450fa-3fce-47cf-a3e3-b87a37b7539e",

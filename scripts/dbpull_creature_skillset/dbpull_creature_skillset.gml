@@ -1,10 +1,11 @@
-///DBcreature_skillset(species);
+///dbpull_creature_skillset(species);
 /// @arg species			
+var species = argument0;	
 /*
-	[Edited 1/5/2018]
 	Pulls a skill list for the creature species from the database
+	>Returns {Skillset Array}
+	>Globally Stores the last {Skillset Array} output by any function
 */
-var species = argument0;
 
 //Parse Skillsets
 var skillset1 = parse_array1d(db_record_get("db_Creatures",species,"skills"),"; ");

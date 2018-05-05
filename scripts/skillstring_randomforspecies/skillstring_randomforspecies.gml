@@ -6,7 +6,7 @@ var creature_level = argument1;
 
 var skillpoints = 3+creature_level;
 var skillarray = [0];
-var skillset = DBcreature_skillset( creature_species );
+var skillset = dbpull_creature_skillset( creature_species );
 var skillslot = 1;
 
 //Add Random Skills

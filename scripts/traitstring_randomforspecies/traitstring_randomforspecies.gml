@@ -6,7 +6,7 @@ var creature_level = argument1;
 
 var traitpoints = 3+creature_level;
 var traitarray = [0];
-var traitset = DBcreature_skillset( creature_species );
+var traitset = dbpull_creature_skillset( creature_species );
 var traitslot = 1;
 
 //Add Random Traits

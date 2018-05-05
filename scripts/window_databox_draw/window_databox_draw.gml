@@ -84,10 +84,9 @@ switch ( Databox_Type[ref] ) {
 		var att_width = floor((width-4)/5);
 		var height = 87;
 		//Draw Sprite
-		var shadow = db_record_get("db_Creatures",Databox_Pointer[ref],"shadow");
-		var sprite = asset_get_index(db_record_get("db_Creatures",Databox_Pointer[ref],"sprite"));
+		var sprite = dbpull_creature_sprite(Databox_Pointer[ref]);
 		if ( sprite ) {
-			draw_sprite(spr_shadows,shadow,Databox_X[ref]+width+32,Databox_Y[ref]+height-10);
+			draw_sprite(spr_shadows,dbpull_creature_shadow(Databox_Pointer[ref]),Databox_X[ref]+width+32,Databox_Y[ref]+height-10);
 			draw_sprite(sprite,0,Databox_X[ref]+width+32,Databox_Y[ref]+height-10);
 			};
 		//Draw Box
@@ -148,8 +147,8 @@ switch ( Databox_Type[ref] ) {
 		break; #endregion
 		
 	case "DB_Creatures3": #region Creature Skills
-		var skillset = DBcreature_skillset(Databox_Pointer[ref]);
-		var skillset_core = DBcreature_skillset_core(Databox_Pointer[ref]);
+		var skillset = dbpull_creature_skillset(Databox_Pointer[ref]);
+		var skillset_core = dbpull_creature_skillset_core(Databox_Pointer[ref]);
 		var width = 246;
 		var height = 59 + ceil( ( array_height_2d(skillset) - 1 ) / 8 ) * 31;
 		var tooltip = 0;

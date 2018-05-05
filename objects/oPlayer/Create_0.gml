@@ -27,3 +27,7 @@ for ( var i=1 ; i<=PartySize ; i++ ) {
 	Party_Skill[i,1] = 0;
 	Party_Trait[i,1] = 0;
 	};
+	
+OptionalUpdates = true;
+alarm[0] = 5; //Updates
+

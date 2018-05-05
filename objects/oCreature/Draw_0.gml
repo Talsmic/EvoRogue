@@ -1,3 +1,14 @@
+if ( !Draw ) { return };
+
+//Draw Shadow
+draw_sprite(spr_shadows,Sprite_Shadow,x,y);
+//Draw Sprite
+draw_sprite_ext(Sprite,0,x,y,Sprite_ScaleX*Sprite_Facing,Sprite_ScaleY,Sprite_Rotation,Sprite_Tint,Sprite_Alpha);
+
+if ( mouse_in_region( [0,x-48,y-72,x+48,y+72] ) ) {
+	draw_sprite_glow(Sprite,0,x-48,y-72,0,c_nature,0.5);
+	};
+
 /* LEGACY CODE
 
 //Update from active

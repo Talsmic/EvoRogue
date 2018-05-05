@@ -1,8 +1,8 @@
 {
-    "id": "4890c94c-9128-49ef-927e-db7cd5ad887b",
+    "id": "ab97e53c-b995-4052-b651-74dbd2c1b977",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "DBcreature_skillset",
+    "name": "dbpull_storedcreature_attributes",
     "IsCompatibility": false,
     "IsDnD": false
 }

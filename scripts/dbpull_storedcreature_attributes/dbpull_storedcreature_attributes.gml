@@ -1,11 +1,12 @@
-///storage_attributes(player,stored_creature);
+///dbpull_storedcreature_attributes(player,stored_creature);
 /// @arg player
 /// @arg stored_creature
 var player = argument0;
 var stored_creature = argument1;
-var level = player.Stored_Level[stored_creature];
+var level = player.Party_Level[stored_creature];
 /*
-	Calculates {player}.{stored_creature}'s Power, Fortitude, Speed, Recovery and Potency
+	Pulls the attribute data for a creature from the database based on a stored creature
+	and adds any relative passive or trait bonuses
 	> Returns Array
 		[0] -
 		[1] Power

@@ -6,6 +6,7 @@
 	this variable set should not be run after loading a save.
 */
 
+global.UpdateWindow = 20;//Frames
 //=[Gameplay Settings](gps)===========================================
 //  Most of these are constants that can be adjusted during 
 //  testing but will be finalized before release

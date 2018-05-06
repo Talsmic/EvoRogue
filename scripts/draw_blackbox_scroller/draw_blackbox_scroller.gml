@@ -52,12 +52,12 @@ switch ( arrowdirection ) {
 		draw_sprite_ext(spr_whitebox,1,X,Y,1,1,0,draw_colour,1);
 		draw_sprite_stretched_ext(spr_whitebox,2,X+4,Y,length-8,4,draw_colour,1);
 		draw_sprite_ext(spr_whitebox,3,X+length-4,Y,1,1,0,draw_colour,1);
-		draw_sprite(spr_scrollarrow,0+spriteoffset,X+length*0.5,Y+2-iconoffset)	
+		draw_sprite(spr_scrollarrow,0+spriteoffset,X+length*0.5,Y+2-iconoffset);
 		break;
 	case DOWN:
 		draw_sprite_ext(spr_whitebox,7,X,Y,1,1,0,draw_colour,1);
 		draw_sprite_stretched_ext(spr_whitebox,8,X+4,Y,length-8,4,draw_colour,1);
 		draw_sprite_ext(spr_whitebox,9,X+length-4,Y,1,1,0,draw_colour,1);
-		draw_sprite(spr_scrollarrow,2+spriteoffset,X+length*0.5,Y+2+iconoffset)	
+		draw_sprite(spr_scrollarrow,2+spriteoffset,X+length*0.5,Y+2+iconoffset);
 		break;
 	};

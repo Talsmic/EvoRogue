@@ -8,7 +8,7 @@ X = 20;
 Y = 20;
 
 /*
-ref_player = 1;
+Player = 1;
 ref_party = 1;
 mode = 1;
 skillset = creature_skillslist(1);

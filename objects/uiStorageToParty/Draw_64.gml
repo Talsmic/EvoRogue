@@ -19,8 +19,8 @@ var i; var j;
 for ( i=1 ; i<=global.gps_partysize ; i++ ) {
 	state = 0;
 	if ( point_in_rectangle( mouse_x, mouse_y, floor(x_main+i*29+136.5-global.gps_partysize*14.5)-14, y_main-17, floor(x_main+i*29+136.5-global.gps_partysize*14.5)+14, y_main+17 )) {	state = 2	};
-	if ( ref_target == global.party_reference[ref_player, i] ) {	state = 2	};
-	draw_icon_creature(floor(x_main+i*29+136.5-global.gps_partysize*14.5),y_main,24.32,global.party_species[ref_player, i],state);
+	if ( ref_target == global.party_reference[Player, i] ) {	state = 2	};
+	draw_icon_creature(floor(x_main+i*29+136.5-global.gps_partysize*14.5),y_main,24.32,global.party_species[Player, i],state);
 	};
 //====================================================================
 
@@ -114,7 +114,7 @@ for ( i=1 ; i<31 ; i++) {
 	//Draw	  
 	draw_icon_creature(_x,_y,24,global.storage_species[i+offset],state);
 	for ( j=1 ; j<=global.gps_partysize ; j++ ) {
-		if ( global.party_reference[ref_player, j] = i+offset ) {
+		if ( global.party_reference[Player, j] = i+offset ) {
 			draw_sprite_ext(spr_icon_frame_24x24halo,state,_x,_y,1,1,0,c_green,0.5);
 			};
 		};	

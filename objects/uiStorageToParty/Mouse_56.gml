@@ -17,10 +17,10 @@ if ( point_in_rectangle( mouse_x, mouse_y, x_main+282, y_main+161, x_main+296, y
 var i;
 for ( i=1 ; i<=global.gps_partysize ; i++ ) {
 	if ( point_in_rectangle( mouse_x, mouse_y, floor(x_main+i*29+136.5-global.gps_partysize*14.5)-14, y_main-17, floor(x_main+i*29+136.5-global.gps_partysize*14.5)+14, y_main+17 )) {	
-		if ( ref_target == global.party_reference[ref_player, i] and global.party_reference[ref_player, i] != 0 ) {
-			storage_addremove(ref_player,global.party_reference[ref_player, i]);
+		if ( ref_target == global.party_reference[Player, i] and global.party_reference[Player, i] != 0 ) {
+			storage_addremove(Player,global.party_reference[Player, i]);
 			} else {
-			ref_target = global.party_reference[ref_player, i];
+			ref_target = global.party_reference[Player, i];
 			if ( ref_target < 1 ) {	ref_target = 1 };
 			};
 		};
@@ -31,7 +31,7 @@ var offset = storage_page*30;
 for ( i=1 ; i<31 ; i++) {
 	if ( point_in_rectangle( mouse_x, mouse_y, _x-14, _y-14, _x+14, _y+14 ) ) {
 		if ( ref_target == i+offset ) {
-			storage_addremove(ref_player,i+offset);
+			storage_addremove(Player,i+offset);
 			} else {
 			ref_target = i+offset;
 			if ( ref_target < 1 ) {	ref_target = 1 };

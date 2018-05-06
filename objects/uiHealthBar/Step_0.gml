@@ -33,8 +33,8 @@ if ( instance_exists(btl_commandbar) ) {
 	btl_commandbar.energy_cache = energy_cache;
 	};
 	
-if ( global.party_health[ref_player, ref_creature] < 1 ) {
-	global.party_health[ref_player, ref_creature] = 0;
+if ( global.party_health[Player, ref_creature] < 1 ) {
+	global.party_health[Player, ref_creature] = 0;
 	btl_manager.event_endround = true;
-	btl_manager.event_death[ref_player] = true;
+	btl_manager.event_death[Player] = true;
 	};

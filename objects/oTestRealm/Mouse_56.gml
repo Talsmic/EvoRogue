@@ -1,2 +1,2 @@
-/*window_tabset_leftclick(1);
-window_tabset_leftclick(2);
+/*ui_tabset_leftclick(1);
+ui_tabset_leftclick(2);

@@ -1,3 +1,3 @@
-depth = -31;
+FocusLevel = 9;
 
-ref_player = 1;
+Player = 1;

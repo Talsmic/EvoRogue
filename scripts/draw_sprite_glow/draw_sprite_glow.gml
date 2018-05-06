@@ -1,17 +1,24 @@
-///draw_sprite_glow(sprite_index,image_index,x,y,size,colour,alpha);
-/// @arg sprite_index
-/// @arg image_index
+///draw_sprite_glow(x,y,colour,alpha,xscale,yscale,rotation);
 /// @arg x
 /// @arg y
-/// @arg size
 /// @arg colour
 /// @arg alpha
-var sprite = argument0;
-var image = argument1;
-var X = argument2;
-var Y = argument3;
-var size = argument4;
-var colour = argument5;
-var alpha = argument6;
+/// @arg xscale
+/// @arg yscale
+/// @arg rotation
+var X = argument0;
+var Y = argument1;
+var colour = argument2;
+var alpha = argument3;
+var xscale = argument4;
+var yscale = argument5;
+var rotation = argument6;
+var w = surface_get_width(GlowSurface);
+var h = surface_get_height(GlowSurface);
+var c = c_white;
 
-draw_sprite_glow_ext(sprite,image,X,Y,size,colour,alpha,1,1,0);
+//Draw Surface
+if ( xscale < 0 ) { X += w };
+if ( yscale < 0 ) { Y += h };
+draw_surface_ext(GlowSurface,X,Y,xscale,yscale,rotation,colour,alpha);
+surface_free(GlowSurface);

@@ -1,38 +1,37 @@
-/* LEGACY CODE
 
 //Textpoint
-if ( textpoint > 0 ) { textpoint-- };
+if ( Text_Point > 0 ) { Text_Point-- };
 
-//Stances
-//Rooted
-if ( global.party_stance[ref_player, ref_creature] == 43 ) { 
-	jump_offset = 0;
-	jump_speed = 0;
-	};
-//Flying
-if ( global.party_stance[ref_player, ref_creature] == 42 ) { 
-	if ( jump_offset > flight_height ) { jump_speed -= 0.1 };
-	if ( jump_offset < flight_height and jump_speed < 1 ) { jump_speed += 0.1 };
+party_effects_clear(Player,Party_Member);
+//=[Stances]====================================================================
+switch ( Player.Party_Stance[Party_Member] ) {
+	case eEffects.sFlying:
+		Jump_Offset = 0;
+		Jump_Speed = 0;
+		break;
+	case eEffects.sRooted:
+		if ( Jump_Offset > Flight_Height ) { Jump_Speed -= 0.1 };
+		if ( Jump_Offset < Flight_Height and Jump_Speed < 1 ) { Jump_Speed += 0.1 };
+		break;
 	};
 
-//Effect: Jump
-jump_offset += jump_speed;
-if ( jump_offset > 0 and global.party_stance[ref_player, ref_creature] != 42 ) { jump_speed += gravity_speed };
-if ( jump_offset < 0 ) { jump_offset = 0 };
-
-//Effect: Flash
-if (flash_intensity > 0) {
-	flash_intensity -= flash_fade;
+//=[Effects]====================================================================
+//Jump
+Jump_Offset += Jump_Speed;
+if ( Jump_Offset > 0 and Player.Party_Stance[Party_Member] != eEffects.sFlying ) { Jump_Speed += Gravity_Speed };
+if ( Jump_Offset < 0 ) { Jump_Offset = 0 };
+//Flash
+if (Flash_Intensity > 0) {
+	Flash_Intensity -= Flash_Fade;
 	};
-	
-//Effect: Pivot
-rotation += rotation_speed*facing;
-if ( rotation_speed > 0 ) { rotation_speed += gravity_speed };
-if ( rotation_speed < 0 ) { rotation_speed -= gravity_speed };
-if ( rotation_speed == 0 ) { 
-	rotation = round(rotation);
-	if ( rotation < 0 ) { rotation++ };
-	if ( rotation < 0 ) { rotation++ };
-	if ( rotation > 0 ) { rotation-- };
-	if ( rotation > 0 ) { rotation-- };
+//Pivot
+Sprite_Rotation += Rotation_Speed*Facing;
+if ( Rotation_Speed > 0 ) { Rotation_Speed += Gravity_Speed };
+if ( Rotation_Speed < 0 ) { Rotation_Speed -= Gravity_Speed };
+if ( Rotation_Speed == 0 ) { 
+	Sprite_Rotation = round(Sprite_Rotation);
+	if ( Sprite_Rotation < 0 ) { Sprite_Rotation++ };
+	if ( Sprite_Rotation < 0 ) { Sprite_Rotation++ };
+	if ( Sprite_Rotation > 0 ) { Sprite_Rotation-- };
+	if ( Sprite_Rotation > 0 ) { Sprite_Rotation-- };
 	};

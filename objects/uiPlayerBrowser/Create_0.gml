@@ -8,23 +8,23 @@ SubMode = "Storage"
 X = 20;
 Y = 20;
 
-window_listbox_create();
-	window_listbox_command("ParentMode:Players");
+ui_listbox_create();
+	ui_listbox_command("ParentMode:Players");
 	Listbox_X = X;
 	Listbox_Y = Y+25;	
 	Listbox_WordWidth = 120;
 	
-window_databox_create(1);
+ui_databox_create(1);
 	Databox_Type[1] = "PlayerContainer"
 	Databox_X[1] = X+130;
 	Databox_Y[1] = Y+25;
 	
-window_databox_create(2);
+ui_databox_create(2);
 	Databox_Type[2] = "StorageCreature"
 	Databox_X[2] = X+300;
 	Databox_Y[2] = Y+25;
 	
-window_tabset_create(1,2);
+ui_tabset_create(1,2);
 	Tabset_X[1] = X+141;
 	Tabset_Y[1] = Y+80;
 	Tabset_List[1,1] = "Storage";

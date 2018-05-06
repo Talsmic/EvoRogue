@@ -1,5 +1,5 @@
 {
-    "id": "3f2844d2-aa3a-4ef5-b58d-850f15f72333",
+    "id": "da4128a5-7fcf-47ef-937c-697a11fe150f",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "draw_sprite_glow",

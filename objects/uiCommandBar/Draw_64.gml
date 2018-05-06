@@ -3,7 +3,7 @@
 offset += offset_speed;
 
 var state;
-var stored_tt = 0;
+var stored_tooltip = 0;
 var ref_party = global.active_creature[1, 1];
 var viable_energy = global.party_energy[1, ref_party]-energy_cache;
 
@@ -74,7 +74,7 @@ if ( mode == 1 ) {
 			//Mouseover
 			if ( point_in_rectangle( mouse_x, mouse_y, skill_offset-14, y-50, skill_offset+12, y-24 ) ) {
 				state = 2;
-				stored_tt = focus_skill;			
+				stored_tooltip = focus_skill;			
 				};
 			//Not Enough Energy
 			if ( viable_energy < db_record_get("db_Skills",focus_skill,"cost") ) {	state = 5	};
@@ -131,7 +131,7 @@ if ( mode == 1 ) {
 			//Mouseover
 			if ( point_in_rectangle( mouse_x, mouse_y, skill_offset-14, y-18, skill_offset+12, y+16 ) ) {
 				state = 2;
-				stored_tt = focus_skill;			
+				stored_tooltip = focus_skill;			
 				};
 			//Not Enough Energy
 			if ( viable_energy < db_record_get("db_Skills",focus_skill,"cost") ) {	state = 5	};
@@ -145,7 +145,7 @@ if ( mode == 1 ) {
 	
 	draw_set_halign(fa_left);
 	//Draw Tooltip: Skills
-	if (stored_tt > 0) { draw_tooltip_skill(stored_tt) };
+	if (stored_tooltip > 0) { draw_tooltip_skill(stored_tooltip) };
 	};
 	
 if ( mode == 2 ) {
@@ -179,7 +179,7 @@ if ( mode == 2 ) {
 		//Mouseover
 		if ( point_in_rectangle( mouse_x, mouse_y, skill_offset-14, y-18, skill_offset+12, y+16 ) ) {
 			state = 2;		
-			stored_tt = i;
+			stored_tooltip = i;
 			};
 		//Active
 		if ( global.party_status[1, i] == eCreatureState.active ) { state = 5 };	
@@ -190,5 +190,5 @@ if ( mode == 2 ) {
 		skill_offset += 30;
 		};
 	//Draw Tooltip
-	if ( stored_tt ) { draw_tooltip_party(1,stored_tt,2,1,0) };
+	if ( stored_tooltip ) { draw_tooltip_party(1,stored_tooltip,2,1,0) };
 	};

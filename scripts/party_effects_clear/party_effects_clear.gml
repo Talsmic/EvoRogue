@@ -16,5 +16,5 @@ for ( var i=1 ; i<=global.bal_effectcap ; i++ ) {
 	};
 	
 //Reset Stance
-player.Party_Stance[party_member] = 0;
+player.Party_Stance[party_member] = eEffects.NoEffect;
 player.Party_Stance_Duration[party_member] = 0;

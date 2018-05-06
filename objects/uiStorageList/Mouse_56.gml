@@ -1,3 +1,3 @@
 /*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 
-window_listbox_leftclick();
+ui_listbox_leftclick();

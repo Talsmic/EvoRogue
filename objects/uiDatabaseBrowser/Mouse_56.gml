@@ -1,25 +1,25 @@
 /*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 
-window_listbox_leftclick();
+ui_listbox_leftclick();
 
-var tabpress = window_tabset_leftclick(1);
+var tabpress = ui_tabset_leftclick(1);
 if ( tabpress ) {
 	switch ( Tabset_Pointer[1] ) {
-		case 1:		window_listbox_command("ParentMode:Skills");		break;
-		case 2:		window_listbox_command("ParentMode:Creatures");		break;
+		case 1:		ui_listbox_command("ParentMode:Skills");		break;
+		case 2:		ui_listbox_command("ParentMode:Creatures");		break;
 		};
 	};
 
-tabpress = window_tabset_leftclick(2);
+tabpress = ui_tabset_leftclick(2);
 if ( tabpress ) {
 	switch ( Tabset_Pointer[2] ) {
-		case 1:		window_listbox_command("Mode:Icons");		break;
-		case 2:		window_listbox_command("Mode:Words");		break;
+		case 1:		ui_listbox_command("Mode:Icons");		break;
+		case 2:		ui_listbox_command("Mode:Words");		break;
 		};
 	};
 
 if ( Mode == "Creatures" ) {
-	tabpress = window_tabset_leftclick(3);
+	tabpress = ui_tabset_leftclick(3);
 	};
 
 //Close

@@ -1,6 +1,6 @@
 /*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 
-window_listbox_keyrelease();
+ui_listbox_keyrelease();
 
 //[Test Functions]
 if ( keyboard_check_released(ord("0")) ) { DrawExtraCommands = toggle(DrawExtraCommands) };	

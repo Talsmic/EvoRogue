@@ -3,7 +3,7 @@ alpha += alpha_speed;
 draw_set_alpha(alpha);
 
 var x_offset = global.bal_chainsize*19;
-var stored_tt = 0;
+var stored_tooltip = 0;
 var empty_slots = 0;
 var i; var j;
 for ( i=1 ; i<=global.bal_chainsize ; i++ ) { 
@@ -49,7 +49,7 @@ for ( i=1 ; i<=global.bal_chainsize ; i++ ) {
 		case 1: //Use Skill
 			draw_icon_skill(x-x_offset+38*i-19,y,32,skill,1);
 			if ( point_in_rectangle( mouse_x, mouse_y, x-x_offset+38*i-36, y-17, x-x_offset+38*i-2, y+17 ) ) {
-				stored_tt = skill;
+				stored_tooltip = skill;
 				};
 			chain_recharge[i] = db_record_get("db_Skills",skill,"recharge");
 			break;
@@ -86,6 +86,6 @@ draw_set_halign(fa_left);
 
 //====================================================================
 //Draw Tooltip: Skills
-if (stored_tt > 0) { draw_tooltip_skill(stored_tt) };
+if (stored_tooltip > 0) { draw_tooltip_skill(stored_tooltip) };
 
 draw_set_alpha(1);

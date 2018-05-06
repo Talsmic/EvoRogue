@@ -1,9 +1,12 @@
-if ( AllowMouseSelection and !Selected ) {
-	with ( oCreature ) { Selected = false };
-	Selected = true;
-	alarm[0] = 1; //Update
+
+if ( AllowMouseSelection == 1 ) {
+	if ( Selected ) { Selected = false }
+	else { with ( oCreature ) { Selected = false; Targeted = false };	Selected = true; alarm[0] = 1 };
 	};
 	
-if ( AllowMouseSelection and Selected ) {
-	Selected = false;
+if ( AllowMouseTargetting == 1 and !Selected ) {
+	with ( oCreature ) {
+		Targeted = false;
+		if ( Selected ) { Target = other };
+		};
 	};

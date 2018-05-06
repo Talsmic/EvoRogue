@@ -21,7 +21,7 @@ switch ( battle_phase_step )    {
 		break;
 	case 11: //Activate Player 1 creature
 		player1_creature_sprite = instance_create_depth(160,160,-2,btl_creature);
-		player1_creature_sprite.ref_player = 1;
+		player1_creature_sprite.Player = 1;
 		player1_creature_sprite.ref_creature = 0;
 		player1_creature_sprite.ref_active = 1;
 		switch_use(1,opener_selection_1,0);
@@ -29,7 +29,7 @@ switch ( battle_phase_step )    {
 	case 21: //Activate Player 2 creature
 		player2_creature_sprite = instance_create_depth(320,160,-2,btl_creature);
 		player2_creature_sprite.facing = -1;
-		player2_creature_sprite.ref_player = 2;
+		player2_creature_sprite.Player = 2;
 		player2_creature_sprite.ref_creature = 0;
 		player2_creature_sprite.ref_active = 1;
 		switch_use(2,opener_selection_2,0);
@@ -37,7 +37,7 @@ switch ( battle_phase_step )    {
 	case 31: //Create Health Bars
 		player1_healthbar = instance_create_depth(-44,48,-7,btl_healthbar);
 		player2_healthbar = instance_create_depth(524,48,-7,btl_healthbar);
-		player2_healthbar.ref_player = 2;
+		player2_healthbar.Player = 2;
 		player2_healthbar.facing = -1;
 		break;
 	//...	

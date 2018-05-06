@@ -6,7 +6,7 @@ draw_screenfill(c_white,0.5);
 //=[Sprite]===========================================================
 var shadow = db_record_get("db_Creatures",ref_selection,"shadow");
 var sprite = asset_get_index(db_record_get("db_Creatures",ref_selection,"sprite"));
-var name = global.party_name[ref_player,ref_party];
+var name = global.party_name[Player,ref_party];
 var s_name = db_record_get("db_Creatures",ref_selection,"name");
 //Draw Sprite
 draw_sprite(spr_shadows,shadow,88,138);
@@ -22,7 +22,7 @@ draw_set_halign(fa_left);
 var __stats = 11;
 var stats;
 //Find Stats
-stats = party_checkattribute(ref_player,ref_party,6);
+stats = party_checkattribute(Player,ref_party,6);
 //Draw Box and Lines
 draw_blackbox(x_stats,y_stats,112,64);
 draw_blackbox(x_stats+4,y_stats+8,104,6);
@@ -48,7 +48,7 @@ draw_text(x_stats+105,y_stats+4+__stats*3,real(stats[4]));
 draw_text(x_stats+105,y_stats+4+__stats*4,real(stats[5]));
 draw_set_halign(fa_left); 
 //Draw Stat Star
-switch (global.party_nature[ref_player,ref_party]) {
+switch (global.party_nature[Player,ref_party]) {
 	default: 	var c_stat = c_white;		break;
 	case 1:		var c_stat = c_power;		break;
 	case 2:		var c_stat = c_fortitude;	break;
@@ -60,12 +60,12 @@ draw_sprite_ext(spr_statstar,0,x_stats+8,y_stats-9,1,1,0,c_stat,1);
 //====================================================================
 
 //=[Name Plate]=======================================================
-var ref_health = floor(global.party_health[ref_player, ref_party]);
-var ref_energy = floor(global.party_energy[ref_player, ref_party]);
-var max_health = party_checkmaxhealth(ref_player, ref_party);
+var ref_health = floor(global.party_health[Player, ref_party]);
+var ref_energy = floor(global.party_energy[Player, ref_party]);
+var max_health = party_checkmaxhealth(Player, ref_party);
 var max_energy = global.bal_energy_base;
-var typeA_c = find_elementcolour(db_record_get("db_Creatures",global.party_species[ref_player, ref_party],"elementA"));
-var typeB_c = find_elementcolour(db_record_get("db_Creatures",global.party_species[ref_player, ref_party],"elementB"));
+var typeA_c = find_elementcolour(db_record_get("db_Creatures",global.party_species[Player, ref_party],"elementA"));
+var typeB_c = find_elementcolour(db_record_get("db_Creatures",global.party_species[Player, ref_party],"elementB"));
 var health_size = ref_health / max_health * 100;
 var energy_size = ref_energy / max_energy * 100;
 //Draw Background Box
@@ -82,7 +82,7 @@ draw_text_outline(x_name-8,y_name-18,name,c_white);
 //Draw Level
 draw_set_font(ft_EvoTooltip_6);
 draw_set_halign(fa_center);
-draw_text_outline(x_name,y_name-4,global.party_level[ref_player,ref_party],typeA_c);
+draw_text_outline(x_name,y_name-4,global.party_level[Player,ref_party],typeA_c);
 draw_set_halign(fa_right); 
 //Draw Health
 draw_sprite_part_ext(spr_healthbar,0,0,0,health_size,7,x_name-11,y_name-6,-1,1,c_white,1);
@@ -114,7 +114,7 @@ draw_text(x_main+286,y_main+153,"X");
 //-[Mode 1: Status]---------------------------------------------------
 if (mode == 1) {
 	//Update Skills
-	party_coreskills(ref_player, ref_party);
+	party_coreskills(Player, ref_party);
 	var level_check = creature_skillslist_core(global.party_species[1, ref_party]);
 	draw_blackbox_sharp(x_main,y_main,300,50,0,0,1,1);
 	draw_blackbox_sharp(x_main,y_main+51,300,49,1,1,1,1);
@@ -170,7 +170,7 @@ if (mode == 1) {
 			//Mouseover
 			if ( point_in_rectangle( mouse_x, mouse_y, icon_start-20, y_main+60, icon_start+8, y_main+95 ) ) {
 				state = 2;
-				stored_tt = focus_skill;			
+				stored_tooltip = focus_skill;			
 				};
 			if ( global.party_level[1, ref_party] < level_check[i, 2] ) { state = 6 };
 			//Draw
@@ -204,7 +204,7 @@ if (mode == 1) {
 		//Mouseover
 		if ( point_in_rectangle( mouse_x, mouse_y, icon_x-14, y_main+60, icon_x+12, y_main+95 ) ) {
 			state = 2;
-			stored_tt = focus_skill;			
+			stored_tooltip = focus_skill;			
 			};
 		if ( global.party_level[1, ref_party] < req_level ) { state = 6 };
 		//Draw

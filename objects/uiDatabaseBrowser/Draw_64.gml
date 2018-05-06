@@ -12,12 +12,12 @@ switch ( Mode ) {
 	};
 	
 //-[List Box]-------------------------------------------------------------------
-window_listbox_draw();
-window_tabset_draw(1);
-window_tabset_draw(2);
+ui_listbox_draw();
+ui_tabset_draw(1);
+ui_tabset_draw(2);
 //-[Data Box]-------------------------------------------------------------------	
-window_databox_draw(1);
-if ( Mode == "Creatures" ) { window_tabset_draw(3); window_databox_draw(2); };
+ui_databox_draw(1);
+if ( Mode == "Creatures" ) { ui_tabset_draw(3); ui_databox_draw(2); };
 //------------------------------------------------------------------------------
 
 draw_cornercross(oGlobalController.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);

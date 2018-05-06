@@ -18,8 +18,8 @@ if ( point_in_rectangle( mouse_x, mouse_y, x_main+282, y_main+151, x_main+296, y
 
 //Change StatStar
 if ( point_in_rectangle( mouse_x, mouse_y, x_stats, y_stats-16, x_stats+16, y_stats ) ) {
-	global.party_nature[ref_player,ref_party]++;
-	if ( global.party_nature[ref_player,ref_party] > 5 ) { global.party_nature[ref_player,ref_party] = 0 };
+	global.party_nature[Player,ref_party]++;
+	if ( global.party_nature[Player,ref_party] > 5 ) { global.party_nature[Player,ref_party] = 0 };
 	};
 
 //-[Mode 2: Skills]---------------------------------------------------
@@ -27,19 +27,19 @@ if (mode == 2) {
 	var _x = x_main-10; var _y = y_main+63;
 	//Remove Skills
 	if ( point_in_rectangle( mouse_x, mouse_y, icon_start-14, y_main+4, icon_start+12, y_main+39 ) ) {
-		global.party_skill1[ref_player, ref_party] = 0;
+		global.party_skill1[Player, ref_party] = 0;
 		};
 	if ( point_in_rectangle( mouse_x, mouse_y, icon_start+16, y_main+4, icon_start+42, y_main+39 ) ) {
-		global.party_skill2[ref_player, ref_party] = 0;
+		global.party_skill2[Player, ref_party] = 0;
 		};
 	if ( point_in_rectangle( mouse_x, mouse_y, icon_start+46, y_main+4, icon_start+72, y_main+39 ) ) {
-		global.party_skill3[ref_player, ref_party] = 0;
+		global.party_skill3[Player, ref_party] = 0;
 		};
 	if ( point_in_rectangle( mouse_x, mouse_y, icon_start+76, y_main+4, icon_start+102, y_main+39 ) ) {
-		global.party_skill4[ref_player, ref_party] = 0;
+		global.party_skill4[Player, ref_party] = 0;
 		};
 	if ( point_in_rectangle( mouse_x, mouse_y, icon_start+106, y_main+4, icon_start+132, y_main+39 ) ) {
-		global.party_skill5[ref_player, ref_party] = 0;
+		global.party_skill5[Player, ref_party] = 0;
 		};
 	//Add Skills
 	for ( i=1 ; i<array_height_2d(skillset) ; i++) {
@@ -49,50 +49,50 @@ if (mode == 2) {
 			_y += 30;
 			};		
 		if ( point_in_rectangle( mouse_x, mouse_y, _x-14, _y-14, _x+14, _y+14 ) ) {
-			if ( global.party_level[ref_player, ref_party] < skillset[i, 2] ) { break };
-			if (global.party_skill1[ref_player, ref_party] == skillset[i,1]) { 
-				global.party_skill1[ref_player, ref_party] = 0;
+			if ( global.party_level[Player, ref_party] < skillset[i, 2] ) { break };
+			if (global.party_skill1[Player, ref_party] == skillset[i,1]) { 
+				global.party_skill1[Player, ref_party] = 0;
 				break; 
 				};
-			if (global.party_skill2[ref_player, ref_party] == skillset[i,1]) { 
-				global.party_skill2[ref_player, ref_party] = 0;
+			if (global.party_skill2[Player, ref_party] == skillset[i,1]) { 
+				global.party_skill2[Player, ref_party] = 0;
 				break; 
 				};
-			if (global.party_skill3[ref_player, ref_party] == skillset[i,1]) { 
-				global.party_skill3[ref_player, ref_party] = 0;
+			if (global.party_skill3[Player, ref_party] == skillset[i,1]) { 
+				global.party_skill3[Player, ref_party] = 0;
 				break; 
 				};
-			if (global.party_skill4[ref_player, ref_party] == skillset[i,1]) { 
-				global.party_skill4[ref_player, ref_party] = 0;
+			if (global.party_skill4[Player, ref_party] == skillset[i,1]) { 
+				global.party_skill4[Player, ref_party] = 0;
 				break; 
 				};
-			if (global.party_skill5[ref_player, ref_party] == skillset[i,1]) { 
-				global.party_skill5[ref_player, ref_party] = 0;
+			if (global.party_skill5[Player, ref_party] == skillset[i,1]) { 
+				global.party_skill5[Player, ref_party] = 0;
 				break; 
 				};
 			//Slot1
-			if (global.party_skill1[ref_player, ref_party] == 0) {
-				global.party_skill1[ref_player, ref_party] = skillset[i,1];
+			if (global.party_skill1[Player, ref_party] == 0) {
+				global.party_skill1[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			//Slot2
-			if (global.party_skill2[ref_player, ref_party] == 0) {
-				global.party_skill2[ref_player, ref_party] = skillset[i,1];
+			if (global.party_skill2[Player, ref_party] == 0) {
+				global.party_skill2[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			//Slot3
-			if (global.party_skill3[ref_player, ref_party] == 0 and global.party_level[ref_player, ref_party] >= 3) {
-				global.party_skill3[ref_player, ref_party] = skillset[i,1];
+			if (global.party_skill3[Player, ref_party] == 0 and global.party_level[Player, ref_party] >= 3) {
+				global.party_skill3[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			//Slot4
-			if (global.party_skill4[ref_player, ref_party] == 0 and global.party_level[ref_player, ref_party] >= 5) {
-				global.party_skill4[ref_player, ref_party] = skillset[i,1];
+			if (global.party_skill4[Player, ref_party] == 0 and global.party_level[Player, ref_party] >= 5) {
+				global.party_skill4[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			//Slot5
-			if (global.party_skill5[ref_player, ref_party] == 0 and global.party_level[ref_player, ref_party] >= 7) {
-				global.party_skill5[ref_player, ref_party] = skillset[i,1];
+			if (global.party_skill5[Player, ref_party] == 0 and global.party_level[Player, ref_party] >= 7) {
+				global.party_skill5[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			};

@@ -17,6 +17,8 @@ enum eDirection {
 //Battle
 enum eCreatureState { 
 	nonexistant, existant, defeated, active, benched, defeatedbenched	};
+enum eEffects { 
+	NoEffect, sFlying, sRooted	};
 
 //Multiplayer
 #macro TEAMDATA 1

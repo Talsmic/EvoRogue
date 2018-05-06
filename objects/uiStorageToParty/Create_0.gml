@@ -2,7 +2,7 @@
 
 global.focus_layer[4] = 1;
 
-ref_player = 1;
+Player = 1;
 ref_target = 1;
 storage_page = 0;
 
@@ -11,5 +11,5 @@ y_main = y+56;
 
 var i;
 for ( i=1 ; i<=global.gps_partysize ; i++ ) {
-	storage_updatefromparty(ref_player,i);
+	storage_updatefromparty(Player,i);
 	};

@@ -4,18 +4,18 @@ draw_set_alpha( alpha );
 
 //Update from active
 if ( ref_active ) {
-	if (global.active_creature[ref_player, ref_active] <= 0) { return };
-	ref_creature = global.active_creature[ref_player, ref_active];
+	if (global.active_creature[Player, ref_active] <= 0) { return };
+	ref_creature = global.active_creature[Player, ref_active];
 	};
 
 //Find Information
-var ref_name = global.party_name[ref_player, ref_creature];
-var ref_health = floor(global.party_health[ref_player, ref_creature]);
-var ref_energy = floor(global.party_energy[ref_player, ref_creature]);
-var max_health = party_checkmaxhealth(ref_player, ref_creature);
+var ref_name = global.party_name[Player, ref_creature];
+var ref_health = floor(global.party_health[Player, ref_creature]);
+var ref_energy = floor(global.party_energy[Player, ref_creature]);
+var max_health = party_checkmaxhealth(Player, ref_creature);
 var max_energy = global.bal_energy_base;
-var typeA = find_elementcolour(db_record_get("db_Creatures",global.party_species[ref_player, ref_creature],"elementA"));
-var typeB = find_elementcolour(db_record_get("db_Creatures",global.party_species[ref_player, ref_creature],"elementB"));
+var typeA = find_elementcolour(db_record_get("db_Creatures",global.party_species[Player, ref_creature],"elementA"));
+var typeB = find_elementcolour(db_record_get("db_Creatures",global.party_species[Player, ref_creature],"elementB"));
 if ( ref_health > stored_health ) { stored_health++ };
 if ( ref_health < stored_health ) { stored_health-- };
 if ( ref_energy > stored_energy ) { stored_energy++ };
@@ -37,7 +37,7 @@ if ( facing ) {
 	//Draw Level
 	draw_set_font(ft_EvoTooltip_6);
 	draw_set_halign(fa_center);
-	draw_text_outline(x+1,y-4,global.party_level[ref_player,ref_creature],typeA);
+	draw_text_outline(x+1,y-4,global.party_level[Player,ref_creature],typeA);
 	draw_set_halign(fa_left); 
 	//Draw Health
 	draw_sprite_part(spr_healthbar,0,0,0,health_size,7,x+11,y-6);
@@ -77,7 +77,7 @@ if ( facing ) {
 	//Draw Level
 	draw_set_font(ft_EvoTooltip_6);
 	draw_set_halign(fa_center);
-	draw_text_outline(x,y-4,global.party_level[ref_player,ref_creature],typeA);
+	draw_text_outline(x,y-4,global.party_level[Player,ref_creature],typeA);
 	draw_set_halign(fa_right); 
 	//Draw Health
 	draw_sprite_part_ext(spr_healthbar,0,0,0,health_size,7,x-11,y-6,-1,1,c_white,alpha);
@@ -106,11 +106,11 @@ if ( ref_active ) {
 	var boost_count = 0;
 	boost_count[0] = 0;
 	var boost_draw = 1;
-	if ( global.active_boost_power[ref_player] > 0 ) { boost_count[boost_draw]=c_power; boost_draw++ };
-	if ( global.active_boost_potency[ref_player] > 0 ) { boost_count[boost_draw]=c_potency; boost_draw++ };
-	if ( global.active_boost_fortitude[ref_player] > 0 ) { boost_count[boost_draw]=c_fortitude; boost_draw++ };
-	if ( global.active_boost_recovery[ref_player] > 0 ) { boost_count[boost_draw]=c_recovery; boost_draw++ };
-	if ( global.active_boost_speed[ref_player] > 0 ) { boost_count[boost_draw]=c_speed; boost_draw++ };
+	if ( global.active_boost_power[Player] > 0 ) { boost_count[boost_draw]=c_power; boost_draw++ };
+	if ( global.active_boost_potency[Player] > 0 ) { boost_count[boost_draw]=c_potency; boost_draw++ };
+	if ( global.active_boost_fortitude[Player] > 0 ) { boost_count[boost_draw]=c_fortitude; boost_draw++ };
+	if ( global.active_boost_recovery[Player] > 0 ) { boost_count[boost_draw]=c_recovery; boost_draw++ };
+	if ( global.active_boost_speed[Player] > 0 ) { boost_count[boost_draw]=c_speed; boost_draw++ };
 	switch ( array_length_1d(boost_count) ) {
 		case 6:
 			draw_sprite_part_ext(spr_boostarrow,0,0,0,3,15,x-7-boost_offset,y-22,1,1,boost_count[1],1);
@@ -144,11 +144,11 @@ if ( ref_active ) {
 	boost_count = 0;
 	boost_count[0] = 0;
 	boost_draw = 1;
-	if ( global.active_boost_power[ref_player] < 0 ) { boost_count[boost_draw]=c_power; boost_draw++ };
-	if ( global.active_boost_potency[ref_player] < 0 ) { boost_count[boost_draw]=c_potency; boost_draw++ };
-	if ( global.active_boost_fortitude[ref_player] < 0 ) { boost_count[boost_draw]=c_fortitude; boost_draw++ };
-	if ( global.active_boost_recovery[ref_player] < 0 ) { boost_count[boost_draw]=c_recovery; boost_draw++ };
-	if ( global.active_boost_speed[ref_player] < 0 ) { boost_count[boost_draw]=c_speed; boost_draw++ };
+	if ( global.active_boost_power[Player] < 0 ) { boost_count[boost_draw]=c_power; boost_draw++ };
+	if ( global.active_boost_potency[Player] < 0 ) { boost_count[boost_draw]=c_potency; boost_draw++ };
+	if ( global.active_boost_fortitude[Player] < 0 ) { boost_count[boost_draw]=c_fortitude; boost_draw++ };
+	if ( global.active_boost_recovery[Player] < 0 ) { boost_count[boost_draw]=c_recovery; boost_draw++ };
+	if ( global.active_boost_speed[Player] < 0 ) { boost_count[boost_draw]=c_speed; boost_draw++ };
 	switch ( array_length_1d(boost_count) ) {
 		case 6:
 			draw_sprite_part_ext(spr_boostarrow,1,0,0,3,15,x-7-boost_offset,y+8,1,1,boost_count[1],1);
@@ -209,42 +209,42 @@ if ( facing ) {
 	var effect_draw_direction = -1;
 };
 //Draw Stance
-if ( global.party_stance[ref_player, ref_creature] ) {
-	draw_icon_effect(x+effect_x,y+effect_y,16,global.party_stance[ref_player, ref_creature],global.party_stance_duration[ref_player, ref_creature],0)
+if ( global.party_stance[Player, ref_creature] ) {
+	draw_icon_effect(x+effect_x,y+effect_y,16,global.party_stance[Player, ref_creature],global.party_stance_duration[Player, ref_creature],0)
 	effect_x += 21*effect_draw_direction;
 	};
 //Draw Buffs
 for ( i=1 ; i<=5 ; i++ ) {
 	switch ( i ) {
 		case 1: 
-			effect = global.party_buff1[ref_player, ref_creature]; 
-			effect_duration = global.party_buff1_duration[ref_player, ref_creature];
-			effect_element = global.party_buff1_element[ref_player, ref_creature];
-			effect_potency = global.party_buff1_potency[ref_player, ref_creature];
+			effect = global.party_buff1[Player, ref_creature]; 
+			effect_duration = global.party_buff1_duration[Player, ref_creature];
+			effect_element = global.party_buff1_element[Player, ref_creature];
+			effect_potency = global.party_buff1_potency[Player, ref_creature];
 			break;
 		case 2: 
-			effect = global.party_buff2[ref_player, ref_creature]; 
-			effect_duration = global.party_buff2_duration[ref_player, ref_creature];
-			effect_element = global.party_buff2_element[ref_player, ref_creature];
-			effect_potency = global.party_buff2_potency[ref_player, ref_creature];
+			effect = global.party_buff2[Player, ref_creature]; 
+			effect_duration = global.party_buff2_duration[Player, ref_creature];
+			effect_element = global.party_buff2_element[Player, ref_creature];
+			effect_potency = global.party_buff2_potency[Player, ref_creature];
 			break;
 		case 3: 
-			effect = global.party_buff3[ref_player, ref_creature]; 
-			effect_duration = global.party_buff3_duration[ref_player, ref_creature];
-			effect_element = global.party_buff3_element[ref_player, ref_creature];
-			effect_potency = global.party_buff3_potency[ref_player, ref_creature];
+			effect = global.party_buff3[Player, ref_creature]; 
+			effect_duration = global.party_buff3_duration[Player, ref_creature];
+			effect_element = global.party_buff3_element[Player, ref_creature];
+			effect_potency = global.party_buff3_potency[Player, ref_creature];
 			break;
 		case 4: 
-			effect = global.party_buff4[ref_player, ref_creature]; 
-			effect_duration = global.party_buff4_duration[ref_player, ref_creature];
-			effect_element = global.party_buff4_element[ref_player, ref_creature];
-			effect_potency = global.party_buff4_potency[ref_player, ref_creature];
+			effect = global.party_buff4[Player, ref_creature]; 
+			effect_duration = global.party_buff4_duration[Player, ref_creature];
+			effect_element = global.party_buff4_element[Player, ref_creature];
+			effect_potency = global.party_buff4_potency[Player, ref_creature];
 			break;
 		case 5: 
-			effect = global.party_buff5[ref_player, ref_creature]; 
-			effect_duration = global.party_buff5_duration[ref_player, ref_creature];
-			effect_element = global.party_buff5_element[ref_player, ref_creature];
-			effect_potency = global.party_buff5_potency[ref_player, ref_creature];
+			effect = global.party_buff5[Player, ref_creature]; 
+			effect_duration = global.party_buff5_duration[Player, ref_creature];
+			effect_element = global.party_buff5_element[Player, ref_creature];
+			effect_potency = global.party_buff5_potency[Player, ref_creature];
 			break;
 		};
 	if ( effect ) {
@@ -258,34 +258,34 @@ for ( i=1 ; i<=5 ; i++ ) {
 for ( i=1 ; i<=5 ; i++ ) {
 	switch ( i ) {
 		case 1: 
-			effect = global.party_debuff1[ref_player, ref_creature]; 
-			effect_duration = global.party_debuff1_duration[ref_player, ref_creature];
-			effect_element = global.party_debuff1_element[ref_player, ref_creature];
-			effect_potency = global.party_debuff1_potency[ref_player, ref_creature];
+			effect = global.party_debuff1[Player, ref_creature]; 
+			effect_duration = global.party_debuff1_duration[Player, ref_creature];
+			effect_element = global.party_debuff1_element[Player, ref_creature];
+			effect_potency = global.party_debuff1_potency[Player, ref_creature];
 			break;
 		case 2: 
-			effect = global.party_debuff2[ref_player, ref_creature]; 
-			effect_duration = global.party_debuff2_duration[ref_player, ref_creature];
-			effect_element = global.party_debuff2_element[ref_player, ref_creature];
-			effect_potency = global.party_debuff2_potency[ref_player, ref_creature];
+			effect = global.party_debuff2[Player, ref_creature]; 
+			effect_duration = global.party_debuff2_duration[Player, ref_creature];
+			effect_element = global.party_debuff2_element[Player, ref_creature];
+			effect_potency = global.party_debuff2_potency[Player, ref_creature];
 			break;
 		case 3: 
-			effect = global.party_debuff3[ref_player, ref_creature]; 
-			effect_duration = global.party_debuff3_duration[ref_player, ref_creature];
-			effect_element = global.party_debuff3_element[ref_player, ref_creature];
-			effect_potency = global.party_debuff3_potency[ref_player, ref_creature];
+			effect = global.party_debuff3[Player, ref_creature]; 
+			effect_duration = global.party_debuff3_duration[Player, ref_creature];
+			effect_element = global.party_debuff3_element[Player, ref_creature];
+			effect_potency = global.party_debuff3_potency[Player, ref_creature];
 			break;
 		case 4: 
-			effect = global.party_debuff4[ref_player, ref_creature]; 
-			effect_duration = global.party_debuff4_duration[ref_player, ref_creature];
-			effect_element = global.party_debuff4_element[ref_player, ref_creature];
-			effect_potency = global.party_debuff4_potency[ref_player, ref_creature];
+			effect = global.party_debuff4[Player, ref_creature]; 
+			effect_duration = global.party_debuff4_duration[Player, ref_creature];
+			effect_element = global.party_debuff4_element[Player, ref_creature];
+			effect_potency = global.party_debuff4_potency[Player, ref_creature];
 			break;
 		case 5: 
-			effect = global.party_debuff5[ref_player, ref_creature]; 
-			effect_duration = global.party_debuff5_duration[ref_player, ref_creature];
-			effect_element = global.party_debuff5_element[ref_player, ref_creature];
-			effect_potency = global.party_debuff5_potency[ref_player, ref_creature];
+			effect = global.party_debuff5[Player, ref_creature]; 
+			effect_duration = global.party_debuff5_duration[Player, ref_creature];
+			effect_element = global.party_debuff5_element[Player, ref_creature];
+			effect_potency = global.party_debuff5_potency[Player, ref_creature];
 			break;
 		};
 	if ( effect ) {

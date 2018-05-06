@@ -13,8 +13,8 @@ draw_text_color(x,y-18,text_title,c_white,c_white,c_gray,c_gray,0.25);
 draw_set_font(ft_EvoSmallcaps_6);
 draw_text_outline_coloured(x,y+10,text_desc,c_white,banner_colour);
 draw_set_halign(fa_left); 
-var stored_tt = 0;
-var stored_tt_p = 1;
+var stored_tooltip = 0;
+var stored_tooltip_p = 1;
 
 //=[Creature Selection]===============================================
 //Draw Sprite
@@ -39,7 +39,7 @@ for ( i=1 ; i<=global.gps_partysize ; i++ ) {
 	state = 0;
 	if ( point_in_rectangle( mouse_x, mouse_y, team_preview_offset+i*25-25, tp_y-20, team_preview_offset+i*25-2, tp_y+17 )) {	
 		state = 2;
-		stored_tt = i;
+		stored_tooltip = i;
 		};
 		//Defeated
 	if ( global.party_status[1, i] == eCreatureState.defeated ) { state = 6 };	
@@ -74,12 +74,12 @@ var state;
 for ( i=1 ; i<=global.gps_partysize ; i++ ) {
 	if ( global.party_status[2, i] == eCreatureState.nonexistant ) { continue };
 	if ( point_in_rectangle( mouse_x, mouse_y, 479-team_preview_offset-opponent_teamsize*25+i*25-25, tp_y-20, 479-team_preview_offset-opponent_teamsize*25+i*25-2, tp_y+17 )) {	
-		stored_tt = i;
-		stored_tt_p = 2;
+		stored_tooltip = i;
+		stored_tooltip_p = 2;
 		};
 	draw_icon_creature(479-team_preview_offset-opponent_teamsize*25+i*25-12,tp_y,20.28,global.party_species[2, i],0);
 	};
 //====================================================================
 
 //Draw Tooltip
-if ( stored_tt ) { draw_tooltip_party(stored_tt_p,stored_tt,2,1,0) };
+if ( stored_tooltip ) { draw_tooltip_party(stored_tooltip_p,stored_tooltip,2,1,0) };

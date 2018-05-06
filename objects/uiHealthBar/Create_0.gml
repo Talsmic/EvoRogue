@@ -1,4 +1,4 @@
-ref_player = 1;
+Player = 1;
 ref_creature = 1;
 ref_active = 1;
 stored_health = 200;

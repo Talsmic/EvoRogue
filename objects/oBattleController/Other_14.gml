@@ -38,7 +38,7 @@ switch ( battle_phase_step )    {
 	//...
 	case 105: //Recovery
 		var i;
-		for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+		for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 			party_recovery(1,i);
 			party_recovery(2,i);
 			party_recharge(1,i);

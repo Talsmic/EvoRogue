@@ -15,8 +15,8 @@ if ( point_in_rectangle( mouse_x, mouse_y, x_main+282, y_main+161, x_main+296, y
 	
 //Icons 
 var i;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
-	if ( point_in_rectangle( mouse_x, mouse_y, floor(x_main+i*29+136.5-global.gps_partysize*14.5)-14, y_main-17, floor(x_main+i*29+136.5-global.gps_partysize*14.5)+14, y_main+17 )) {	
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
+	if ( point_in_rectangle( mouse_x, mouse_y, floor(x_main+i*29+136.5-global.Default_PartySize*14.5)-14, y_main-17, floor(x_main+i*29+136.5-global.Default_PartySize*14.5)+14, y_main+17 )) {	
 		if ( ref_target == global.party_reference[Player, i] and global.party_reference[Player, i] != 0 ) {
 			storage_addremove(Player,global.party_reference[Player, i]);
 			} else {

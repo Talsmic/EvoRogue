@@ -10,8 +10,8 @@ global.UpdateWindow = 20;//Frames
 //=[Gameplay Settings](gps)===========================================
 //  Most of these are constants that can be adjusted during 
 //  testing but will be finalized before release
-global.gps_partysize = 10;				//Maximum party size
-global.gps_storagesize = 150;			//Maximum creatures in a storage set
+global.Default_PartySize = 5;				//Maximum party size
+global.Default_StorageSize = 150;			//Maximum creatures in a storage set
 global.gps_currencymultiplier = 3;		//Multiplier for currency gains
 global.gps_experiencemultiplier = 3;	//Multiplier for experience gains
 // (bal) balance settings
@@ -19,7 +19,7 @@ global.bal_health_base = 45;			//Base Health of a lv0 Creature
 global.bal_health_growth = 5.5;			//Health growth per level
 global.bal_energy_base = 100;			//Default energy pool size
 global.bal_energy_growth = 0;			//Default energy pool size
-global.bal_startingenergy = 30;			//Energy a lv0 creature starts a battle with
+global.bal_startingenergy_base = 30;	//Energy a lv0 creature starts a battle with
 global.bal_startingenergy_growth = 2;	//Starting Energy growth per level
 
 global.bal_chainsize = 3;				//Amount of skills that can be queued in a round

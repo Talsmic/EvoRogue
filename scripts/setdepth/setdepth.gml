@@ -1,9 +1,37 @@
-///setdepth();
+///setdepth(depth_layer);
+/// @arg depth_layer
+var depth_layer = "Playfield"
+if ( argument_count > 0 ) { depth_Layer = argument[0] } 
+var focus_level = 10;
+var depth_offset = 0;
+if ( variable_instance_exists(id,"FocusLevel") ) { focus_level = FocusLevel }; 
+if ( variable_instance_exists(id,"DepthOffset") ) { depth_offset = DepthOffset };
+switch ( depth_layer ) {
+	
+	case "Playfield": default:
+		//Depths 0+ are playfield depths
+		//Playfield depths are assigned by y axis
+		var set_depth = 0;
+		var set_depth = room_width - y;
+		break;
+		
+	case "UI":
+		//Depths 0 to -100 are UI depths
+		//UI depths are assigned by focus level
+		var set_depth = -100;
+		set_depth += focus_level*10;		
+		set_depth += depth_offset;
+		break;
+		
+	case "Debug":
+		//Depths -100 to -200 are Debug depths
+		//Debug depths are assigned by inverted focus level
+		var set_depth = -200;
+		set_depth += focus_level*10;		
+		set_depth += depth_offset;
+		break;
+		
+	};
 
-var depth1;
-
-depth1 = 10000 - y;
-
-if ( variable_instance_exists(id,"FocusLevel") ) { depth1 -= ( 11 - FocusLevel ) * 10000 }; 
-
-depth = depth1;
+depth = set_depth;
+return set_depth;

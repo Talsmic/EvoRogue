@@ -152,7 +152,7 @@ if ( mode == 2 ) {
 	//Draw Bar
 	var bar_size = 5;
 	var i;
-	for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+	for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 		if ( global.party_status[1, i] ) {	bar_size += 30	};
 		};
 	draw_blackbox_sharp(offset,y-16,bar_size,32,1,1,1,1);
@@ -173,7 +173,7 @@ if ( mode == 2 ) {
 	//Draw Creatures
 	var i; 
 	var skill_offset = 18;
-	for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+	for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 		if ( global.party_status[1, i] == eCreatureState.nonexistant ) { continue };
 		state = 1;
 		//Mouseover

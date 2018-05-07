@@ -9,14 +9,14 @@ draw_sprite(spr_blackboxcaps16,0,80,_y-1);
 draw_blackbox_sharp(400,_y,80,15,1,1,1,1);
 draw_sprite(spr_blackboxcaps16,2,368,_y-1);
 var icons_drawn = 0;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[1,i] > 1 ) {	icons_drawn++	};
 	};
 if ( icons_drawn < global.battle_creaturecap[1] ) { icons_drawn = global.battle_creaturecap[1] };
 if ( icons_drawn ) { draw_blackbox_sharp(0,_y+15,32,icons_drawn*29+2,1,1,1,0) };
 //draw_sprite_ext(spr_blackboxcaps32,0,0,_y+16+icons_drawn*29,1,-1,270,c_white,1);
 icons_drawn = 0;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[2,i] > 1 ) {	icons_drawn++	};
 	};
 if ( icons_drawn < global.battle_creaturecap[2] ) { icons_drawn = global.battle_creaturecap[2] };
@@ -26,7 +26,7 @@ if ( icons_drawn ) { draw_blackbox_sharp(448,_y+16,32,icons_drawn*29+2,1,1,0,1) 
 //Draw Names
 draw_set_font(ft_EvoSmallcaps_6);
 draw_set_color(c_white);
-draw_text(4,_y+3,global.player_name);
+draw_text(4,_y+3,Player.Player_Name);
 draw_set_halign(fa_right);
 draw_text(476,_y+3,global.opponent_name);
 draw_set_halign(fa_left);
@@ -37,7 +37,7 @@ var stored_tooltip = 0;
 var stored_tooltip_p = 1;
 //Draw P1 Icons
 icons_drawn = 0;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[1,i] > 1 ) {
 		state = 0;
 		if ( global.party_status[1,i] == eCreatureState.defeated ) { state = 6 };
@@ -56,7 +56,7 @@ for ( i=icons_drawn ; i<global.battle_creaturecap[1] ; i++ ) {
 	};
 //Draw P2 Icons
 icons_drawn = 0;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[2,i] > 1 ) {
 		state = 0;
 		if ( global.party_status[2,i] == eCreatureState.defeated ) { state = 6 };

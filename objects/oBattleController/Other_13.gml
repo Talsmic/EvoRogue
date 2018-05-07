@@ -58,7 +58,7 @@ switch ( battle_phase_step )    {
 		break;
 	case 105: //Turn End
 		var i;
-		for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+		for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 			party_effect_depleteturn(1,i);
 			party_effect_depleteturn(2,i);
 			};

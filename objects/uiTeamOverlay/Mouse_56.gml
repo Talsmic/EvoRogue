@@ -1,20 +1,22 @@
-/* LEGACY CODE
+/*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
 
-var panel = instance_nearest(x,y,ui_creatureinfopanel);
+var panel = instance_nearest(x,y,uiPartyCreature);
 //Icons
-var i;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
-	if ( global.party_status[Player, i] and point_in_rectangle( mouse_x, mouse_y, x+i*29-27, y-17, x+i*29, y+17 ) ) {
+var box_x = 0;
+var box_y = oGlobalController.Resolution_CompleteHeight - 22;
+for ( var i=1 ; i<=party_lastentry(Player) ; i++ ) {
+	if ( Player.Party_Status[i] and mouse_in_region_gui( define_region_icon( box_x+i*29-13,box_y,24.32 ) ) ) {
 		//If no Info Panel exists, create one
-		if (panel == noone) {
-			panel = instance_create_depth(0,0,-30,ui_creatureinfopanel);
+		if ( !panel ) {	
+			panel = instance_create_depth(0,0,-30,uiPartyCreature); 
+			panel.FocusLevel = FocusLevel;
 			};
-		//Change Creature Focus
-		panel.ref_party = i;
+		panel.Player = Player;
+		panel.Party_Member = i;
 		};
 	};
 	
 //Team Change
 if ( point_in_rectangle( mouse_x, mouse_y, 372, y-4, 452, y+20 )) {
-	instance_create_depth(0,0,-40,ui_storage);
+	//instance_create_depth(0,0,-40,ui_storage);
 	};

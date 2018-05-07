@@ -1,6 +1,6 @@
-PlayerName = "Default";
-PlayerTag = "P1";
-PlayerColour = c_nature;
+Player_Name = "Default";
+Player_Tag = "P1";
+Player_Colour = c_nature;
 
 Draw = false;
 
@@ -10,9 +10,9 @@ CondenseCounterOperations = 0;
 
 //Establish Storage
 //Storage is a full list of all creatures a Player owns
-StorageSize = global.gps_storagesize;
-for ( var i=1 ; i<=StorageSize ; i++ ) {
-	Stored_Status[i] = eCreatureState.nonexistant;
+StorageSize = global.Default_StorageSize;
+for ( var stored_creature=1 ; stored_creature<=StorageSize ; stored_creature++ ) {
+	Stored_Status[stored_creature] = eCreatureState.nonexistant;
 	};
 
 //Establish Party
@@ -20,14 +20,16 @@ for ( var i=1 ; i<=StorageSize ; i++ ) {
 //the ones they can use in battle, with more information 
 //readily available like health that doesn't need to be kept
 //for stored creatures
-PartySize = global.gps_partysize;
-for ( var i=1 ; i<=PartySize ; i++ ) {
-	Party_Status[i] = eCreatureState.nonexistant;
-	Party_StoredID[i] = 0;
-	Party_Skill[i,1] = 0;
-	Party_Trait[i,1] = 0;
+PartySize = global.Default_PartySize;
+for ( var party_member=1 ; party_member<=PartySize ; party_member++ ) {
+	Party_Status[party_member] = eCreatureState.nonexistant;
+	Party_StoredID[party_member] = 0;
+	Party_Skill[party_member,1] = 0;
+	Party_Trait[party_member,1] = 0;
+	Party_Health[party_member] = 1;
+	Party_MaxHealth[party_member] = 1;
 	};
 	
 OptionalUpdates = true;
-alarm[0] = 5; //Updates
+alarm[0] = 1;//Periodic Updates
 

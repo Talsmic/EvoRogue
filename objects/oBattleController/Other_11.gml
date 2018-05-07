@@ -4,7 +4,7 @@
 switch ( battle_phase_step )    {
 	case 0: //Setup
 		var i;
-		for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+		for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 			if ( global.party_status[1,i] > eCreatureState.defeated ) { global.party_status[1,i] = eCreatureState.existant };
 			party_startingenergy(1,i);
 			if ( global.party_status[2,i] > eCreatureState.defeated ) { global.party_status[2,i] = eCreatureState.existant };

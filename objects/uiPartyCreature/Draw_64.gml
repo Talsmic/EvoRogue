@@ -1,13 +1,11 @@
 //FadeScreen
 draw_screenfill(c_white,0.5);
 
-
-/*
 //=[Sprite]===========================================================
-var shadow = db_record_get("db_Creatures",ref_selection,"shadow");
-var sprite = asset_get_index(db_record_get("db_Creatures",ref_selection,"sprite"));
-var name = global.party_name[Player,ref_party];
-var s_name = db_record_get("db_Creatures",ref_selection,"name");
+var shadow = dbpull_creature_shadow(Player.Party_Species[Party_Member]);
+var sprite = dbpull_creature_sprite(Player.Party_Species[Party_Member]);
+var name = Player.Party_Name[Party_Member]
+var s_name = db_record_get("db_Creatures",Player.Party_Species[Party_Member],"name");
 //Draw Sprite
 draw_sprite(spr_shadows,shadow,88,138);
 draw_sprite(sprite,0,88,138);
@@ -17,12 +15,12 @@ draw_set_halign(fa_right);
 draw_text_colour(144,138,s_name,c_black,c_black,c_black,c_black,0.75);
 draw_set_halign(fa_left); 
 //====================================================================
-
+/*
 //=[Stat Panel]=======================================================
 var __stats = 11;
 var stats;
 //Find Stats
-stats = party_checkattribute(Player,ref_party,6);
+stats = party_update_attributes(Player,Party_Member);
 //Draw Box and Lines
 draw_blackbox(x_stats,y_stats,112,64);
 draw_blackbox(x_stats+4,y_stats+8,104,6);
@@ -64,8 +62,8 @@ var ref_health = floor(global.party_health[Player, ref_party]);
 var ref_energy = floor(global.party_energy[Player, ref_party]);
 var max_health = party_checkmaxhealth(Player, ref_party);
 var max_energy = global.bal_energy_base;
-var typeA_c = find_elementcolour(db_record_get("db_Creatures",global.party_species[Player, ref_party],"elementA"));
-var typeB_c = find_elementcolour(db_record_get("db_Creatures",global.party_species[Player, ref_party],"elementB"));
+var typeA_c = find_elementcolour(db_record_get("db_Creatures",Player.Party_Species[ ref_party],"elementA"));
+var typeB_c = find_elementcolour(db_record_get("db_Creatures",Player.Party_Species[ ref_party],"elementB"));
 var health_size = ref_health / max_health * 100;
 var energy_size = ref_energy / max_energy * 100;
 //Draw Background Box
@@ -213,3 +211,7 @@ if (mode == 1) {
 			draw_sprite(spr_iconlock,0,icon_x,y_main+79); 
 			draw_text_outline_coloured(icon_x,y_main+78,string(req_level),c_lightgray,c_darkgray); 
 			};
+		*/
+
+draw_cornercross(oGlobalController.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);
+

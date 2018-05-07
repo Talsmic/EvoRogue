@@ -15,7 +15,7 @@ tp_y = 180
 player_teamsize = 1
 opponent_teamsize = 1 
 selection = 1;
-for ( i=global.gps_partysize ; i>0 ; i-- ) {
+for ( i=global.Default_PartySize ; i>0 ; i-- ) {
 	if ( global.party_status[1, i] == eCreatureState.nonexistant ) { continue };
 	if ( global.party_status[1, i] == eCreatureState.defeated ) { continue };
 	selection = i;

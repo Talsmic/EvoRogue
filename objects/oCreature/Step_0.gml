@@ -1,4 +1,3 @@
-
 //Textpoint
 if ( Text_Point > 0 ) { Text_Point-- };
 

@@ -1,5 +1,5 @@
 {
-    "id": "8459ba03-43b1-4a28-b634-7848818b67db",
+    "id": "c3135502-63b8-451a-b3d7-9c8f7b29af02",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "draw_textbutton_gui",

@@ -1,5 +1,7 @@
 /// @desc Updates (Every Update Window)
 alarm[0] = global.UpdateWindow;
+setdepth();
+
 //==============================================================================
 //Update Association
 if ( Player.Party_Status[Party_Member] = eCreatureState.nonexistant ) {

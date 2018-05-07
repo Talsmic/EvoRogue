@@ -1,5 +1,8 @@
-/// @desc Update Lists
+/// @desc Updates (Every Update Window)
+alarm[0] = global.UpdateWindow;
+setdepth("Debug");
 
+//Update Lists
 switch ( Mode ) {
 	case "Storage":		
 		Listbox_ListIcon = 0;
@@ -42,5 +45,3 @@ switch ( Mode ) {
 			};
 		break;
 	};
-
-alarm[0] = 30;

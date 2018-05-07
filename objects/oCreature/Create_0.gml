@@ -34,4 +34,4 @@ Gravity_Speed = 0;
 Rotation_Speed = 0;
 Text_Point = 0;
 
-event_perform(ev_alarm,0)
+alarm[0] = 1;//Periodic Updates

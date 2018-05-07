@@ -204,8 +204,8 @@ switch ( Databox_Type[ref] ) {
 		draw_set_colour(c_lightgray);
 		var id_string = string(Databox_Pointer[ref]);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,id_string);
-		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,"["+Databox_Pointer[ref].PlayerTag+"]");
-		draw_text_flatcolour(Databox_X[ref]+42,Databox_Y[ref]+34,Databox_Pointer[ref].PlayerName,Databox_Pointer[ref].PlayerColour,1);
+		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,"["+Databox_Pointer[ref].Player_Tag+"]");
+		draw_text_flatcolour(Databox_X[ref]+42,Databox_Y[ref]+34,Databox_Pointer[ref].Player_Name,Databox_Pointer[ref].Player_Colour,1);
 		break; #endregion
 		
 	case "StorageCreature": #region

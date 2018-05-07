@@ -2,11 +2,6 @@
 /// @arg skill
 /// @arg x
 /// @arg y
-/*
-	[Edited 24/4/2018]
-	Draws the tooltip for the required skill at the location
-*/
-
 var skill = argument0;
 var X = argument1; //global.gui_mouse_x+2;
 var Y = argument2; //global.gui_mouse_y+10;

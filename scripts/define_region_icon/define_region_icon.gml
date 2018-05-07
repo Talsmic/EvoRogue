@@ -1,17 +1,15 @@
 ///define_region_icon(x,y,icon_size);
 /// @arg x
 /// @arg y
-/// @arg width
-/// @arg height
-/*
-	[Edited 26/4/2018]
-	Icons use a slightly wonky regions definition because of frame dimensions
-*/
+/// @arg size
 var X = argument0;
 var Y = argument1;
 var icon_size = argument2;
+/*
+	Icons use a slightly wonky regions definition because of frame dimensions
+*/
 var icon_width = floor(icon_size);
-var icon_height = frac(icon_size);
+var icon_height = frac(icon_size)*100;
 if ( icon_height == 0 ) { icon_height = icon_width };
 
 var region;

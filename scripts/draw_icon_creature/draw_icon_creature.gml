@@ -19,7 +19,7 @@ var icon_state = argument5;
 //State Detection
 if ( icon_state == eIconState.detectGUI ) {
 	if ( infocus() ) {
-		if ( mouse_in_region( define_region_icon( X,Y,icon_size ) ) ) {
+		if ( mouse_in_region_gui( define_region_icon( X,Y,icon_size ) ) ) {
 			if ( mouse_check_button(mb_left) ) {
 				icon_state = eIconState.pressed
 				}

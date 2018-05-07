@@ -106,7 +106,7 @@ if ( mode == 2 ) {
 	//Creature Buttons
 	var i; 
 	var skill_offset = -12;
-	for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+	for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 		if ( global.party_status[1, i] == eCreatureState.nonexistant ) { continue };
 		skill_offset += 30;
 		if ( global.party_status[1, i] == eCreatureState.active ) { continue };

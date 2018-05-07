@@ -1,2 +1,2 @@
-Sprite_Facing = -1;
+Facing = -1;
 Selected = true;

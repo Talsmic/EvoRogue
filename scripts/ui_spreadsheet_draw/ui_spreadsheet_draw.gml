@@ -11,7 +11,7 @@ draw_set_font(ft_EvoSmallcaps_6);
 switch ( mode ) {
 	
 	case "StorageContents": #region
-		draw_text_flatcolour(X+4,Y,"Storage Contents for "+PlayerName,c_orange,1);
+		draw_text_flatcolour(X+4,Y,"Storage Contents for "+Player_Name,c_orange,1);
 		var rowcount = storage_firstemptyslot(id)-1;
 		var columns = [		"id",
 							"Status", 

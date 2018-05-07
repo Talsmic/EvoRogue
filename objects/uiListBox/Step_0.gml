@@ -1,7 +1,5 @@
 /// @description HoldKey / Focus / ScrollBeat
-
-//Manage Focus
-focus_set(FocusLevel);
+event_inherited();
 
 //Manage Beats
 ScrollBeat = beat_scrollstep(ScrollBeat);

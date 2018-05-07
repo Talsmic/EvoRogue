@@ -1,3 +1,7 @@
-FocusLevel = 9;
+/// @desc UI Variables
+event_inherited();
 
-Player = 1;
+FocusCanDown = false;
+Depth_Offset = -1;
+
+Player = global.LocalPlayer;

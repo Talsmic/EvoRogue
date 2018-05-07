@@ -25,16 +25,16 @@ draw_sprite_ext(ref_sprite,0,90,tp_y-8,1,1,0,c_white,1);
 draw_set_font(ft_EvoLarge_12);
 player_teamsize = 0;
 var i;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[1, i] ) { player_teamsize++ };
 	};
 var boxsize = 6+player_teamsize*25;
 draw_blackbox_sharp(-4+team_preview_offset,tp_y-4,boxsize,24,0,1,0,1);
 draw_sprite(spr_blackboxcaps24,0,-4+team_preview_offset+boxsize,tp_y-4);
-draw_text_outline(4+team_preview_offset,tp_y-36,global.player_name,c_white);
+draw_text_outline(4+team_preview_offset,tp_y-36,Player.Player_Name,c_white);
 //Draw Icons
 var state;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[1, i] == eCreatureState.nonexistant ) { continue };
 	state = 0;
 	if ( point_in_rectangle( mouse_x, mouse_y, team_preview_offset+i*25-25, tp_y-20, team_preview_offset+i*25-2, tp_y+17 )) {	
@@ -63,7 +63,7 @@ draw_set_halign(fa_right);
 draw_text_outline(476+team_preview_offset,tp_y-36,global.opponent_name,c_white);
 draw_set_halign(fa_left);
 opponent_teamsize = 0;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[2, i] ) { opponent_teamsize++ };
 	};
 boxsize = 6+opponent_teamsize*25;
@@ -71,7 +71,7 @@ draw_blackbox_sharp(484-boxsize-team_preview_offset,tp_y-4,boxsize,24,1,1,1,1);
 draw_sprite_ext(spr_blackboxcaps24,0,484-team_preview_offset-boxsize,tp_y+20,-1,-1,0,c_white,1);
 //Draw Icons
 var state;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
+for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 	if ( global.party_status[2, i] == eCreatureState.nonexistant ) { continue };
 	if ( point_in_rectangle( mouse_x, mouse_y, 479-team_preview_offset-opponent_teamsize*25+i*25-25, tp_y-20, 479-team_preview_offset-opponent_teamsize*25+i*25-2, tp_y+17 )) {	
 		stored_tooltip = i;

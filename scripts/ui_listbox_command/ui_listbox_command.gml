@@ -112,8 +112,8 @@ switch ( command ) {
 		Count = 1;
 		with ( oPlayer ) {
 			other.Listbox_ListIcon[other.Count] = id;
-			other.Listbox_ListWords[other.Count] = "["+PlayerTag+"] "+PlayerName;
-			other.Listbox_ListColour[other.Count] = PlayerColour;
+			other.Listbox_ListWords[other.Count] = "["+Player_Tag+"] "+Player_Name;
+			other.Listbox_ListColour[other.Count] = Player_Colour;
 			other.Count++;
 			};
 		ui_listbox_command("Mode:Words");
@@ -135,9 +135,9 @@ switch ( command ) {
 					//i = StorageSize 
 					};
 				else {
-					other.Listbox_ListIcon[i] = db_record_get("db_Creatures",Stored_Species[i],"icon");
+					other.Listbox_ListIcon[i] = dbpull_creature_icon(Stored_Species[i]);
 					other.Listbox_ListWords[i] = Stored_Name[i];
-					other.Listbox_ListColour[i] = db_record_get("db_Creatures",Stored_Species[i],"element");
+					other.Listbox_ListColour[i] = dbpull_creature_element(Stored_Species[i]);
 					};
 				};
 			};
@@ -165,9 +165,9 @@ switch ( command ) {
 					//i = PartySize 
 					};
 				else {
-					other.Listbox_ListIcon[i] = db_record_get("db_Creatures",Party_Species[i],"icon");
+					other.Listbox_ListIcon[i] = dbpull_creature_icon(Party_Species[i]);
 					other.Listbox_ListWords[i] = Party_Name[i];
-					other.Listbox_ListColour[i] = db_record_get("db_Creatures",Party_Species[i],"element");
+					other.Listbox_ListColour[i] = dbpull_creature_element(Party_Species[i]);
 					};
 				};
 			};

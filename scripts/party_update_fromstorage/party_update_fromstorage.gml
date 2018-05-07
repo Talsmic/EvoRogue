@@ -8,7 +8,7 @@ var stored_creature = player.Party_StoredID[party_member];
 //Fail to update if no stored_creature ID
 if ( stored_creature <= 0 ) { return false };
 //Fail to update if no creature in stored_creature
-if ( !player.Stored_Status[stored_creature] ) { return false };
+if ( !player.Stored_Status[stored_creature] ) { player.Party_StoredID[party_member] = 0; return false };
 
 //Update Party Info
 if ( !player.Party_Status[party_member] ) { player.Party_Status[party_member] = eCreatureState.existant };

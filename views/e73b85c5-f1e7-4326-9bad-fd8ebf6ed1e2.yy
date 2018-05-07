@@ -6,7 +6,8 @@
     "children": [
         "3905eadf-862f-41be-a669-fb29c809cc3f",
         "c0874429-22ab-44e9-91a2-ebbb855e966d",
-        "d459e7cf-d0ea-485a-b532-3a7d2f139150"
+        "d459e7cf-d0ea-485a-b532-3a7d2f139150",
+        "c96ca88a-d5da-4a4d-9af9-4db6fc71362c"
     ],
     "filterType": "GMScript",
     "folderName": "Tooltips",

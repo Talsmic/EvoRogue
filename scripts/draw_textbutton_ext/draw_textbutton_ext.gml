@@ -1,24 +1,28 @@
-///draw_textbutton_ext(x,y,string,colour,roll_colour,height_padding,width_padding);
+///draw_textbutton_ext(x,y,string,mode,colour,colour2,colour3,height_padding,width_padding);
 /// @arg x			
 /// @arg y
 /// @arg string		
+/// @arg mode
 /// @arg colour
-/// @arg roll_colour
+/// @arg colour2
+/// @arg colour3
 /// @arg height_padding
 /// @arg width_padding
-/*
-	[Edited 28/4/2018]
-	Draws a text button with a user defined region
-*/
 var X = argument0; 
 var Y = argument1; 
 var _string = argument2; 
-var colour = argument3;
-var colour2 = argument4;
+var mode = argument3
+var colour = argument4;
+var colour2 = argument5;
+var colour3 = argument6;
+var height_padding = argument7; 
+var width_padding = argument8; 
+/*
+	>Draws a text button with a user defined region
+*/
+
 var height = string_height( _string ) - 2;
 var width = string_width( _string ) - 2;
-var height_padding = argument5; 
-var width_padding = argument6; 
 
 //State Detection
 if ( infocus() ) {
@@ -33,26 +37,64 @@ if ( infocus() ) {
 else { var state = eIconState.disabled };
 
 //Draw
-switch ( state ) {
-	
-	case eIconState.disabled:
-		draw_text_flatcolour( X+1,Y+1,_string,c_black,0.8 );
-		draw_text_flatcolour( X,Y+1,_string,find_colour_dark(colour),0.8 );
+switch ( mode ) {
+	case "Flat":
+	//=[Flat Buttons]=(Colour=Body, Colour2=Rollover)===========================
+		switch ( state ) {	
+			case eIconState.disabled:
+				draw_text_flatcolour( X,Y,_string,c_midgray,0.8 );
+				break;		
+			case eIconState.enabled: default:
+				draw_text_flatcolour( X,Y,_string,colour,1 );
+				break;		
+			case eIconState.pressed:
+				draw_text_flatcolour( X,Y,_string,colour2,1 );
+				break;		
+			case eIconState.mouseover:
+				draw_text_flatcolour( X,Y,_string,colour2,1 );
+				break;			
+			};
 		break;
-		
-	case eIconState.enabled: default:
-		draw_text_flatcolour( X+1,Y+1,_string,c_black,0.8 );
-		draw_text_flatcolour( X,Y,_string,colour,1 );
+	case "Padded": default:
+	//=[Padded Buttons]=(Colour=Body, Colour2=Rollover, Colour3=Padding)========
+		switch ( state ) {	
+			case eIconState.disabled:
+				draw_text_flatcolour( X+1,Y+1,_string,c_darkgray,0.8 );
+				draw_text_flatcolour( X,Y+1,_string,c_midgray,0.8 );
+				break;		
+			case eIconState.enabled: default:
+				draw_text_flatcolour( X+1,Y+1,_string,colour3,0.8 );
+				draw_text_flatcolour( X,Y,_string,colour,1 );
+				break;		
+			case eIconState.pressed:
+				draw_text_flatcolour( X+1,Y+1,_string,colour3,0.8 );
+				draw_text_flatcolour( X,Y+1,_string,colour2,1 );
+				break;		
+			case eIconState.mouseover:
+				draw_text_flatcolour( X+1,Y+1,_string,colour3,0.8 );
+				draw_text_flatcolour( X,Y,_string,colour2,1 );
+				break;			
+			};
 		break;
-		
-	case eIconState.pressed:
-		draw_text_flatcolour( X+1,Y+1,_string,c_black,0.8 );
-		draw_text_flatcolour( X,Y+1,_string,colour2,1 );
+	//==========================================================================
+	case "Outline": case "Outlined":
+	//=[Outlined Buttons]=(Colour=Body, Colour2=Rollover, Colour3=Outline)======
+		switch ( state ) {	
+			case eIconState.disabled:
+				draw_text_outline_coloured( X,Y+1,_string,c_midgray,c_darkgray );
+				break;		
+			case eIconState.enabled: default:
+				draw_text_outline_coloured( X,Y+1,_string,colour,colour3 );
+				draw_text_outline_coloured( X,Y,_string,colour,colour3 );
+				break;		
+			case eIconState.pressed:
+				draw_text_outline_coloured( X,Y+1,_string,colour,colour3 );
+				break;		
+			case eIconState.mouseover:
+				draw_text_outline_coloured( X,Y+1,_string,colour2,colour3 );
+				draw_text_outline_coloured( X,Y,_string,colour2,colour3 );
+				break;		
+			};
 		break;
-		
-	case eIconState.mouseover:
-		draw_text_flatcolour( X+1,Y+1,_string,c_black,0.8 );
-		draw_text_flatcolour( X,Y,_string,colour2,1 );
-		break;
-		
+	//==========================================================================
 	};

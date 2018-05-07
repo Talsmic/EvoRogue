@@ -27,7 +27,7 @@ var se = global.bal_startingenergy_base;
 //Use global.bal_ to determine Health and Energy growth by level
 var h_growth = global.bal_health_growth;
 var e_growth = global.bal_energy_growth;
-var se_growth = global.bal_startingenerg_growth;
+var se_growth = global.bal_startingenergy_growth;
 #endregion
 
 //Calculate

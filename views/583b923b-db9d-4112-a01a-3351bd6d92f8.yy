@@ -10,7 +10,7 @@
         "54131c65-f473-46cf-b8e0-4b6cac3318bd"
     ],
     "filterType": "GMScript",
-    "folderName": "[Window Structures]",
+    "folderName": "[UI Structures]",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

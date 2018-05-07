@@ -1,41 +1,36 @@
-var stored_tooltip = 0;
+/*FocusCheck*/	if ( !infocus() ) { return };	/*FocusCheck*/
+var stored_tooltip = 0; 
 
-/*
-party_condense(1);
 //=[Creature Selection]===============================================
 //Draw Box
-var boxsize = 9+global.gps_partysize*29;
-draw_blackbox(x-4,y-4,boxsize,24);
 draw_set_font(ft_EvoSmallcaps_6);
-draw_blackbox_sharp(x-4,y-34,string_width(global.player_name)+12,30,1,0,1,1);
-draw_text_outline(x+4,y-30,global.player_name,c_white);
+var box_width = 7+party_lastentry(Player)*29;
+if ( box_width < string_width(Player.Player_Name)+16 ) { box_width = string_width(Player.Player_Name)+16 };
+var box_x = 0;
+var box_y = oGlobalController.Resolution_CompleteHeight - 22;
+var tooltip_offset_x = string_width(Player.Player_Name)+12;
+var tooltip_offset_y = 30;
+draw_blackbox(box_x-4,box_y,box_width,20);
+draw_blackbox_sharp(box_x-4,box_y-33,string_width(Player.Player_Name)+12,33,1,0,1,1);
+draw_text_outline(box_x+3,box_y-30,Player.Player_Name,c_white);
+
 //Draw Icons
-var state;
-var panel = instance_nearest(x,y,ui_creatureinfopanel);
-var i;
-for ( i=1 ; i<=global.gps_partysize ; i++ ) {
-	state = 0;
-	if ( point_in_rectangle( mouse_x, mouse_y, x+i*29-27, y-17, x+i*29, y+17 )) {	
-		state = 2;
-		stored_tooltip = i;
-		};
-	if ( panel != noone and panel.ref_party == i) {	state = 2	};
-	draw_icon_creature(x+i*29-12,y,24.32,global.party_species[Player, i],state);
+for ( var i=1 ; i<=party_lastentry(Player) ; i++ ) {
+	var state = eIconState.detectGUI;
+	if ( mouse_in_region_gui( define_region_icon( box_x+i*29-13,box_y,24.32 ) ) ) { stored_tooltip = i };
+	if ( !Player.Party_Status[i] ) { state = eIconState.disabled };
+	draw_icon_dbcreature(box_x+i*29-13,box_y,24.32,Player.Party_Species[i],state);
 	};
-//Draw Buttons
-draw_blackbox(372,y-4,80,24);
-draw_blackbox(372,y-4,80,24);
-draw_blackbox(454,y-4,24,24);
-draw_blackbox(454,y-4,24,24);
-draw_set_halign(fa_center); 
-draw_set_font(ft_EvoTooltipBold_6);
-draw_set_colour(c_white);
-draw_text(412,y-2,"Change\nCreatures");
-if ( point_in_rectangle( mouse_x, mouse_y, 372, y-4, 452, y+20 )) {
-	draw_set_colour(c_orange);
-	draw_text(412,y-2,"Change\nCreatures");
-	};
-draw_set_halign(fa_left); 
-if ( stored_tooltip ) { draw_tooltip_party(1,stored_tooltip,1,1,0) };
-	
+if ( i > 3 ) { tooltip_offset_y += 17 };
 //====================================================================
+	
+//Draw Other Buttons
+draw_set_font(ft_EvoTooltipBold_6);
+draw_textbutton_gui_ext(box_x+box_width,box_y+9,"Change Party","Outline",c_shadow,c_white,c_shadow_dark,2,2);
+draw_textbutton_gui_ext(box_x+box_width,box_y-2,"Edit Creatures","Outline",c_air,c_white,c_air_dark,2,2);
+
+//Draw Tooltip
+if ( stored_tooltip ) { 
+	/*Debug*/party_update_resources(Player,stored_tooltip);
+	draw_tooltip_party(Player,stored_tooltip,box_x+tooltip_offset_x,box_y-tooltip_offset_y,1,0,0) };
+	

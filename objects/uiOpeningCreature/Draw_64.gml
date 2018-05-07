@@ -19,7 +19,7 @@ var stored_tooltip_p = 1;
 //=[Creature Selection]===============================================
 //Draw Sprite
 if ( global.player_sprite ) { draw_sprite_ext(spr_pktrainersprites,global.player_sprite,60,tp_y-10,-1,1,0,c_white,1) };
-var ref_sprite = asset_get_index(db_record_get("db_Creatures",global.party_species[1, selection],"sprite"));
+var ref_sprite = asset_get_index(db_record_get("db_Creatures",Player.Party_Species[selection],"sprite"));
 draw_sprite_ext(ref_sprite,0,90,tp_y-8,1,1,0,c_white,1);
 //Draw Box
 draw_set_font(ft_EvoLarge_12);
@@ -44,7 +44,7 @@ for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 		//Defeated
 	if ( global.party_status[1, i] == eCreatureState.defeated ) { state = 6 };	
 	if ( selection == i ) {	state = 2	};
-	draw_icon_creature(team_preview_offset+i*25-12,tp_y,20.28,global.party_species[1, i],state);
+	draw_icon_creature(team_preview_offset+i*25-12,tp_y,20.28,Player.Party_Species[i],state);
 	};
 //Draw Button
 var buttonshade = c_fire;

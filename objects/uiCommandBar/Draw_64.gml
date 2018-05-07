@@ -9,7 +9,7 @@ var viable_energy = global.party_energy[1, ref_party]-energy_cache;
 
 if ( mode == 1 ) {
 	//Draw Bar
-	var level_check = creature_skillslist_core(global.party_species[1, ref_party]);
+	var level_check = creature_skillslist_core(Player.Party_Species[ref_party]);
 	var bar_size = 5;
 	if (global.party_skillA[1, ref_party] > 0) {	bar_size += 30	};
 	if (global.party_skillB[1, ref_party] > 0) {	bar_size += 30	};
@@ -80,10 +80,10 @@ if ( mode == 1 ) {
 			if ( viable_energy < db_record_get("db_Skills",focus_skill,"cost") ) {	state = 5	};
 			//On Recharge
 			if ( focus_recharge > 0 ) {	state = 4 + focus_recharge*0.1;	};
-			if ( global.party_level[1, ref_party] < level_check[i, 2] ) { state = 6 };
+			if ( Player.Party_Level[ref_party] < level_check[i, 2] ) { state = 6 };
 			//Draw
 			draw_icon_skill(offset+skill_offset,y-36,24,focus_skill,state);
-			if ( global.party_level[1, ref_party] < level_check[i, 2] ) { 
+			if ( Player.Party_Level[ref_party] < level_check[i, 2] ) { 
 				draw_sprite(spr_iconlock,0,offset+skill_offset,y-36); 
 				draw_set_font(ft_EvoTooltipBold_6);
 				draw_text_outline_coloured(offset+skill_offset,y-37,string(level_check[i, 2]),c_lightgray,c_darkgray); 
@@ -186,7 +186,7 @@ if ( mode == 2 ) {
 		//Defeated
 		if ( global.party_status[1, i] == eCreatureState.defeated ) { state = 6 };	
 		//Draw
-		draw_icon_creature(offset+skill_offset,y,24.32,global.party_species[1, i],state);
+		draw_icon_creature(offset+skill_offset,y,24.32,Player.Party_Species[i],state);
 		skill_offset += 30;
 		};
 	//Draw Tooltip

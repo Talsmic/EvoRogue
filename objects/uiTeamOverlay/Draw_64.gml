@@ -34,3 +34,6 @@ if ( stored_tooltip ) {
 	/*Debug*/party_update_resources(Player,stored_tooltip);
 	draw_tooltip_party(Player,stored_tooltip,box_x+tooltip_offset_x,box_y-tooltip_offset_y,1,0,0) };
 	
+draw_set_font(ft_EvoTooltipBold_6);
+draw_text_flatcolour(14,260,depth,c_nature,1);
+draw_text_flatcolour(4,260,infocus(),c_nature_dark,1);

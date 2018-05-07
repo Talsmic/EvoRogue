@@ -258,6 +258,7 @@ switch ( Databox_Type[ref] ) {
 	case "PartyCreature": #region
 		var p = Databox_Pointer[ref];
 		var player = Databox_Pointer[1];
+		if ( p > party_lastentry(player) ) { p = party_lastentry(player) };
 		if ( !player.Party_Status[p] ) { return false };
 		var skill_height = 11 * ceil( array_length_2d(player.Party_Skill,p) / 7 );
 		var trait_height = 11 * ceil( array_length_2d(player.Party_Trait,p) / 7 );
@@ -331,4 +332,45 @@ switch ( Databox_Type[ref] ) {
 		draw_set_halign(fa_left);
 		break; #endregion
 		
+	case "PartyCreature:Attributes": #region
+	
+		//Draw Sprite
+		draw_sprite(spr_shadows,Databox_Shadow,88,138);
+		draw_sprite(Databox_Sprite,0,88,138);
+		//Draw Species
+		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_halign(fa_right);
+		draw_text_colour(144,138,Databox_SpeciesName,c_black,c_black,c_black,c_black,0.75);
+		draw_set_halign(fa_left); 
+	
+		//Attribute Box
+		var width = 112;
+		var height = 64;
+		var stat_spacing = 12;
+		//Draw Box
+		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
+		//Draw Attributes
+		for ( var i=0 ; i<5 ; i++ ) {
+			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+5+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),0.5);
+			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+4+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),1);
+			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+3+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),1);
+			draw_set_font(ft_EvoTooltipBold_6);
+			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+4+stat_spacing*i,find_attribute_name(i+1),c_black,0.2);
+			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+3+stat_spacing*i,find_attribute_name(i+1),c_white,1);
+			draw_set_halign(fa_right);
+			draw_text_flatcolour(Databox_X[ref]+width-8,Databox_Y[ref]+4+stat_spacing*i,real(Databox_Attributes[i+1]),c_black,0.2);
+			draw_text_flatcolour(Databox_X[ref]+width-8,Databox_Y[ref]+3+stat_spacing*i,real(Databox_Attributes[i+1]),c_white,1);
+			draw_set_halign(fa_left); 
+			};
+		//Draw Stat Star
+		switch (Player.Party_Nature[Party_Member]) {
+			default: 	var c_stat = c_white;		break;
+			case 1:		var c_stat = c_power;		break;
+			case 2:		var c_stat = c_fortitude;	break;
+			case 3:		var c_stat = c_speed;		break;
+			case 4:		var c_stat = c_recovery;	break;
+			case 5:		var c_stat = c_potency;		break;
+			};
+		draw_sprite_ext(spr_naturestar,0,Databox_X[ref]+8,Databox_Y[ref]-9,1,1,0,find_colour(Player.Party_Nature[Party_Member]+i),1);
+		break; #endregion
 	};

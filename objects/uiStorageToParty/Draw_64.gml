@@ -25,7 +25,7 @@ for ( i=1 ; i<=global.Default_PartySize ; i++ ) {
 //====================================================================
 
 //=[Target]===========================================================
-draw_sprite_stretched_ext(spr_pixel,0,x_main+1,y_main+21,298,1,c_darkgray,0.8);
+draw_colouredplane(x_main+1,y_main+21,298,1,c_darkgray,0.8);
 draw_blackbox_sharp(x_main,y_main+22,300,40,1,1,1,1);
 draw_icon_creature(x_main+22,y_main+42,32,global.storage_species[ref_target],0);
 var name = global.storage_name[ref_target];
@@ -41,10 +41,10 @@ draw_text_outline(x_main+44,y_main+24,name,c_white);
 draw_set_font(ft_EvoTooltipBold_6);
 draw_text_colour(x_main+44,y_main+42,s_name,c_white,c_white,c_white,c_white,0.5);
 //Draw Type
-var type_c = find_elementcolour(typeA);
+var type_c = find_colour(typeA);
 draw_text_colour(x_main+44,y_main+51,typeA,type_c,type_c,type_c,type_c,1);
 if ( typeB != "" ) {
-	type_c = find_elementcolour(typeB);
+	type_c = find_colour(typeB);
 	draw_text_colour(x_main+45+string_width(typeA),y_main+51,"|",c_white,c_white,c_white,c_white,0.2);
 	draw_text_colour(x_main+46+string_width(typeA+"|"),y_main+51,typeB,type_c,type_c,type_c,type_c,1);
 	};
@@ -57,12 +57,12 @@ switch (global.storage_nature[ref_target]) {
 	case 4:		var c_stat = c_recovery;	break;
 	case 5:		var c_stat = c_potency;		break;
 	};
-draw_sprite_ext(spr_statstar,1,x_main+36,y_main+55,1,1,0,c_stat,1);
+draw_sprite_ext(spr_naturestar,1,x_main+36,y_main+55,1,1,0,c_stat,1);
 //====================================================================
 
 //=[Storage]==========================================================
 var offset = storage_page*30;
-draw_sprite_stretched_ext(spr_pixel,0,x_main+1,y_main+62,298,1,c_darkgray,0.8);
+draw_colouredplane(x_main+1,y_main+62,298,1,c_darkgray,0.8);
 draw_blackbox_sharp(x_main,y_main+63,300,97,1,1,0,0);
 //Tabs
 draw_set_halign(fa_center); 

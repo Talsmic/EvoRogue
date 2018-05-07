@@ -14,8 +14,8 @@ var ref_health = floor(global.party_health[Player, ref_creature]);
 var ref_energy = floor(global.party_energy[Player, ref_creature]);
 var max_health = party_checkmaxhealth(Player, ref_creature);
 var max_energy = global.bal_energy_base;
-var typeA = find_elementcolour(db_record_get("db_Creatures",Player.Party_Species[ ref_creature],"elementA"));
-var typeB = find_elementcolour(db_record_get("db_Creatures",Player.Party_Species[ ref_creature],"elementB"));
+var typeA = find_colour(db_record_get("db_Creatures",Player.Party_Species[ ref_creature],"elementA"));
+var typeB = find_colour(db_record_get("db_Creatures",Player.Party_Species[ ref_creature],"elementB"));
 if ( ref_health > stored_health ) { stored_health++ };
 if ( ref_health < stored_health ) { stored_health-- };
 if ( ref_energy > stored_energy ) { stored_energy++ };
@@ -37,7 +37,7 @@ if ( facing ) {
 	//Draw Level
 	draw_set_font(ft_EvoTooltip_6);
 	draw_set_halign(fa_center);
-	draw_text_outline(x+1,y-4,global.party_level[Player,ref_creature],typeA);
+	draw_text_outline(x+1,y-4,Player.Party_Level[ref_creature],typeA);
 	draw_set_halign(fa_left); 
 	//Draw Health
 	draw_sprite_part(spr_healthbar,0,0,0,health_size,7,x+11,y-6);
@@ -77,7 +77,7 @@ if ( facing ) {
 	//Draw Level
 	draw_set_font(ft_EvoTooltip_6);
 	draw_set_halign(fa_center);
-	draw_text_outline(x,y-4,global.party_level[Player,ref_creature],typeA);
+	draw_text_outline(x,y-4,Player.Party_Level[ref_creature],typeA);
 	draw_set_halign(fa_right); 
 	//Draw Health
 	draw_sprite_part_ext(spr_healthbar,0,0,0,health_size,7,x-11,y-6,-1,1,c_white,alpha);

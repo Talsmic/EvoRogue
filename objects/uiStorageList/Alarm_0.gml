@@ -1,5 +1,10 @@
 /// @desc Updates (Every Update Window)
 alarm[0] = global.UpdateWindow;
+
+//Update from Parent
+FocusLevel = Parent.FocusLevel;
+SubMode = Parent.SubMode;
+SubPlayerID = Parent.Databox_Pointer[1];
 setdepth("Debug");
 
 //Update Lists

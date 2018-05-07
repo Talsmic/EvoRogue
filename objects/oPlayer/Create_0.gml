@@ -22,12 +22,7 @@ for ( var stored_creature=1 ; stored_creature<=StorageSize ; stored_creature++ )
 //for stored creatures
 PartySize = global.Default_PartySize;
 for ( var party_member=1 ; party_member<=PartySize ; party_member++ ) {
-	Party_Status[party_member] = eCreatureState.nonexistant;
-	Party_StoredID[party_member] = 0;
-	Party_Skill[party_member,1] = 0;
-	Party_Trait[party_member,1] = 0;
-	Party_Health[party_member] = 1;
-	Party_MaxHealth[party_member] = 1;
+	var_oPlayer_Party_Empty(party_member);
 	};
 	
 OptionalUpdates = true;

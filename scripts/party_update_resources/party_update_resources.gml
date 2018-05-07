@@ -6,7 +6,7 @@ var party_member = argument1;
 var level = player.Party_Level[party_member];
 /*
 	Calculates {player}.{party_member}'s Maximum Health and Energy
-	> Pushes to oPlayer [Party_MaxHealth] & [Party_MaxEnergy]
+	> Pushes to {player}: [Party_MaxHealth] & [Party_MaxEnergy]
 	> Returns Array
 		[0] Maximum_Health
 		[1] Maximum_Energy

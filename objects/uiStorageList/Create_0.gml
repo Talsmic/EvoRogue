@@ -1,12 +1,16 @@
 /// @desc UI Variables / Create Listbox
 alarm[0] = 1; //Turn On Periodic Updates
 
-FocusLevel = 8;
-GUI_X = 0;
-GUI_Y = 0;
+FocusLevel = 5.2;
+FocusCanDown = false;
+DepthOffset = -1;
+GUI_X = 161;
+GUI_Y = 95;
 
-Mode = "Storage"
-PlayerID = global.Player1
+Mode = "Storage";
+PlayerID = global.Player1;
+SubMode = "Storage";
+SubPlayerID = global.Player1;
 DrawExtraCommands = false;
 
 ui_listbox_create();

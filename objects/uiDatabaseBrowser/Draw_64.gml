@@ -1,13 +1,13 @@
 //FadeScreen
-draw_screenfill(c_white,0.5);
+draw_screenfill(c_white,0.7);
 
 draw_set_font(ft_EvoLarge_12);
 switch ( Mode ) {
 	case "Skills":		
-		draw_text_outline_coloured(X,Y,"Skill Database",c_shadow,c_shadow_dark);	
+		draw_text_outline_coloured(GUI_X,GUI_Y,"Skill Database",c_shadow,c_shadow_dark);	
 		break;
 	case "Creatures":	
-		draw_text_outline_coloured(X,Y,"Creature Database",c_shadow,c_shadow_dark);	
+		draw_text_outline_coloured(GUI_X,GUI_Y,"Creature Database",c_shadow,c_shadow_dark);	
 		break;
 	};
 	

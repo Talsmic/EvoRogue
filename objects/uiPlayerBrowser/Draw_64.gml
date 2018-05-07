@@ -1,8 +1,8 @@
 //FadeScreen
-draw_screenfill(c_white,0.5);
+draw_screenfill(c_white,0.7);
 
 draw_set_font(ft_EvoLarge_12);
-draw_text_outline_coloured(X,Y,"Player Containers",c_shadow,c_shadow_dark);	
+draw_text_outline_coloured(GUI_X,GUI_Y,"Player Containers",c_shadow,c_shadow_dark);	
 	
 //-[List Box]-------------------------------------------------------------------
 ui_listbox_draw();

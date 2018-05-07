@@ -9,7 +9,7 @@
         "13927b0c-832f-4e1f-8c9c-9b70d8dce6f0"
     ],
     "filterType": "GMScript",
-    "folderName": "{Addon] [GMSDB]",
+    "folderName": "{Addon}[GMSDB]",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

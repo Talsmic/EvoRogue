@@ -20,3 +20,7 @@ player.Party_StoredID[party_member] = stored_creature;
 
 //Update Party Info
 party_update_fromstorage(player,party_member);
+
+//Expand Data
+party_update_attributes(player,party_member);
+party_reset_resources(player,party_member);

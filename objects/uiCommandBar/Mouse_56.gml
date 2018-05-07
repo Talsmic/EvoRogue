@@ -7,7 +7,7 @@ var skill_offset = 18;
 var command = 0;
 var command_slot = 0;
 var viable_energy = global.party_energy[1, ref_party]-energy_cache;
-var level_check = creature_skillslist_core(global.party_species[1, ref_party]);
+var level_check = creature_skillslist_core(Player.Party_Species[ref_party]);
 
 if ( mode == 1 ) {
 	//Mode Button
@@ -43,7 +43,7 @@ if ( mode == 1 ) {
 			if ( point_in_rectangle( mouse_x, mouse_y, skill_offset-14, y-50, skill_offset+12, y-24 ) ) {
 				if ( focus_recharge > 0 ) {	return	};
 				if ( viable_energy < db_record_get("db_Skills",focus_skill,"cost") ) {	return	};
-				if ( global.party_level[1, ref_party] < level_check[i, 2] ) { return };
+				if ( Player.Party_Level[ref_party] < level_check[i, 2] ) { return };
 				command = 1
 				command_slot = i;
 				};

@@ -6,7 +6,7 @@ var party_member = argument1;
 var level = player.Party_Level[party_member];
 /*
 	Calculates {player}.{party_member}'s Power, Fortitude, Speed, Recovery and Potency
-	> Pushes to oPlayer [Party_Attribute][1..5]
+	> Pushes to {player}: [Party_Attribute][1..5]
 	> Returns Array
 		[0] -
 		[1] Power

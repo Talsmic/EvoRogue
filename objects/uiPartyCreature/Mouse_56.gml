@@ -18,8 +18,8 @@ if ( point_in_rectangle( mouse_x, mouse_y, x_main+282, y_main+151, x_main+296, y
 
 //Change StatStar
 if ( point_in_rectangle( mouse_x, mouse_y, x_stats, y_stats-16, x_stats+16, y_stats ) ) {
-	global.party_nature[Player,ref_party]++;
-	if ( global.party_nature[Player,ref_party] > 5 ) { global.party_nature[Player,ref_party] = 0 };
+	Player.Party_Nature[ref_party]++;
+	if ( Player.Party_Nature[ref_party] > 5 ) { Player.Party_Nature[ref_party] = 0 };
 	};
 
 //-[Mode 2: Skills]---------------------------------------------------
@@ -49,7 +49,7 @@ if (mode == 2) {
 			_y += 30;
 			};		
 		if ( point_in_rectangle( mouse_x, mouse_y, _x-14, _y-14, _x+14, _y+14 ) ) {
-			if ( global.party_level[Player, ref_party] < skillset[i, 2] ) { break };
+			if ( Player.Party_Level[ ref_party] < skillset[i, 2] ) { break };
 			if (global.party_skill1[Player, ref_party] == skillset[i,1]) { 
 				global.party_skill1[Player, ref_party] = 0;
 				break; 
@@ -81,17 +81,17 @@ if (mode == 2) {
 				break;
 				};
 			//Slot3
-			if (global.party_skill3[Player, ref_party] == 0 and global.party_level[Player, ref_party] >= 3) {
+			if (global.party_skill3[Player, ref_party] == 0 and Player.Party_Level[ ref_party] >= 3) {
 				global.party_skill3[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			//Slot4
-			if (global.party_skill4[Player, ref_party] == 0 and global.party_level[Player, ref_party] >= 5) {
+			if (global.party_skill4[Player, ref_party] == 0 and Player.Party_Level[ ref_party] >= 5) {
 				global.party_skill4[Player, ref_party] = skillset[i,1];
 				break;
 				};
 			//Slot5
-			if (global.party_skill5[Player, ref_party] == 0 and global.party_level[Player, ref_party] >= 7) {
+			if (global.party_skill5[Player, ref_party] == 0 and Player.Party_Level[ ref_party] >= 7) {
 				global.party_skill5[Player, ref_party] = skillset[i,1];
 				break;
 				};

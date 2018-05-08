@@ -36,7 +36,7 @@ switch ( language ) {
 			};
 		for ( var i=1 ; i <= db_table_size("db_Strings_Skills") ; i++ ) {
 			var fixed_string = "!"+db_record_get("db_Strings_Skills",i,"name")+"!";
-			var fixed_string2 = "!"+db_record_get("db_Strings_Skills",i,"tooltip")+"!";
+			var fixed_string2 = "! "+db_record_get("db_Strings_Skills",i,"tooltip")+" !";
 			db_record_update("db_Strings_Skills",i,"name,tooltip",fixed_string,fixed_string2)
 			};
 		Options_Language = "English";

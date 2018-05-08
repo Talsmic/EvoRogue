@@ -17,7 +17,7 @@ playerA.Stored_Species[stored_creature] =		playerB.Stored_Species[stored_creatur
 playerA.Stored_Name[stored_creature] =			playerB.Stored_Name[stored_creature2];
 playerA.Stored_Form[stored_creature] =			playerB.Stored_Form[stored_creature2];
 playerA.Stored_Quality[stored_creature] =		playerB.Stored_Quality[stored_creature2];
-playerA.Stored_Nature[stored_creature] =		playerB.Stored_Nature[stored_creature2];
+playerA.Stored_Genome[stored_creature] =		playerB.Stored_Genome[stored_creature2];
 playerA.Stored_Level[stored_creature] =			playerB.Stored_Level[stored_creature2];
 playerA.Stored_Exp[stored_creature] =			playerB.Stored_Exp[stored_creature2];
 

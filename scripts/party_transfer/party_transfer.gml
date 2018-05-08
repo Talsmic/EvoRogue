@@ -20,7 +20,7 @@ playerA.Party_Species[party_memberA] =		playerB.Party_Species[party_memberB];
 playerA.Party_Name[party_memberA] =			playerB.Party_Name[party_memberB];
 playerA.Party_Form[party_memberA] =			playerB.Party_Form[party_memberB];
 playerA.Party_Quality[party_memberA] =		playerB.Party_Quality[party_memberB];
-playerA.Party_Nature[party_memberA] =		playerB.Party_Nature[party_memberB];
+playerA.Party_Genome[party_memberA] =		playerB.Party_Genome[party_memberB];
 playerA.Party_Level[party_memberA] =		playerB.Party_Level[party_memberB];
 playerA.Party_Exp[party_memberA] =			playerB.Party_Exp[party_memberB];
 

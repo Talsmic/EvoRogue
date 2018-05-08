@@ -5,7 +5,7 @@
 /// @arg height
 /*
 	[Edited 24/4/2018] (Variant of draw_tilebox_ext)
-	Draws a coloured, semi-transparent UI box with rounded corners 
+	Draws a coloured, semi-termparent UI box with rounded corners 
 */
 
 var X = argument0; 

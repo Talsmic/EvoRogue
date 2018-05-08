@@ -31,7 +31,7 @@ player.Party_Species[party_member] = 0;
 player.Party_Name[party_member] = "nil";
 player.Party_Form[party_member] = 0;					//Currently unused, leave at 0
 player.Party_Quality[party_member] = 0;					//MUST BE 0 FOR PLAYER CREATURES (Used for changing NPC statblocks)
-player.Party_Nature[party_member] = 0;					//[0 to 5]
+player.Party_Genome[party_member] = 0;					//[0 to 5]
 
 player.Party_Level[party_member] = 0;
 player.Party_Exp[party_member] = 0;

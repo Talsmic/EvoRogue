@@ -33,4 +33,7 @@ window_set_min_height( Resolution_MinHeight );
 alarm[1] = 10;
 application_surface_draw_enable(false);
 
+//Apply Other Settings
+change_language(Options_Language);
+
 Beat = beat_create(5,0.1);

@@ -86,7 +86,7 @@ switch ( command ) {
 		Mode = "Skills"
 		Listbox_IconType = "DB_Skill";
 		Listbox_Position = 1;
-		Listbox_ListIcon = db_pull_columnasarray("db_Skills","icon");
+		Listbox_ListIcon = db_pull_columnasarray("db_Skills","id");
 		Listbox_ListWords = db_pull_columnasarray("db_Skills","name");
 		Listbox_ListColour = db_pull_columnasarray("db_Skills","element");
 		ui_listbox_command("Mode:Icons");
@@ -96,7 +96,7 @@ switch ( command ) {
 		Mode = "Creatures"
 		Listbox_IconType = "DB_Creature";
 		Listbox_Position = 1;
-		Listbox_ListIcon = db_pull_columnasarray("db_Creatures","icon");
+		Listbox_ListIcon = db_pull_columnasarray("db_Creatures","id");
 		Listbox_ListWords = db_pull_columnasarray("db_Creatures","name");
 		Listbox_ListColour = db_pull_columnasarray("db_Creatures","element");
 		ui_listbox_command("Mode:Words");

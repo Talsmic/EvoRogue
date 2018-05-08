@@ -49,7 +49,7 @@ draw_colouredplane(X+1,Y+12,width-2,1,$020202,1);
 draw_colouredplane(X+2,Y+12,width-4,1,tt_colour_dark,0.6);
 draw_tilebox_cornerless(X,Y+13,width,height-13,spr_tooltipbox,tt_colour_body,1,1,1,0,0);
 //Draw Header
-draw_text_flatcolour(X+3, Y+2, tt_name, tt_colour_dark, 1);
+draw_text_flatcolour(X+3, Y+2, tt_name, c_midgray, 1);
 draw_text_flatcolour(X+3, Y+1, tt_name, c_white, 1);
 var offset = 0;
 //Draw Health

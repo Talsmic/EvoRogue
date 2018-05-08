@@ -13,8 +13,7 @@ for ( var i=0 ; i<array_length_1d(ColourArray)-1 ; i++ ) {
 //Dark Stick
 draw_colouredplane(x+width,y,width,height*20,c_black,DarkValue);
 //Light Stick
-draw_colouredplane(x+width*4,y,width*0.5,height*20,c_white,0.2);
-draw_colouredplane(x+width*4.5,y,width*0.5,height*20,c_white,DarkValue);
+draw_colouredplane(x+width*4,y,width,height*20,c_white,0.2);
 
 draw_set_font(ft_EvoTooltipBold_6);
 for ( var i=0 ; i<array_length_1d(ColourArray)-1 ; i++ ) {

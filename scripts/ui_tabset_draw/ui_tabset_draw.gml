@@ -7,7 +7,7 @@ var y1 = 0; var y2 = 0;
 var tabwidth = Tabset_TabWidth[ref]; 
 var tabheight = Tabset_TabHeight[ref];
 //Rotated Tab Adjustments
-if ( Tabset_Rotation[ref] == RIGHT or Tabset_Rotation[ref] == LEFT ) {
+if ( Tabset_Rotation[ref] == ANGLE_RIGHT or Tabset_Rotation[ref] == ANGLE_LEFT ) {
 	tabwidth = Tabset_TabHeight[ref]; 
 	tabheight = Tabset_TabWidth[ref];
 	};
@@ -62,33 +62,43 @@ for ( var i=1 ; i<array_length_2d(Tabset_List,ref) ; i++ ) {
 	switch ( state ) {		
 		case eIconState.disabled:
 			draw_tilebox_cornerless( X, Y+y1-tabheight-1+y2*2, tabwidth-abs(x1), tabheight-abs(y1), spr_whitebox,Tabset_Colour_Tab[ref],0.6,c[0],c[1],c[2],c[3]);
-			draw_set_color(c_midgray);
-			draw_text_ext_transformed( X+floor(tabwidth*0.5)-x1, Y-Tabset_FontHeight[ref]+y2, Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref])
-			//draw_text_flatcolour( X+floor(tabwidth*0.5)-x1, Y-Tabset_FontHeight[ref]+y2, Tabset_List[ref,i], Tabset_Colour_Text[ref], 0.6 );
+			if ( Tabset_Rotation[ref] ) {
+				draw_set_color(c_midgray);
+				draw_text_ext_transformed( X+floor(tabwidth*0.5)-x1, Y-Tabset_FontHeight[ref]+y2, Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref]) };
+			else {
+				draw_text_flatcolour( X+floor(tabwidth*0.5)-x1, Y-Tabset_FontHeight[ref]+y2, Tabset_List[ref,i], c_midgray, 1 ) };
 			break;		
 		case eIconState.enabled: default:
-			draw_tilebox_cornerless( X+x1-x2, Y-tabheight+y1-1+y2, tabwidth, tabheight, spr_whitebox,Tabset_Colour_Tab[ref],0.7,c[0],c[1],c[2],c[3]);
-			draw_set_color(Tabset_Colour_Text[ref]);			
-			draw_text_ext_transformed( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref])
-			//draw_text_flatcolour( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], Tabset_Colour_Text[ref], 1 );
+			draw_tilebox_cornerless( X+x1-x2, Y-tabheight+y1-1+y2, tabwidth, tabheight, spr_whitebox,Tabset_Colour_Tab[ref],0.7,c[0],c[1],c[2],c[3]);			
+			if ( Tabset_Rotation[ref] ) {
+				draw_set_color(Tabset_Colour_Text[ref]);	
+				draw_text_ext_transformed( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref]) };
+			else {
+				draw_text_flatcolour( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], Tabset_Colour_Text[ref], 1 ) };
 			break;		
 		case eIconState.focus:
 			draw_tilebox_cornerless( X+x1-x2*2, Y-tabheight-1, tabwidth+abs(x1), tabheight+abs(y1), spr_whitebox,Tabset_Colour_TabFocus[ref],0.8,c[0],c[1],c[2],c[3]);
-			draw_set_color(Tabset_Colour_TextFocus[ref]);
-			draw_text_ext_transformed( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref])
-			//draw_text_flatcolour( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], Tabset_Colour_TextFocus[ref], 1 );
+			if ( Tabset_Rotation[ref] ) {
+				draw_set_color(Tabset_Colour_TextFocus[ref]);	
+				draw_text_ext_transformed( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref]) };
+			else {
+				draw_text_flatcolour( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], Tabset_Colour_TextFocus[ref], 1 ) };
 			break;		
 		case eIconState.pressed:
 			draw_tilebox_cornerless( X+x1-x2*2, Y-tabheight-1, tabwidth+abs(x1), tabheight+abs(y1), spr_whitebox,Tabset_Colour_Tab[ref],0.8,c[0],c[1],c[2],c[3]);
-			draw_set_color(Tabset_Colour_TextFocus[ref]);
-			draw_text_ext_transformed( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref])
-			//draw_text_flatcolour( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], Tabset_Colour_TextFocus[ref], 1 );
+			if ( Tabset_Rotation[ref] ) {
+				draw_set_color(Tabset_Colour_TextFocus[ref]);	
+				draw_text_ext_transformed( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref]) };
+			else {
+				draw_text_flatcolour( X+floor(tabwidth*0.5), Y-Tabset_FontHeight[ref], Tabset_List[ref,i], Tabset_Colour_TextFocus[ref], 1 ) };
 			break;		
 		case eIconState.mouseover:
 			draw_tilebox_cornerless( X+x1*2-x2*2, Y-tabheight+y1-1, tabwidth+abs(x1), tabheight+abs(y1), spr_whitebox,Tabset_Colour_TabHover[ref],0.8,c[0],c[1],c[2],c[3]);
-			draw_set_color(Tabset_Colour_TextHover[ref]);
-			draw_text_ext_transformed( X+floor(tabwidth*0.5)+x1, Y-Tabset_FontHeight[ref]+y1, Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref])
-			//draw_text_flatcolour( X+floor(tabwidth*0.5)+x1, Y-Tabset_FontHeight[ref]+y1, Tabset_List[ref,i], Tabset_Colour_TextHover[ref], 1 );
+			if ( Tabset_Rotation[ref] ) {
+				draw_set_color(Tabset_Colour_TextHover[ref]);	
+				draw_text_ext_transformed( X+floor(tabwidth*0.5)+x1, Y-Tabset_FontHeight[ref]+y1, Tabset_List[ref,i], -1, 300, 1, 1, Tabset_Rotation[ref]) };
+			else {
+				draw_text_flatcolour( X+floor(tabwidth*0.5)+x1, Y-Tabset_FontHeight[ref]+y1, Tabset_List[ref,i], Tabset_Colour_TextHover[ref], 1 ) };
 			break;		
 		};
 			

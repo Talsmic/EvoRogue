@@ -1,0 +1,21 @@
+id#,name,tooltip
+1,Basic Attack,Minor Physical|1 Damage|1#  Generates|14 Energy|14
+2,Wait,Do nothing
+3,???,
+4,Strike,Deals Physical|1 Damage|1
+5,Fire Strike,Deals Fire|2 Damage|2
+6,Water Strike,Deals Water|3 Damage|3
+7,Air Strike,Deals Air|4 Damage|4
+8,Nature Strike,Deals Nature|5 Damage|5
+9,Shadow Strike,Deals Shadow|6 Damage|6
+10,,
+11,[T1] Damage,Deals Physical|1 Damage|1
+12,[T2] Damage,Deals Physical|1 Damage|1
+13,[T3] Damage,Deals Physical|1 Damage|1
+14,[T4] Damage,Deals Physical|1 Damage|1
+15,[T5] Damage,Deals Physical|1 Damage|1
+16,[T2] Penetrating,Deals Physical|1 Damage|1#  Penetrating
+17,[T2] Powerful,Deals Physical|1 Damage|1#  Powerful|11
+18,[T2] Arcing,Deals Physical|1 Damage|1#  Arcing
+19,[T2] Recoil,Deals Physical|1 Damage|1#  Recoil [20%]
+20,[T2] Leech,Deals Physical|1 Damage|1#  Leeching|14 [25%]

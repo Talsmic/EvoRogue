@@ -76,7 +76,7 @@ switch ( Databox_Type[ref] ) {
 		var id_string = "["+string_format(db_record_get("db_Creatures",Databox_Pointer[ref],"id"),3,0)+"]";
 		id_string = string_replace_all(id_string," ","0");
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,id_string);
-		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,db_record_get("db_Creatures",Databox_Pointer[ref],"name"));
+		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,dbpull_creature_name(Databox_Pointer[ref]));
 		break; #endregion
 		
 	case "DB_Creatures1": #region Creature Stats 
@@ -111,16 +111,16 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+80,Databox_Y[ref]+45,"Icon:");
 		draw_set_font(ft_EvoTooltipSquished_6);
 		draw_set_halign(fa_center);
-		draw_text_flatcolour(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+55,"Power",c_power,1);
-		draw_text_flatcolour(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+55,"Fortitude",c_fortitude,1);
-		draw_text_flatcolour(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+55,"Speed",c_speed,1);
-		draw_text_flatcolour(Databox_X[ref]+2+att_width*3.5,Databox_Y[ref]+55,"Recovery",c_recovery,1);
-		draw_text_flatcolour(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+55,"Potency",c_potency,1);
+		draw_text_flatcolour(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+55,term("Power"),c_power,1);
+		draw_text_flatcolour(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+55,term("Fortitude"),c_fortitude,1);
+		draw_text_flatcolour(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+55,term("Speed"),c_speed,1);
+		draw_text_flatcolour(Databox_X[ref]+2+att_width*3.5,Databox_Y[ref]+55,term("Recovery"),c_recovery,1);
+		draw_text_flatcolour(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+55,term("Potency"),c_potency,1);
 		draw_set_halign(fa_left);
 		//Draw Data
 		draw_set_font(ft_EvoTooltipBold_6);
 		draw_set_colour(c_lightgray);
-		draw_text_flatcolour(Databox_X[ref]+6,Databox_Y[ref]+13,db_record_get("db_Creatures",Databox_Pointer[ref],"element"),find_colour(db_record_get("db_Creatures",Databox_Pointer[ref],"element")),1);
+		draw_text_flatcolour(Databox_X[ref]+6,Databox_Y[ref]+13,dbpull_creature_element(Databox_Pointer[ref]),dbpull_creature_ecolour(Databox_Pointer[ref]),1);
 		draw_set_font(ft_EvoTooltip_6);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+34,db_record_get("db_Creatures",Databox_Pointer[ref],"sprite"));
 		draw_set_halign(fa_right);
@@ -234,7 +234,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Species:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Level:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+45,"Exp:");
-		draw_text(Databox_X[ref]+100,Databox_Y[ref]+45,"Nature:");
+		draw_text(Databox_X[ref]+100,Databox_Y[ref]+45,"Genome:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+87,"Traits:");
 		//Draw Data
@@ -249,7 +249,8 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,string(player.Stored_Species[p])+":"+string(db_record_get("db_Creatures",player.Stored_Species[p],"name")));
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+55,player.Stored_Level[p]);
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+55,player.Stored_Exp[p]);
-		draw_text(Databox_X[ref]+102,Databox_Y[ref]+55,player.Stored_Nature[p]);
+		draw_sprite_ext(spr_genomestar,0,Databox_X[ref]+116,Databox_Y[ref]+58,1,1,0,find_colour(player.Stored_Genome[p]+10),1);
+		//draw_text(Databox_X[ref]+102,Databox_Y[ref]+55,player.Stored_Genome[p]);
 		draw_set_font(ft_EvoTooltip_6);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+76,player.Stored_SkillString[p]);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+97,player.Stored_TraitString[p]);
@@ -293,7 +294,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Species:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Level:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+45,"Exp:");
-		draw_text(Databox_X[ref]+100,Databox_Y[ref]+45,"Nature:");
+		draw_text(Databox_X[ref]+100,Databox_Y[ref]+45,"Genome:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+76+skill_height,"Traits:");
 		//Draw Data
@@ -307,7 +308,8 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+34,string(player.Party_Species[p])+":"+string(db_record_get("db_Creatures",player.Party_Species[p],"name")));
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+55,player.Party_Level[p]);
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+55,player.Party_Exp[p]);
-		draw_text(Databox_X[ref]+102,Databox_Y[ref]+55,player.Party_Nature[p]);
+		draw_sprite_ext(spr_genomestar,0,Databox_X[ref]+116,Databox_Y[ref]+58,1,1,0,find_colour(player.Party_Genome[p]+10),1);
+		//draw_text(Databox_X[ref]+102,Databox_Y[ref]+55,player.Party_Genome[p]);
 		draw_set_font(ft_EvoTooltip_6);
 		draw_set_halign(fa_right);
 		draw_text(Databox_X[ref]+width-4,Databox_Y[ref]+66,player.Party_SkillString[p]);
@@ -333,44 +335,82 @@ switch ( Databox_Type[ref] ) {
 		break; #endregion
 		
 	case "PartyCreature:Attributes": #region
-	
-		//Draw Sprite
-		draw_sprite(spr_shadows,Databox_Shadow,88,138);
-		draw_sprite(Databox_Sprite,0,88,138);
-		//Draw Species
-		draw_set_font(ft_EvoTooltipBold_6);
-		draw_set_halign(fa_right);
-		draw_text_colour(144,138,Databox_SpeciesName,c_black,c_black,c_black,c_black,0.75);
-		draw_set_halign(fa_left); 
-	
-		//Attribute Box
 		var width = 112;
 		var height = 64;
 		var stat_spacing = 12;
+	
+		//Draw Sprite
+		draw_sprite(spr_shadows,Databox_Shadow,Databox_X[ref]+width*0.5,Databox_Y[ref]-10,);
+		draw_sprite(Databox_Sprite,0,Databox_X[ref]+width*0.5,Databox_Y[ref]-10,);
+		//Draw Species
+		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_halign(fa_right);
+		draw_text_flatcolour(Databox_X[ref]+width,Databox_Y[ref]-10,Databox_SpeciesName,c_darkgray,1);
+		draw_set_halign(fa_left); 
+	
+		//Attribute Box
 		//Draw Box
 		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
 		//Draw Attributes
 		for ( var i=0 ; i<5 ; i++ ) {
-			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+5+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),0.5);
+			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+5+stat_spacing*i,width-4,8,spr_whitebox,find_colour_dark(i+11),1);
+			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+3+stat_spacing*i,width-4,8,spr_whitebox,find_colour_light(i+11),1);
 			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+4+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),1);
-			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+3+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),1);
 			draw_set_font(ft_EvoTooltipBold_6);
-			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+4+stat_spacing*i,find_attribute_name(i+1),c_black,0.2);
-			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+3+stat_spacing*i,find_attribute_name(i+1),c_white,1);
+			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+4+stat_spacing*i,term(find_attribute_name(i+1)),find_colour_dark(i+11),1);
+			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+3+stat_spacing*i,term(find_attribute_name(i+1)),c_white,1);
 			draw_set_halign(fa_right);
-			draw_text_flatcolour(Databox_X[ref]+width-8,Databox_Y[ref]+4+stat_spacing*i,real(Databox_Attributes[i+1]),c_black,0.2);
-			draw_text_flatcolour(Databox_X[ref]+width-8,Databox_Y[ref]+3+stat_spacing*i,real(Databox_Attributes[i+1]),c_white,1);
+			draw_text_flatcolour(Databox_X[ref]+width-8,Databox_Y[ref]+4+stat_spacing*i,Databox_Attributes[i+1],find_colour_dark(i+11),1);
+			draw_text_flatcolour(Databox_X[ref]+width-8,Databox_Y[ref]+3+stat_spacing*i,Databox_Attributes[i+1],c_white,1);
 			draw_set_halign(fa_left); 
 			};
-		//Draw Stat Star
-		switch (Player.Party_Nature[Party_Member]) {
-			default: 	var c_stat = c_white;		break;
-			case 1:		var c_stat = c_power;		break;
-			case 2:		var c_stat = c_fortitude;	break;
-			case 3:		var c_stat = c_speed;		break;
-			case 4:		var c_stat = c_recovery;	break;
-			case 5:		var c_stat = c_potency;		break;
-			};
-		draw_sprite_ext(spr_naturestar,0,Databox_X[ref]+8,Databox_Y[ref]-9,1,1,0,find_colour(Player.Party_Nature[Party_Member]+i),1);
+		//Draw Genome Star
+		draw_sprite_ext(spr_genomestar,0,Databox_X[ref]+8,Databox_Y[ref]-9,1,1,0,find_colour(Player.Party_Genome[Party_Member]+10),1);
 		break; #endregion
+		
+	case "PartyCreature:Status": #region
+		var width = 216;
+		var height1 = 48;
+		var height2 = 49;
+		var height3 = 48;
+		//Draw Box
+		draw_blackbox_sharp(Databox_X[ref],Databox_Y[ref],width,height1-1,0,0,1,1);
+		draw_blackbox_sharp(Databox_X[ref],Databox_Y[ref]+height1,width,height2-1,1,1,1,1);
+		draw_blackbox_sharp(Databox_X[ref],Databox_Y[ref]+height1+height2,width,height3,1,1,0,0);
+		draw_colouredplane(Databox_X[ref]+1,Databox_Y[ref]+height1-1,width-2,1,c_darkgray,0.8);
+		draw_colouredplane(Databox_X[ref]+1,Databox_Y[ref]+height1+height2-1,width-2,1,c_darkgray,0.8);
+		//Headers
+		draw_set_color(c_white);
+		draw_text_flatcolour(Databox_X[ref]+3,Databox_Y[ref]+height1-1,term("Skills"),c_midgray,1);
+		draw_text_flatcolour(Databox_X[ref]+3,Databox_Y[ref]+height1-2,term("Skills"),c_white,1);
+		draw_text_flatcolour(Databox_X[ref]+3,Databox_Y[ref]+height1+height2-1,term("Passives"),c_midgray,1);
+		draw_text_flatcolour(Databox_X[ref]+3,Databox_Y[ref]+height1+height2-2,term("Passives"),c_white,1);
+		//Info
+		draw_text_flatcolour(Databox_X[ref]+4,Databox_Y[ref]+2,term("Element")+":",c_lightgray,1);
+		draw_text_flatcolour(Databox_X[ref]+4,Databox_Y[ref]+23,term("Genome")+":",c_lightgray,1);
+		draw_colouredplane(Databox_X[ref]+8,Databox_Y[ref]+12,64,11,c_midgray,0.5);
+		draw_colouredplane(Databox_X[ref]+8,Databox_Y[ref]+33,64,11,c_midgray,0.5);
+		draw_set_halign(fa_center);
+		draw_text_flatcolour(Databox_X[ref]+40,Databox_Y[ref]+14,Databox_Element,find_colour_dark(Databox_EColour),1);
+		draw_text_flatcolour(Databox_X[ref]+40,Databox_Y[ref]+13,Databox_Element,Databox_EColour,1);
+		draw_text_flatcolour(Databox_X[ref]+40,Databox_Y[ref]+35,find_genome_name(Player.Party_Genome[Party_Member]),find_colour_dark(Player.Party_Genome[Party_Member]+10),1);
+		draw_text_flatcolour(Databox_X[ref]+40,Databox_Y[ref]+34,find_genome_name(Player.Party_Genome[Party_Member]),find_colour(Player.Party_Genome[Party_Member]+10),1);
+		draw_set_halign(fa_left);
+		//Skills
+		break; #endregion
+		
+		case "PartyCreature:Skills": #region
+		var width = 216;
+		var height = 40;
+		//Draw Box
+		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
+		break; #endregion
+		
+		case "PartyCreature:Passives": #region
+		var width = 216;
+		var height = 145;
+		//Draw Box
+		draw_blackbox(Databox_X[ref],Databox_Y[ref],width,height);
+		break; #endregion
+		
 	};

@@ -3,23 +3,25 @@
 var colour = string(argument0);
 //Cleanse Input
 colour = string_replace_all(colour, "c_", "");
+colour = string_replace_all(colour, "_dark", "");
+colour = string_replace_all(colour, "_light", "");
 colour = string_lettersdigits(colour);
 colour = string_lower(colour);
 
 switch (colour) {
 	
 	//Elemental
-    case "1":	case "physical":	case string(c_physical):	case string(c_physical_dark):	
+    case "1":	case "physical":	case string(c_physical):		
 		return c_physical_dark;
-    case "2":	case "fire":		case string(c_fire):		case string(c_fire_dark):
+    case "2":	case "fire":		case string(c_fire):		
 		return c_fire_dark;
-    case "3":	case "water":		case string(c_water):		case string(c_water_dark):		case "7":
+    case "3":	case "water":		case string(c_water):		case "7":
 		return c_water_dark;
-    case "4":	case "air":			case string(c_air):			case string(c_air_dark):		case "8":
+    case "4":	case "air":			case string(c_air):			case "8":
 		return c_air_dark;
-    case "5": 	case "nature":		case string(c_nature):		case string(c_nature_dark):		case "9":
+    case "5": 	case "nature":		case string(c_nature):		case "9":
 		return c_nature_dark;
-    case "6": 	case "shadow":		case string(c_shadow):		case string(c_shadow_dark):
+    case "6": 	case "shadow":		case string(c_shadow):		
 		return c_shadow_dark;
 		
 	//Attributes
@@ -38,8 +40,8 @@ switch (colour) {
 		return c_potency_dark;
 	
 	//Basic Colours
-    case "c_orange": case string(c_orange):		return c_orange;
-	case "c_black":	case string(c_black):		return c_black; 	
+    case "c_orange":	case string(c_orange):		return c_orange;
+	case "c_black":		case string(c_black):		return c_black; 	
 	
 	//Depreciated (Removed Elements)
     case "earth": 		return c_earth;

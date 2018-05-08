@@ -1,18 +1,18 @@
-///var_oPlayer_Party_Exists(party_member,player,level,species,name,nature);
+///var_oPlayer_Party_Exists(party_member,player,level,species,name,genome);
 /// @arg party_member
 /// @arg player
 /// @arg level
 /// @arg species
 /// @arg name
-/// @arg nature
+/// @arg genome
 var party_member = storage_firstemptyslot(id);
 var player = id;
 var level = irandom(10);
 var species = irandom_range(1,CREATURECOUNT);
 var name = randomcreaturename(species);
-var nature = irandom(5);
+var genome = irandom(5);
 switch ( argument_count ) {
-	case 6:		nature = argument[5];
+	case 6:		genome = argument[5];
 	case 5:		name = argument[4];
 	case 4:		species = argument[3];
 				if ( argument_count == 4 ) { name = randomcreaturename(species) };
@@ -31,7 +31,7 @@ player.Party_Species[party_member] = species;
 player.Party_Name[party_member] = name;
 player.Party_Form[party_member] = 0;				//Currently unused, leave at 0
 player.Party_Quality[party_member] = 0;				//MUST BE 0 FOR PLAYER CREATURES (Used for changing NPC statblocks)
-player.Party_Nature[party_member] = nature			//[0 to 5]
+player.Party_Genome[party_member] = genome			//[0 to 5]
 
 player.Party_Level[party_member] = level;
 player.Party_Exp[party_member] = irandom_range(expforlevel(level),expforlevel(level+1));

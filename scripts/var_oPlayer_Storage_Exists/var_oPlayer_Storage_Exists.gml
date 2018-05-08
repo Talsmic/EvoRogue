@@ -1,18 +1,18 @@
-///var_oPlayer_Storage_Exists(stored_creature,player,level,species,name,nature);
+///var_oPlayer_Storage_Exists(stored_creature,player,level,species,name,genome);
 /// @arg stored_creature
 /// @arg player
 /// @arg level
 /// @arg species
 /// @arg name
-/// @arg nature
+/// @arg genome
 var stored_creature = storage_firstemptyslot(id);
 var player = id;
 var level = irandom(10);
 var species = irandom_range(1,CREATURECOUNT);
 var name = randomcreaturename(species);
-var nature = irandom(5);
+var genome = irandom(5);
 switch ( argument_count ) {
-	case 6:		nature = argument[5];
+	case 6:		genome = argument[5];
 	case 5:		name = argument[4];
 	case 4:		species = argument[3];
 	case 3:		level = argument[2];
@@ -29,7 +29,7 @@ player.Stored_Species[stored_creature] = species;
 player.Stored_Name[stored_creature] = name;
 player.Stored_Form[stored_creature] = 0;			
 player.Stored_Quality[stored_creature] = 0;			
-player.Stored_Nature[stored_creature] = nature;	//[0 to 5]
+player.Stored_Genome[stored_creature] = genome;	//[0 to 5]
 
 player.Stored_Level[stored_creature] = level;
 player.Stored_Exp[stored_creature] = irandom_range(expforlevel(level),expforlevel(level+1));

@@ -42,3 +42,5 @@ if ( Draw_Beat ) {
 	};
 	
 draw_set_halign(fa_left);
+
+ui_varlist_draw("Resolution",10,10);

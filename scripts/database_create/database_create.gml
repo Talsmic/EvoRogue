@@ -1,5 +1,5 @@
 ///database_create()
-//Databases last updated on 24/04/2018
+//Databases last updated on 08/05/2018
 db_init();
 db_open("db_Evolutionary");
 
@@ -26,3 +26,18 @@ db_table_import_csv("db_Skills","[Databases]\\db_Skills.csv",",");
 db_table_create(	"db_Effects",
 					"name:string","element:string","tooltip:string","icon:real","type:string","duration:string");
 db_table_import_csv("db_Effects","[Databases]\\db_Effects.csv",",");
+
+//[db_Strings_UI]-----------------------------------------------------[08/05/2018]
+db_table_create(	"db_Strings_UI",
+					"value:string","extended:string");
+db_table_import_csv("db_Strings_UI","[Databases]\\[Language Packs]\\db_Strings_UI [Pirate].csv",",");
+
+//[db_Strings_Skills]-----------------------------------------------------[08/05/2018]
+db_table_create(	"db_Strings_Skills",
+					"name:string","tooltip:string");
+db_table_import_csv("db_Strings_Skills","[Databases]\\[Language Packs]\\db_Strings_Skills [Pirate].csv",",");
+
+//[db_Strings_Creatures]-----------------------------------------------------[08/05/2018]
+db_table_create(	"db_Strings_Creatures",
+					"name:string");
+db_table_import_csv("db_Strings_Creatures","[Databases]\\[Language Packs]\\db_Strings_Creatures [English].csv",",");

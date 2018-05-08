@@ -25,7 +25,7 @@ Tabset_TabSpace[ref] = 1;
 
 Tabset_AttachToSide[ref] = UP;
 Tabset_ListDirection[ref] = LEFT;
-Tabset_Rotation[ref] = NONE;
+Tabset_Rotation[ref] = ANGLE_UP;
 
 Tabset_Colour_Tab[ref] = c_black;
 Tabset_Colour_TabHover[ref] = c_darkgray;

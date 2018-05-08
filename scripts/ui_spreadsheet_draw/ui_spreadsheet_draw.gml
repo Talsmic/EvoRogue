@@ -19,7 +19,7 @@ switch ( mode ) {
 							"Name", 
 							"Level", 
 							"Exp", 
-							"Nature", 
+							"Genome", 
 							"SkillString",
 							];
 		var col_width = [ 16, 32, 32, 56, 24, 24, 32, 64 ];
@@ -31,7 +31,7 @@ switch ( mode ) {
 			data[4,i] = Stored_Name[i];
 			data[5,i] = Stored_Level[i];
 			data[6,i] = Stored_Exp[i];
-			data[7,i] = Stored_Nature[i];
+			data[7,i] = Stored_Genome[i];
 			data[8,i] = Stored_SkillString[i];			
 			};
 		break; #endregion

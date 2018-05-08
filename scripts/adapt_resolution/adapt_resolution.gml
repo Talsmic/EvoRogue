@@ -79,6 +79,7 @@ display_set_gui_maximise( Resolution_Magnification, Resolution_Magnification, Re
 flex_view(0);
 
 //Adapt Application Surface
+if ( !surface_exists(application_surface) ) { return };
 surface_resize( application_surface, Resolution_PlayableWidth, Resolution_PlayableHeight );
 /*if (	window_get_width() != Resolution_CompleteWidth*Resolution_Magnification or
 		window_get_height() != Resolution_CompleteHeight*Resolution_Magnification ) {

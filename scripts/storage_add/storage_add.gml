@@ -19,7 +19,7 @@ player.Stored_Name[stored_creature] = db_record_get("db_Creatures",creature_spec
 player.Stored_Species[stored_creature] = creature_species;
 player.Stored_Form[stored_creature] = 0;	//Currently unused, leave at 0		
 player.Stored_Quality[stored_creature] = 0;	
-player.Stored_Nature[stored_creature] = irandom(5);
+player.Stored_Genome[stored_creature] = irandom(5);
 player.Stored_Level[stored_creature] = creature_level;
 player.Stored_Exp[stored_creature] = irandom_range(expforlevel(creature_level),expforlevel(creature_level+1));
 

@@ -23,7 +23,7 @@ if ( !player.Party_Status[party_member] ) { return false };
 var a = [0,5,5,5,5,5];
 var a_growth = [0,0,0,0,0,0];
 var a_flat = [0,0,0,0,0,0];
-var a_multiplier = [0,0,0,0,0,0];
+var a_multiplier = [0,1,1,1,1,1];
 
 #region Base Stats
 //Pull base stats for your species from the database
@@ -43,9 +43,9 @@ a_growth[4] += db_record_get("db_Creatures",player.Party_Species[party_member],"
 a_growth[5] += db_record_get("db_Creatures",player.Party_Species[party_member],"potency_growth");
 #endregion
 
-#region Nature Bonuses
-//Natures raise the base stats and the growth stats of a species
-switch (player.Party_Nature[party_member]) {
+#region Genome Bonuses
+//Genomes raise the base stats and the growth stats of a species
+switch (player.Party_Genome[party_member]) {
 	default:	//Balanced
 		for ( var i=1 ; i<=5 ; i++ ) {							//Effects All Stats
 			if ( a[i] < 4 ) { a[i] = 4 };					//Raises Base to 4 (No effect if already higher)

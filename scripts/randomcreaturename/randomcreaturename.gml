@@ -1,12 +1,13 @@
 ///randomcreaturename(species)
 /// @arg species
 var species = argument0;
-var species_name = db_record_get("db_Creatures",species,"name");;
+var raw_species_name = db_record_get("db_Creatures",species,"name");
+var species_name = dbpull_creature_name(species);
 
 //Creature Specific
 var name = irandom(1);
 if ( name ) {
-	switch ( species_name ) {
+	switch ( raw_species_name ) {
 		
 		case "Lumbark": 
 			var name2 = irandom(1);

@@ -18,7 +18,7 @@ player.Stored_Species[stored_creature] = 0;
 player.Stored_Name[stored_creature] = "nil";
 player.Stored_Form[stored_creature] = 0;					//Currently unused, leave at 0
 player.Stored_Quality[stored_creature] = 0;				//MUST BE 0 FOR PLAYER CREATURES (Used for changing NPC statblocks)
-player.Stored_Nature[stored_creature] = 0;					//[0 to 5]
+player.Stored_Genome[stored_creature] = 0;					//[0 to 5]
 
 player.Stored_Level[stored_creature] = level;
 player.Stored_Exp[stored_creature] = expforlevel(level);

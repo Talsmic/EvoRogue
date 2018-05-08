@@ -43,9 +43,9 @@ a_growth[4] += db_record_get("db_Creatures",player.Stored_Species[stored_creatur
 a_growth[5] += db_record_get("db_Creatures",player.Stored_Species[stored_creature],"potency_growth");
 #endregion
 
-#region Nature Bonuses
-//Natures raise the base stats and the growth stats of a species
-switch (player.Stored_Nature[stored_creature]) {
+#region Genome Bonuses
+//Genomes raise the base stats and the growth stats of a species
+switch (player.Stored_Genome[stored_creature]) {
 	default:	//Balanced
 		for ( var i=1 ; i<=5 ; i++ ) {							//Effects All Stats
 			if ( a[i] < 4 ) { a[i] = 4 };					//Raises Base to 4 (No effect if already higher)

@@ -22,7 +22,7 @@ player.Stored_Species[stored_creature] =		player.Party_Species[party_member];
 player.Stored_Name[stored_creature] =			player.Party_Name[party_member];
 player.Stored_Form[stored_creature] =			player.Party_Form[party_member];
 player.Stored_Quality[stored_creature] =		player.Party_Quality[party_member] = 0;
-player.Stored_Nature[stored_creature] =			player.Party_Nature[party_member];
+player.Stored_Genome[stored_creature] =			player.Party_Genome[party_member];
 
 player.Stored_Level[stored_creature] =			player.Party_Level[party_member];
 player.Stored_Exp[stored_creature] =			player.Party_Exp[party_member];

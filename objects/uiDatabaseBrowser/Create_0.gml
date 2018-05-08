@@ -40,7 +40,7 @@ ui_tabset_create(2,2);
 	Tabset_List[2,2] = "Words";
 	Tabset_AttachToSide[2] = LEFT;
 	Tabset_ListDirection[2] = DOWN;
-	Tabset_Rotation[2] = LEFT;
+	Tabset_Rotation[2] = ANGLE_LEFT;
 	Tabset_TabWidth[2] = 50;
 	Tabset_FontHeight[2] = 25;
 	

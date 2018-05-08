@@ -7,7 +7,7 @@ if ( ref_target < 1 ) {	ref_target = 1 };
 if ( global.storage_status[ref_target] == 0 ) {	ref_target = 1 };
 
 //Whiteout
-draw_sprite_ext(bg_screen,0,0,0,1,1,0,c_white,0.75);
+draw_screenfill(c_white,0.75);
 
 //=[Party]============================================================
 //Draw Box
@@ -57,7 +57,7 @@ switch (global.storage_nature[ref_target]) {
 	case 4:		var c_stat = c_recovery;	break;
 	case 5:		var c_stat = c_potency;		break;
 	};
-draw_sprite_ext(spr_naturestar,1,x_main+36,y_main+55,1,1,0,c_stat,1);
+draw_sprite_ext(spr_genomestar,1,x_main+36,y_main+55,1,1,0,c_stat,1);
 //====================================================================
 
 //=[Storage]==========================================================

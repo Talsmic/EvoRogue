@@ -9,16 +9,16 @@ var ui_height = window_get_height();
 var pad_w = floor( ( ui_width - surface_width * scale ) * 0.5 );
 var pad_h = floor( ( ui_height - surface_height * scale ) * 0.5 );
 
-//Draw BG
-var bg = surface_create( 2, 2 );
+//Draw surface
+var surface = surface_create( 2, 2 );
 
-surface_set_target( bg );
+surface_set_target( surface );
 	draw_colouredplane(0,0,2,2,c_darkgray,1);
 surface_reset_target();
 
-draw_surface_stretched( bg, 0, 0, ui_width, ui_height );
+draw_surface_stretched( surface, 0, 0, ui_width, ui_height );
 
-surface_free( bg );
+surface_free( surface );
 
 //Draw Primary Surface
 

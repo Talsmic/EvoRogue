@@ -1,7 +1,7 @@
 /* LEGACY CODE
 
 //Draw Background
-draw_sprite_ext(bg_screen,0,0,0,1,1,0,c_white,0.5);
+draw_screenfill(c_white,0.5);
 //Draw Ruleset
 draw_sprite_ext(spr_battlebanner,banner,x,y,1,1,0,banner_colour,.8);
 draw_set_halign(fa_center); 

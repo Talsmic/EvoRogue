@@ -5,6 +5,7 @@ var species = argument0;
 	>Returns {String}
 */
 
-var element = db_record_get("db_Creatures",species,"element");
+//var element = db_record_get("db_Creatures",species,"element");
+var element = term(db_record_get("db_Creatures",species,"element"));
 
 return element;

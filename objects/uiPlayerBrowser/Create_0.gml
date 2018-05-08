@@ -34,6 +34,6 @@ ui_tabset_create(1,2);
 	Tabset_List[1,2] = "Party";
 	Tabset_AttachToSide[1] = LEFT;
 	Tabset_ListDirection[1] = DOWN;
-	Tabset_Rotation[1] = LEFT;
+	Tabset_Rotation[1] = ANGLE_LEFT;
 	Tabset_TabWidth[1] = 70;
 	Tabset_FontHeight[1] = 35;

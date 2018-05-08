@@ -1,0 +1,21 @@
+id#,name,tooltip
+1,Fight,Fight a dude
+2,Drink,Chill out
+3,???,
+4,Strike,Deals Physical|1 Damage|1
+5,Fire Strike,Deals Fire|2 Damage|2
+6,Water Strike,Deals Water|3 Damage|3
+7,Air Strike,Deals Air|4 Damage|4
+8,Nature Strike,Deals Nature|5 Damage|5
+9,Shadow Strike,Deals Shadow|6 Damage|6
+10,,
+11,Damage,Deals Physical|1 Damage|1
+12,Damage,Deals Physical|1 Damage|1
+13,Damage,Deals Physical|1 Damage|1
+14,Damage,Deals Physical|1 Damage|1
+15,Damage,Deals Physical|1 Damage|1
+16,Penetrating,Deals Physical|1 Damage|1#  Shanking
+17,Powerful,Deals Physical|1 Damage|1#  Brutal|11
+18,Arcing,Deals Physical|1 Damage|1#  Spraying
+19,Recoil,Deals Physical|1 Damage|1#  Costly [20%]
+20,Leech,Deals Physical|1 Damage|1#  Sapping|14 [25%]

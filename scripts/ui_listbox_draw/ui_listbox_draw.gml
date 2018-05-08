@@ -52,12 +52,12 @@ switch ( Listbox_Mode ) {
 			if ( Listbox_IconType = "Skill" ) {
 				draw_icon_skill(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],"B",eIconState.detectGUI) };
 			if ( Listbox_IconType = "DB_Skill" ) {
-				draw_icon_dbskill(_x,_y,24,i,eIconState.detectGUI);
-				icon_rarity = db_record_get("db_Skills",i,"rarity") };
+				draw_icon_dbskill(_x,_y,24,Listbox_ListIcon[i],eIconState.detectGUI);
+				icon_rarity = db_record_get("db_Skills",Listbox_ListIcon[i],"rarity") };
 			if ( Listbox_IconType = "Creature" ) {
 				draw_icon_creature(_x,_y,24,Listbox_ListIcon[i],Listbox_ListColour[i],eIconState.detectGUI) };
 			if ( Listbox_IconType = "DB_Creature" ) {
-				draw_icon_dbcreature(_x,_y,24,i,eIconState.detectGUI) };
+				draw_icon_dbcreature(_x,_y,24,Listbox_ListIcon[i],eIconState.detectGUI) };
 			//Draw Focus
 			if ( i == Listbox_Position ) { draw_icon_halo(_x,_y,24,c_orange,icon_rarity,eIconState.detectGUI,0.75) };		
 			//Draw ID

@@ -9,7 +9,7 @@ var y1 = 0;
 var tabwidth = Tabset_TabWidth[ref]; 
 var tabheight = Tabset_TabHeight[ref];
 //Rotated Tab Adjustments
-if ( Tabset_Rotation[ref] == RIGHT or Tabset_Rotation[ref] == LEFT ) {
+if ( Tabset_Rotation[ref] == ANGLE_RIGHT or Tabset_Rotation[ref] == ANGLE_LEFT ) {
 	tabwidth = Tabset_TabHeight[ref]; 
 	tabheight = Tabset_TabWidth[ref];
 	};

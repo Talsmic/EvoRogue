@@ -7,13 +7,13 @@ var X = argument1; //global.gui_mouse_x+2;
 var Y = argument2; //global.gui_mouse_y+10;
 
 //Pull from Database
-var tt_header = db_record_get("db_Skills",skill,"name");
+var tt_header = pullstring("db_Strings_Skills","name",skill);
 var tt_colour = find_colour( db_record_get("db_Skills",skill,"element") );
 var tt_colour_dark = find_colour_dark( db_record_get("db_Skills",skill,"element") );
 var tt_colour_body = c_darkgray;
-var tt_body = db_record_get("db_Skills",skill,"tooltip");
+var tt_body = pullstring("db_Strings_Skills","tooltip",skill);
 var tt_cost = real( db_record_get("db_Skills",skill,"cost") );
-var tt_recharge = real(db_record_get("db_Skills",skill,"recharge"));
+var tt_recharge = real( db_record_get("db_Skills",skill,"recharge") );
 
 //Parse and find dimensions
 draw_set_font( ft_EvoTooltipCondensed_6 );
@@ -60,12 +60,12 @@ draw_text_flatcolour(X+3, Y+1, tt_header, tt_colour, 1);
 draw_set_font(ft_EvoTooltipCondensed_6);
 var offset = 0;
 if ( tt_cost > 0 ) {
-    draw_text_flatcolour(X+3, Y+13,string(string(tt_cost)+" Energy"),c_fortitude,1);
+    draw_text_flatcolour(X+3, Y+13,string(string(tt_cost)+" "+term("EnergyCost")),c_fortitude,1);
 	offset = 11;
     };
 if ( tt_recharge > 0 ) {
     draw_set_halign(fa_right);
-    draw_text_flatcolour(X+width-3, Y+13, string(string(tt_recharge)+" Round Recharge"),c_power,1);
+    draw_text_flatcolour(X+width-3, Y+13, string(string(tt_recharge)+" "+term("Recharge")),c_power,1);
     draw_set_halign(fa_left);
     offset = 11;
 	};

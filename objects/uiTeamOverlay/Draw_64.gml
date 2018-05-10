@@ -25,7 +25,7 @@ if ( i > 3 ) { tooltip_offset_y += 17 };
 //====================================================================
 	
 //Draw Other Buttons
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 draw_textbutton_gui_ext(box_x+box_width,box_y+9,"Change Party","Outline",c_shadow,c_white,c_shadow_dark,2,2);
 draw_textbutton_gui_ext(box_x+box_width,box_y-2,"Edit Creatures","Outline",c_air,c_white,c_air_dark,2,2);
 

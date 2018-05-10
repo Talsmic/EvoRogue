@@ -42,7 +42,7 @@ switch ( Listbox_Mode ) {
 	
 	case "Icons": #region
 		var _x = Listbox_X+18; var _y = Listbox_Y+21; 
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_halign(fa_right);
 		for ( var i=range_start ; i<=range_end ; i++ ) {
 			//Replace missing colours
@@ -71,7 +71,7 @@ switch ( Listbox_Mode ) {
 		
 	case "Words": #region
 		var _x = Listbox_X+4; var _y = Listbox_Y+6; 
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		for ( var i=range_start ; i<=range_end ; i++ ) {
 			//Replace missing colours
 			if ( array_length_1d(Listbox_ListColour) < i ) { Listbox_ListColour[i] = c_white };		

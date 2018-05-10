@@ -38,7 +38,7 @@ draw_set_font(ft_EvoLarge_12);
 draw_text_outline(x_main+45,y_main+24,name,c_white);
 draw_text_outline(x_main+44,y_main+24,name,c_white);
 //Draw Species
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 draw_text_colour(x_main+44,y_main+42,s_name,c_white,c_white,c_white,c_white,0.5);
 //Draw Type
 var type_c = find_colour(typeA);
@@ -66,7 +66,7 @@ draw_colouredplane(x_main+1,y_main+62,298,1,c_darkgray,0.8);
 draw_blackbox_sharp(x_main,y_main+63,300,97,1,1,0,0);
 //Tabs
 draw_set_halign(fa_center); 
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 for ( i=0 ; i<5 ; i++) {
 	if ( storage_page == i ) {
 		draw_set_colour(c_white);

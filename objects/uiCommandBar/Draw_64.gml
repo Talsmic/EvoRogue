@@ -85,7 +85,7 @@ if ( mode == 1 ) {
 			draw_icon_skill(offset+skill_offset,y-36,24,focus_skill,state);
 			if ( Player.Party_Level[ref_party] < level_check[i, 2] ) { 
 				draw_sprite(spr_iconlock,0,offset+skill_offset,y-36); 
-				draw_set_font(ft_EvoTooltipBold_6);
+				draw_set_font(ft_EvoTooltip_6_Bold);
 				draw_text_outline_coloured(offset+skill_offset,y-37,string(level_check[i, 2]),c_lightgray,c_darkgray); 
 				};
 			skill_offset += 30;

@@ -175,19 +175,19 @@
             }
         },
         {
-            "Key": "0da3a8a1-ee67-4a42-b7d0-768761ddae96",
-            "Value": {
-                "id": "1dab0cb4-b6d0-43b5-b38f-c0e34db88f87",
-                "resourcePath": "fonts\\ft_EvoTooltipBold_6\\ft_EvoTooltipBold_6.yy",
-                "resourceType": "GMFont"
-            }
-        },
-        {
             "Key": "0e742efa-e628-4f7f-b18a-1f39193aee33",
             "Value": {
                 "id": "5756d1b5-46cc-4e10-9c72-fce1fd1fb2c1",
                 "resourcePath": "views\\0e742efa-e628-4f7f-b18a-1f39193aee33.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "0eb1942a-6e09-412a-920a-e552782e3b3f",
+            "Value": {
+                "id": "51791157-07b9-4bba-be99-f5626d3213ff",
+                "resourcePath": "fonts\\ft_EvoTooltip_6_Bold\\ft_EvoTooltip_6_Bold.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -372,14 +372,6 @@
                 "id": "75517049-2762-4186-86d0-640836fb3daa",
                 "resourcePath": "scripts\\expforlevel\\expforlevel.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "1cc8dcbd-3de2-4608-a0f3-65a000f0fe7f",
-            "Value": {
-                "id": "57000995-9b77-4fdd-97af-02190b8fd4f9",
-                "resourcePath": "fonts\\ft_EvoTooltipCondensed_6\\ft_EvoTooltipCondensed_6.yy",
-                "resourceType": "GMFont"
             }
         },
         {
@@ -644,14 +636,6 @@
                 "id": "406ad92a-48f7-4bbd-a6b1-49608f590434",
                 "resourcePath": "objects\\bgScreenSnap\\bgScreenSnap.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "2dc8f423-fbf2-41ed-a686-9cdcb2051748",
-            "Value": {
-                "id": "5173f189-bab9-4d14-a8fc-b0ed85c1a385",
-                "resourcePath": "views\\2dc8f423-fbf2-41ed-a686-9cdcb2051748.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -1020,6 +1004,14 @@
                 "id": "dc18f9b9-42cc-4d45-9fd7-e3040886182a",
                 "resourcePath": "views\\483211bf-4bcd-4bb4-a55e-24b8b1c8ce88.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "485dd93f-ee49-44bd-b459-f3097f79e1d9",
+            "Value": {
+                "id": "50ad2af9-2fc8-4760-82bf-276b9f4f44c2",
+                "resourcePath": "fonts\\ft_EvoTooltip_6_Condensed\\ft_EvoTooltip_6_Condensed.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -1863,6 +1855,14 @@
             }
         },
         {
+            "Key": "7c86d511-75ca-4178-9a97-665d60af1a13",
+            "Value": {
+                "id": "938fa92d-defb-4817-bb22-af624860ea58",
+                "resourcePath": "views\\7c86d511-75ca-4178-9a97-665d60af1a13.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7d1d4a78-de86-4e16-ab66-93d4b96749eb",
             "Value": {
                 "id": "b6169b46-0439-4cd5-91c4-d6a3146bb752",
@@ -2231,6 +2231,14 @@
             }
         },
         {
+            "Key": "a1944d9b-c03e-448d-83c5-f5a477af70eb",
+            "Value": {
+                "id": "511b8591-e6f4-49b6-af57-a22216167238",
+                "resourcePath": "views\\a1944d9b-c03e-448d-83c5-f5a477af70eb.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a3471e87-b4aa-40d2-ad19-a8954f2fda0e",
             "Value": {
                 "id": "6259ff39-0607-4af7-ab67-ca1ac25ce60f",
@@ -2263,14 +2271,6 @@
             }
         },
         {
-            "Key": "a5da7a46-dba6-42ae-b847-17117e6ecfb4",
-            "Value": {
-                "id": "a6d67d30-7d26-42e1-a397-e702fef38a40",
-                "resourcePath": "fonts\\ft_EvoTooltipSquished_6\\ft_EvoTooltipSquished_6.yy",
-                "resourceType": "GMFont"
-            }
-        },
-        {
             "Key": "a6635b17-4d76-4016-84cd-f4fa5d4d85d5",
             "Value": {
                 "id": "f5a744c9-0e70-42a1-9aa8-be5f7d8cdfd8",
@@ -2284,6 +2284,14 @@
                 "id": "714f5a06-48c2-428a-88e3-0976dd65a92f",
                 "resourcePath": "views\\a6a51469-2d11-4cff-8494-665f7cb49661.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a6f61802-0142-49a5-ac7a-7898a87a2018",
+            "Value": {
+                "id": "decbfc59-5c97-4ec3-83b5-bd8d11e44a90",
+                "resourcePath": "fonts\\ft_EvoTooltip_6_Squished\\ft_EvoTooltip_6_Squished.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -3300,14 +3308,6 @@
                 "id": "96d6c1db-70a8-4c31-9315-e4dbf7958e2c",
                 "resourcePath": "scripts\\database_create\\database_create.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "ed85b27c-b77d-457e-b753-7bcf9907e652",
-            "Value": {
-                "id": "666e19f3-62c2-4873-9053-1172f1eecb04",
-                "resourcePath": "views\\ed85b27c-b77d-457e-b753-7bcf9907e652.yy",
-                "resourceType": "GMFolder"
             }
         },
         {

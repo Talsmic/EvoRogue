@@ -19,7 +19,7 @@ Tabset_Y[ref] = y;
 
 Tabset_TabWidth[ref] = 40;
 Tabset_TabHeight[ref] = 11;
-Tabset_Font[ref] = ft_EvoTooltipBold_6;
+Tabset_Font[ref] = ft_EvoTooltip_6_Bold;
 Tabset_FontHeight[ref] = 6;
 Tabset_TabSpace[ref] = 1;
 

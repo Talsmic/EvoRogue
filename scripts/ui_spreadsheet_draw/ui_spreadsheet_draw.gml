@@ -57,7 +57,7 @@ for ( var i=1 ; i<array_length_1d(col_width) ; i+=2 ) {
 	XX += col_width[i];
 	};	
 //Draw Headers
-draw_set_font(ft_EvoTooltipSquished_6);
+draw_set_font(ft_EvoTooltip_6_Squished);
 draw_set_colour(c_orange);
 var XX = X+4
 for ( var i=0 ; i<array_length_1d(columns) ; i++ ) {

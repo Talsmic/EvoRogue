@@ -18,7 +18,7 @@ if ( Draw_Mouse ) {
 draw_set_halign(fa_center);
 
 if ( Draw_FrameRate ) {
-	draw_set_font(ft_EvoTooltipSquished_6);
+	draw_set_font(ft_EvoTooltip_6_Squished);
 	draw_text_outline_coloured(draw_offset,2,"FrameRate",c_white,c_gray);
 	draw_set_font(ft_EvoLarge_12);
 	draw_text_outline_coloured(draw_offset,10,fps,c_shadow,c_shadow_dark);
@@ -26,7 +26,7 @@ if ( Draw_FrameRate ) {
 	};
 	
 if ( Draw_FocusLevel ) {
-	draw_set_font(ft_EvoTooltipSquished_6);
+	draw_set_font(ft_EvoTooltip_6_Squished);
 	draw_text_outline_coloured(draw_offset,2,"FocusLevel",c_white,c_gray);
 	draw_set_font(ft_EvoLarge_12);
 	draw_text_outline_coloured(draw_offset,10,FocusCurrent,c_shadow,c_shadow_dark);
@@ -34,7 +34,7 @@ if ( Draw_FocusLevel ) {
 	};
 		
 if ( Draw_Beat ) {
-	draw_set_font(ft_EvoTooltipSquished_6);
+	draw_set_font(ft_EvoTooltip_6_Squished);
 	draw_text_outline_coloured(draw_offset,2,"Beat",c_white,c_gray);
 	draw_set_font(ft_EvoLarge_12);
 	draw_text_outline_coloured(draw_offset,10,string_format(Beat[0],1,1),c_shadow,c_shadow_dark);

@@ -41,6 +41,6 @@ if ( DrawExtraCommands ) {
 		};
 	};
 
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 draw_text_flatcolour(14,250,depth,c_shadow,1);
 draw_text_flatcolour(4,250,infocus(),c_shadow_dark,1);

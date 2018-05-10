@@ -77,7 +77,7 @@ for ( var i=0 ; i<array_length_1d(list_string) ; i++ ) {
 	draw_text(X+4,Y+i*11+13,list_string[i]);
 	};	
 //Draw Values
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 draw_set_colour(c_orange);
 draw_set_halign(fa_right);
 for ( var i=0 ; i<array_length_1d(list_value) ; i++ ) {

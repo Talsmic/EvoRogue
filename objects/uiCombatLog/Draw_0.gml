@@ -11,7 +11,7 @@ var end_line = 0;
 var draw_x = logbox_x+4;
 var draw_y = logbox_y+logbox_height-2;
 var check_height = 0;
-draw_set_font(ft_EvoTooltipCondensed_6);
+draw_set_font(ft_EvoTooltip_6_Condensed);
 for ( i=start_line ; i>end_line ; i-- ) {
 	parse_text(cl_string[i],c_gray);
 	check_height = parsed_text_height(logbox_width-8,8)-6;

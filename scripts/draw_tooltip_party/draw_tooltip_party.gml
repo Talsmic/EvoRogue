@@ -37,7 +37,7 @@ if ( X + width > oGlobalController.Resolution_CompleteWidth ) { X = oGlobalContr
 if ( Y + height > oGlobalController.Resolution_CompleteHeight ) { Y = oGlobalController.Resolution_CompleteHeight - height };
 
 //Draw Header Background
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 draw_text_flatcolour(X+2, Y, tt_name, tt_colour_body, 1);
 draw_text_flatcolour(X+3, Y, tt_name, tt_colour_body, 1);
 draw_text_flatcolour(X+4, Y, tt_name, tt_colour_body, 1);

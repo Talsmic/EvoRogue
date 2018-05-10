@@ -15,7 +15,7 @@ draw_colouredplane(x+width,y,width,height*20,c_black,DarkValue);
 //Light Stick
 draw_colouredplane(x+width*4,y,width,height*20,c_white,0.2);
 
-draw_set_font(ft_EvoTooltipBold_6);
+draw_set_font(ft_EvoTooltip_6_Bold);
 for ( var i=0 ; i<array_length_1d(ColourArray)-1 ; i++ ) {
 	for ( var j=0 ; j<6 ; j++ ) {
 		pix_colour = draw_getpixel((x+5+width*j)*oGlobalController.Resolution_Magnification,(y+5+height*i)*oGlobalController.Resolution_Magnification);

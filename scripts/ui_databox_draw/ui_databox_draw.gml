@@ -28,7 +28,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"ID:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+3,"Name:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+24,"Element:");
-		draw_set_font(ft_EvoTooltipSquished_6);
+		draw_set_font(ft_EvoTooltip_6_Squished);
 		draw_text(Databox_X[ref]+95,Databox_Y[ref]+24,"Energy:");
 		draw_text(Databox_X[ref]+130,Databox_Y[ref]+24,"Recharge:");
 		draw_text(Databox_X[ref]+165,Databox_Y[ref]+24,"Priority:");
@@ -37,7 +37,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+130,Databox_Y[ref]+45,"Icon:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Effects:");
 		//Draw Data
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_colour(c_lightgray);
 		var id_string = "["+string_format(db_record_get("db_Skills",Databox_Pointer[ref],"id"),3,0)+"]";
 		id_string = string_replace_all(id_string," ","0");
@@ -71,7 +71,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+3,"ID:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+3,"Name:");
 		//Draw Data
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_colour(c_lightgray);
 		var id_string = "["+string_format(db_record_get("db_Creatures",Databox_Pointer[ref],"id"),3,0)+"]";
 		id_string = string_replace_all(id_string," ","0");
@@ -109,7 +109,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+24,"Sprite:");			
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+45,"Shadow:");	
 		draw_text(Databox_X[ref]+80,Databox_Y[ref]+45,"Icon:");
-		draw_set_font(ft_EvoTooltipSquished_6);
+		draw_set_font(ft_EvoTooltip_6_Squished);
 		draw_set_halign(fa_center);
 		draw_text_flatcolour(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+55,term("Power"),c_power,1);
 		draw_text_flatcolour(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+55,term("Fortitude"),c_fortitude,1);
@@ -118,7 +118,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text_flatcolour(Databox_X[ref]+2+att_width*4.5,Databox_Y[ref]+55,term("Potency"),c_potency,1);
 		draw_set_halign(fa_left);
 		//Draw Data
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_colour(c_lightgray);
 		draw_text_flatcolour(Databox_X[ref]+6,Databox_Y[ref]+13,dbpull_creature_element(Databox_Pointer[ref]),dbpull_creature_ecolour(Databox_Pointer[ref]),1);
 		draw_set_font(ft_EvoTooltip_6);
@@ -128,7 +128,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+130,Databox_Y[ref]+45,db_record_get("db_Creatures",Databox_Pointer[ref],"icon"));
 		draw_set_halign(fa_center);
 		draw_set_colour(c_white);
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_text(Databox_X[ref]+2+att_width*0.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_power"));
 		draw_text(Databox_X[ref]+2+att_width*1.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_fortitude"));
 		draw_text(Databox_X[ref]+2+att_width*2.5,Databox_Y[ref]+66,db_record_get("db_Creatures",Databox_Pointer[ref],"base_speed"));
@@ -200,7 +200,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+24,"Tag:");
 		draw_text(Databox_X[ref]+40,Databox_Y[ref]+24,"Name:");
 		//Draw Data
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_colour(c_lightgray);
 		var id_string = string(Databox_Pointer[ref]);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,id_string);
@@ -238,7 +238,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+87,"Traits:");
 		//Draw Data
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_colour(c_lightgray);
 		if ( inparty(player,p) ) {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(inparty(player,p))) };
 			else	   {	draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,p) };
@@ -298,7 +298,7 @@ switch ( Databox_Type[ref] ) {
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+66,"Skills:");
 		draw_text(Databox_X[ref]+4,Databox_Y[ref]+76+skill_height,"Traits:");
 		//Draw Data
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_colour(c_lightgray);
 		draw_text(Databox_X[ref]+6,Databox_Y[ref]+13,string(p)+"/"+string(player.Party_StoredID[p]));
 		draw_text(Databox_X[ref]+42,Databox_Y[ref]+13,player.Party_Name[p]);
@@ -314,7 +314,7 @@ switch ( Databox_Type[ref] ) {
 		draw_set_halign(fa_right);
 		draw_text(Databox_X[ref]+width-4,Databox_Y[ref]+66,player.Party_SkillString[p]);
 		draw_text(Databox_X[ref]+width-4,Databox_Y[ref]+76+skill_height,player.Party_TraitString[p]);
-		draw_set_font(ft_EvoTooltipCondensed_6);
+		draw_set_font(ft_EvoTooltip_6_Condensed);
 		var _x = Databox_X[ref]+19; var _y = Databox_Y[ref]+76;
 		for ( var i=0 ; i<array_length_2d(player.Party_Skill,p); i++ ) {
 			draw_text(_x,_y,player.Party_Skill[p,i]);
@@ -343,7 +343,7 @@ switch ( Databox_Type[ref] ) {
 		draw_sprite(spr_shadows,Databox_Shadow,Databox_X[ref]+width*0.5,Databox_Y[ref]-10,);
 		draw_sprite(Databox_Sprite,0,Databox_X[ref]+width*0.5,Databox_Y[ref]-10,);
 		//Draw Species
-		draw_set_font(ft_EvoTooltipBold_6);
+		draw_set_font(ft_EvoTooltip_6_Bold);
 		draw_set_halign(fa_right);
 		draw_text_flatcolour(Databox_X[ref]+width,Databox_Y[ref]-10,Databox_SpeciesName,c_darkgray,1);
 		draw_set_halign(fa_left); 
@@ -356,7 +356,7 @@ switch ( Databox_Type[ref] ) {
 			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+5+stat_spacing*i,width-4,8,spr_whitebox,find_colour_dark(i+11),1);
 			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+3+stat_spacing*i,width-4,8,spr_whitebox,find_colour_light(i+11),1);
 			draw_tilebox_ext(Databox_X[ref]+2,Databox_Y[ref]+4+stat_spacing*i,width-4,8,spr_whitebox,find_colour(i+11),1);
-			draw_set_font(ft_EvoTooltipBold_6);
+			draw_set_font(ft_EvoTooltip_6_Bold);
 			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+4+stat_spacing*i,term(find_attribute_name(i+1)),find_colour_dark(i+11),1);
 			draw_text_flatcolour(Databox_X[ref]+8,Databox_Y[ref]+3+stat_spacing*i,term(find_attribute_name(i+1)),c_white,1);
 			draw_set_halign(fa_right);

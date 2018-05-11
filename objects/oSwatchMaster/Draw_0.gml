@@ -18,7 +18,7 @@ draw_colouredplane(x+width*4,y,width,height*20,c_white,0.2);
 draw_set_font(ft_EvoTooltip_6_Bold);
 for ( var i=0 ; i<array_length_1d(ColourArray)-1 ; i++ ) {
 	for ( var j=0 ; j<6 ; j++ ) {
-		pix_colour = draw_getpixel((x+5+width*j)*oGlobalController.Resolution_Magnification,(y+5+height*i)*oGlobalController.Resolution_Magnification);
+		pix_colour = draw_getpixel((x+5+width*j)*oGameController.Resolution_Magnification,(y+5+height*i)*oGameController.Resolution_Magnification);
 		red = dec_to_hex(colour_get_red(pix_colour));
 		blue = dec_to_hex(colour_get_blue(pix_colour));
 		green = dec_to_hex(colour_get_green(pix_colour));

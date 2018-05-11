@@ -3,7 +3,7 @@
 var panel = instance_nearest(x,y,uiPartyCreature);
 //Icons
 var box_x = 0;
-var box_y = oGlobalController.Resolution_CompleteHeight - 22;
+var box_y = oGameController.Resolution_CompleteHeight - 22;
 for ( var i=1 ; i<=party_lastentry(Player) ; i++ ) {
 	if ( Player.Party_Status[i] and mouse_in_region_gui( define_region_icon( box_x+i*29-13,box_y,24.32 ) ) ) {
 		//If no Info Panel exists, create one

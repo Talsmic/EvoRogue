@@ -3,8 +3,8 @@ if ( !DrawNormal ) { return };
 //Find Dimensions
 var draw_space_x = camera_get_view_x(view_camera[view_current]);
 var draw_space_y = camera_get_view_y(view_camera[view_current]);
-var draw_space_width = oGlobalController.Resolution_PlayableWidth;
-var draw_space_height = oGlobalController.Resolution_PlayableHeight;
+var draw_space_width = oGameController.Resolution_PlayableWidth;
+var draw_space_height = oGameController.Resolution_PlayableHeight;
 var windowX = 0;
 var windowY = 0;
 if ( AnchorView ) {

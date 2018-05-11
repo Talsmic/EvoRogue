@@ -35,5 +35,5 @@ if ( Flash_Intensity > 0 ) {
 
 //Draw Targetting Reticle
 if ( Targeted ) {
-	draw_sprite_ext(spr_scrollarrow,2,x,y-45-oGlobalController.Beat[0]*6,1,1,0,c_fire,0.8);
+	draw_sprite_ext(spr_scrollarrow,2,x,y-45-oGameController.Beat[0]*6,1,1,0,c_fire,0.8);
 	};

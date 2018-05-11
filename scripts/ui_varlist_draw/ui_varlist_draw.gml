@@ -35,16 +35,16 @@ switch ( mode ) {
 							Options_LockedMagnification,
 							Options_Vsync,
 							" ",
-							oGlobalController.Resolution_Magnification, 
-							string(oGlobalController.Resolution_IdealWidth)+", "+string(oGlobalController.Resolution_IdealHeight), 
-							string(oGlobalController.Resolution_MinWidth)+", "+string(oGlobalController.Resolution_MinHeight), 
-							string(oGlobalController.Resolution_MaxWidth)+", "+string(oGlobalController.Resolution_MaxHeight), 
-							string(oGlobalController.Resolution_CompleteWidth)+", "+string(oGlobalController.Resolution_CompleteHeight), 
-							string(oGlobalController.Resolution_PlayableWidth)+", "+string(oGlobalController.Resolution_PlayableHeight), 
-							string(oGlobalController.Resolution_PadWidth)+", "+string(oGlobalController.Resolution_PadHeight), 
-							string(oGlobalController.Resolution_GUIxOffset)+", "+string(oGlobalController.Resolution_GUIyOffset),
-							oGlobalController.Resolution_GUIsnap, 
-							string(oGlobalController.Resolution_ViewWidth)+", "+string(oGlobalController.Resolution_ViewHeight) 
+							oGameController.Resolution_Magnification, 
+							string(oGameController.Resolution_IdealWidth)+", "+string(oGameController.Resolution_IdealHeight), 
+							string(oGameController.Resolution_MinWidth)+", "+string(oGameController.Resolution_MinHeight), 
+							string(oGameController.Resolution_MaxWidth)+", "+string(oGameController.Resolution_MaxHeight), 
+							string(oGameController.Resolution_CompleteWidth)+", "+string(oGameController.Resolution_CompleteHeight), 
+							string(oGameController.Resolution_PlayableWidth)+", "+string(oGameController.Resolution_PlayableHeight), 
+							string(oGameController.Resolution_PadWidth)+", "+string(oGameController.Resolution_PadHeight), 
+							string(oGameController.Resolution_GUIxOffset)+", "+string(oGameController.Resolution_GUIyOffset),
+							oGameController.Resolution_GUIsnap, 
+							string(oGameController.Resolution_ViewWidth)+", "+string(oGameController.Resolution_ViewHeight) 
 							];
 		var col_width = [120,50];
 		break; #endregion

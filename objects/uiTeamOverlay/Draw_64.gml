@@ -7,7 +7,7 @@ draw_set_font(ft_EvoSmallcaps_6);
 var box_width = 7+party_lastentry(Player)*29;
 if ( box_width < string_width(Player.Player_Name)+16 ) { box_width = string_width(Player.Player_Name)+16 };
 var box_x = 0;
-var box_y = oGlobalController.Resolution_CompleteHeight - 22;
+var box_y = oGameController.Resolution_CompleteHeight - 22;
 var tooltip_offset_x = string_width(Player.Player_Name)+12;
 var tooltip_offset_y = 30;
 draw_blackbox(box_x-4,box_y,box_width,20);

@@ -12,5 +12,5 @@ if ( argument_count > 0 ) { focus_level = argument[0] };
 if ( argument_count > 1 ) { can_increase = argument[1] };
 if ( argument_count > 2 ) { can_decrease = argument[2] };
 
-if ( focus_level < oGlobalController.FocusCheck and can_decrease ) { oGlobalController.FocusCheck = focus_level };
-if ( focus_level > oGlobalController.FocusCheck and can_increase ) { oGlobalController.FocusCheck = focus_level };
+if ( focus_level < oGameController.FocusCheck and can_decrease ) { oGameController.FocusCheck = focus_level };
+if ( focus_level > oGameController.FocusCheck and can_increase ) { oGameController.FocusCheck = focus_level };

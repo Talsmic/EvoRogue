@@ -65,5 +65,5 @@ draw_set_halign(fa_left);
 //====================================================================
 
 draw_set_halign(fa_left);
-draw_cornercross(oGlobalController.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);
+draw_cornercross(oGameController.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);
 

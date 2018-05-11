@@ -1,5 +1,5 @@
 ///focus_clear();
 
-oGlobalController.FocusPrevious = oGlobalController.FocusCurrent;
-oGlobalController.FocusCurrent = oGlobalController.FocusCheck;
-oGlobalController.FocusCheck = 10;
+oGameController.FocusPrevious = oGameController.FocusCurrent;
+oGameController.FocusCurrent = oGameController.FocusCheck;
+oGameController.FocusCheck = 10;

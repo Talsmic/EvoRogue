@@ -2,7 +2,7 @@
     "id": "9cc70321-30ea-435c-8244-0b3451cc3519",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oGlobalController",
+    "name": "oEVOGameController",
     "eventList": [
         {
             "id": "c22668c6-3bf4-44db-bc9a-a3fffd88e4c6",
@@ -31,26 +31,6 @@
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "9cc70321-30ea-435c-8244-0b3451cc3519"
-        },
-        {
-            "id": "e473ecab-5a0c-4dcd-a135-79aaa25e8637",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 1,
-            "eventtype": 2,
-            "m_owner": "9cc70321-30ea-435c-8244-0b3451cc3519"
-        },
-        {
-            "id": "26a3993f-ee26-4a8e-b513-73fde475a277",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 77,
             "eventtype": 8,
             "m_owner": "9cc70321-30ea-435c-8244-0b3451cc3519"
         },

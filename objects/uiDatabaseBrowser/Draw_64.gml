@@ -20,7 +20,7 @@ ui_databox_draw(1);
 if ( Mode == "Creatures" ) { ui_tabset_draw(3); ui_databox_draw(2); };
 //------------------------------------------------------------------------------
 
-draw_cornercross(oGlobalController.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);
+draw_cornercross(oGameController.Resolution_CompleteWidth,0,spr_cornerX,eIconState.detectGUI);
 draw_set_font(ft_EvoTooltip_6_Bold);
 draw_text_flatcolour(14,260,depth,c_nature,1);
 draw_text_flatcolour(4,260,infocus(),c_nature_dark,1);

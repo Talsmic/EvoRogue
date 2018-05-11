@@ -1151,6 +1151,14 @@
             }
         },
         {
+            "Key": "52ddc970-9c9d-4af1-a9f0-307e0c14bbdb",
+            "Value": {
+                "id": "4e8dd9dd-af8d-465f-b3fb-d2daba00f2ac",
+                "resourcePath": "views\\52ddc970-9c9d-4af1-a9f0-307e0c14bbdb.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "53143d74-a6df-4c65-903c-14f853aa9167",
             "Value": {
                 "id": "4554420b-5f3b-466a-80cd-3f828481bbb3",
@@ -1220,6 +1228,14 @@
                 "id": "b9d251de-e03c-447b-9dbd-9748af0d9113",
                 "resourcePath": "scripts\\db_record_build\\db_record_build.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5728b22d-08e1-45d8-8afc-818937115476",
+            "Value": {
+                "id": "ba74643a-b8b3-4749-8148-5c1516c7e494",
+                "resourcePath": "views\\5728b22d-08e1-45d8-8afc-818937115476.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2154,7 +2170,7 @@
             "Key": "9cc70321-30ea-435c-8244-0b3451cc3519",
             "Value": {
                 "id": "c5a6ecc8-7c1d-406f-bef2-e86420015cc0",
-                "resourcePath": "objects\\oGlobalController\\oGlobalController.yy",
+                "resourcePath": "objects\\oEVOGameController\\oEVOGameController.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2900,6 +2916,14 @@
                 "id": "b9b37e91-fcdc-4f8d-b448-0eda1ae65c15",
                 "resourcePath": "views\\cd73bd2b-e643-479b-b4d3-1e49d18cd14c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ce57ee5f-79f7-43c7-af27-55f51897e1f0",
+            "Value": {
+                "id": "6119f929-138c-4e4b-afed-7bea2f8ba62f",
+                "resourcePath": "scripts\\game_intialise_EVO\\game_intialise_EVO.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3715,7 +3739,6 @@
         "2a83bc7c-0afa-4fbb-a42f-10afadc0046a",
         "2c08207e-1f39-480b-bf48-34eac0860b20",
         "1bd4c54b-2da6-454b-8063-23504b5df51c",
-        "c01573aa-ec23-4060-9d96-4f9f8ce8cc1b",
         "c4080447-648f-4613-b610-2f891ce20cf2",
         "630454cc-247f-4210-88f1-ca346c80cdd5",
         "4890c94c-9128-49ef-927e-db7cd5ad887b",
@@ -3731,7 +3754,7 @@
         "c3c81e18-f121-4440-96be-76999d29a62f",
         "e4d023df-1b79-4f4b-95ae-b5d8f6b5235e",
         "dfe2248a-1b14-47ab-91aa-edaf767af3f6",
-        "0c299c87-8139-43ad-b8fb-ce114908d645",
+        "ce57ee5f-79f7-43c7-af27-55f51897e1f0",
         "ecdff286-3c95-4f4e-aa5b-f58d2bda9ae5",
         "b25cc2c4-9a44-4bce-9aab-2eeae2d21a87",
         "17c61be5-94b0-454e-83ee-aff0d519b833",
@@ -3856,7 +3879,9 @@
         "c0d7e78d-a31a-4870-bbb3-a27916205273",
         "80e8eb70-cec7-4e77-b949-86e462375c49",
         "4e09c3e2-6151-4fa3-8560-5741f56b2c9c",
-        "5d899d01-fa5e-4e1b-b7b3-d1d17de52408"
+        "5d899d01-fa5e-4e1b-b7b3-d1d17de52408",
+        "c01573aa-ec23-4060-9d96-4f9f8ce8cc1b",
+        "0c299c87-8139-43ad-b8fb-ce114908d645"
     ],
     "tutorial": ""
 }

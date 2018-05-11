@@ -33,8 +33,8 @@ if ( tt_show_weakness ) {
 	};
  
 //Snap to screen boundaries
-if ( X + width > oGlobalController.Resolution_CompleteWidth ) { X = oGlobalController.Resolution_CompleteWidth - width };
-if ( Y + height > oGlobalController.Resolution_CompleteHeight ) { Y = oGlobalController.Resolution_CompleteHeight - height };
+if ( X + width > oGameController.Resolution_CompleteWidth ) { X = oGameController.Resolution_CompleteWidth - width };
+if ( Y + height > oGameController.Resolution_CompleteHeight ) { Y = oGameController.Resolution_CompleteHeight - height };
 
 //Draw Header Background
 draw_set_font(ft_EvoTooltip_6_Bold);

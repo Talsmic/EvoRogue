@@ -8,7 +8,7 @@
         "c01573aa-ec23-4060-9d96-4f9f8ce8cc1b"
     ],
     "filterType": "GMScript",
-    "folderName": "ppc placeholders",
+    "folderName": "ppc replaces",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

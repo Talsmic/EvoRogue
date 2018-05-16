@@ -7,7 +7,8 @@
         "ac89549c-f9c8-42e4-ae21-921425e653d3",
         "b0cb9691-ed22-498c-91d8-90cf14c6160b",
         "e65a5a02-2229-4df9-801c-8c35b71029c3",
-        "bef7aec3-abad-42aa-a911-0b661acbb9cb"
+        "bef7aec3-abad-42aa-a911-0b661acbb9cb",
+        "c318bcff-a2e8-4bd1-b320-809bef295ed2"
     ],
     "filterType": "GMSprite",
     "folderName": "[Cursor]",

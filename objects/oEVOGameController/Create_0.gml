@@ -1,4 +1,3 @@
-
 //GUI Debug Tools
 DebugMode = true//debug_mode;
 

@@ -4,8 +4,8 @@
     "mvc": "1.1",
     "name": "972bd8cf-17f7-43c6-892d-5545b7a9c64f",
     "children": [
-        "2d4deaa7-aaec-43ef-b4d6-a8f0e9cfaccc",
-        "b51aca49-89c6-4b5a-b095-c33f2374a952"
+        "67e90f40-ecaa-4870-a1e5-f823437bf43a",
+        "aa388b4f-c7d5-4869-94f8-cc566e6dacc7"
     ],
     "filterType": "GMObject",
     "folderName": "[Backgrounds]",
